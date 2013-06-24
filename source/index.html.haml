@@ -11,12 +11,18 @@ body_class: index
       <button type="button"class="btn" data-toggle="collapse" data-target=".menu-collapse"></button>
   .top-menu 
     %ul.menu-collapse.inline.row-fluid
-      %li.span2 menu1
-      %li.span2 menu2
-      %li.span2 menu Jesus
-      %li.span2 no moquetur
-      %li.span2 ordo nihil
-      %li.span2 liber
+      %li.span2
+        = link_to 'menu1', '/', title: 'menu1'
+      %li.span2
+        = link_to 'menu2', '/', title: 'menu2'
+      %li.span2
+        = link_to 'big unfaithful link text', '/', title: 'menu3'
+      %li.span2
+        = link_to 'no moquetur', '/', title: 'menu4'
+      %li.span2
+        = link_to 'menu5', '/', title: 'menu5'
+      %li.span2
+        = link_to 'liber', '/', title: 'menu6'
 
   .wellcome
     .big We build <strong>web, mobile, backend</strong>
