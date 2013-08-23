@@ -1,0 +1,12 @@
+{
+  "name": "brandymint2013",
+  "version": "0.1",
+  "dependencies": {
+    "jquery": "1.10.2",
+    "jquery-utils": "git://github.com/BrandyMint/jquery-utils.git"
+  },
+  "ignore": [
+    "**/.*",
+    "components"
+  ]
+}

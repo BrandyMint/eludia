@@ -6,24 +6,17 @@ body_class: index
 
   .top-navbar
     .logo
-      = link_to 'brandy<strong>mint</strong>', '/', title: 'brandymint mainpage'
+      = link_to 'brandymint', '/'
     .button
-      <button type="button"class="btn" data-toggle="collapse" data-target=".menu-collapse"></button>
-  .top-menu 
+      = link_to 'menu', '#j-navbar-top', data: { toggle: :collapse}
+
+  .navbar-top.collapse#j-navbar-top
     %ul.menu-collapse.inline.row-fluid
       %li.span2
         = link_to 'menu1', '/', title: 'menu1'
       %li.span2
         = link_to 'menu2', '/', title: 'menu2'
       %li.span2
-        = link_to 'big unfaithful link text', '/', title: 'menu3'
-      %li.span2
-        = link_to 'no moquetur', '/', title: 'menu4'
-      %li.span2
-        = link_to 'menu5', '/', title: 'menu5'
-      %li.span2
-        = link_to 'liber', '/', title: 'menu6'
-
   .wellcome
     .big We build <strong>web, mobile, backend</strong>
     .small for brands, businesses and startups

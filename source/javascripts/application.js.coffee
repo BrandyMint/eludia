@@ -2,3 +2,6 @@
 #= require_tree ./lib
 #= require jquery
 #= require bootstrap
+
+$ ->
+  $(".collapse").collapse()
