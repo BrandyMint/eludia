@@ -1,3 +1,52 @@
+set :css_dir, 'stylesheets'
+
+set :js_dir, 'javascripts'
+
+set :images_dir, 'images'
+
+activate :livereload, :grace_period => 0.5
+
+activate :sprockets
+
+# Build-specific configuration
+configure :build do
+  ignore 'images/*.psd'
+  ignore 'stylesheets/lib/*'
+  ignore 'stylesheets/vendor/*'
+  ignore 'javascripts/lib/*'
+  ignore 'javascripts/vendor/*'
+  ignore 'vendor/javascripts/*'
+  ignore 'vendor/stylesheets/*'
+  # For example, change the Compass output style for deployment
+  activate :minify_css
+
+  # Minify Javascript on build
+  activate :minify_javascript
+
+  # Enable cache buster
+  # activate :cache_buster
+
+  # Use relative URLs
+  # activate :relative_assets
+
+  # Compress PNGs after build
+  # First: gem install middleman-smusher
+  # require "middleman-smusher"
+  # activate :smusher
+
+  # Or use a different image path
+  # set :http_path, "/Content/images/"
+end
+
+
+after_configuration do
+  @bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
+  @bower_assets_path = File.join "#{root}", @bower_config["directory"]
+  sprockets.append_path @bower_assets_path
+  sprockets.append_path 'vendor/javascripts'
+  sprockets.append_path 'vendor/stylesheets'
+end
+
 ###
 # Compass
 ###
@@ -50,39 +99,4 @@
 #   end
 # end
 
-set :css_dir, 'stylesheets'
 
-set :js_dir, 'javascripts'
-
-set :images_dir, 'images'
-
-activate :livereload, :grace_period => 0.5
-
-# Build-specific configuration
-configure :build do
-  ignore 'images/*.psd'
-  ignore 'stylesheets/lib/*'
-  ignore 'stylesheets/vendor/*'
-  ignore 'javascripts/lib/*'
-  ignore 'javascripts/vendor/*'
-
-  # For example, change the Compass output style for deployment
-  activate :minify_css
-
-  # Minify Javascript on build
-  activate :minify_javascript
-
-  # Enable cache buster
-  # activate :cache_buster
-
-  # Use relative URLs
-  # activate :relative_assets
-
-  # Compress PNGs after build
-  # First: gem install middleman-smusher
-  # require "middleman-smusher"
-  # activate :smusher
-
-  # Or use a different image path
-  # set :http_path, "/Content/images/"
-end

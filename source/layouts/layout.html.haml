@@ -34,13 +34,30 @@
     -# Stylesheets
     = stylesheet_link_tag 'application'
   %body{class: current_page.data.body_class || 'page'}
+    .navbar.navbar-inverse.navbar-static-top
+      .container
+        %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", type: "button"}
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        %a.pull-left{href: "#"}
+          %img.navbar-brand-logo{src: '../images/logo_brandymint.svg', alt: 'Brandymint'}
+
+        .navbar-collapse.collapse
+          %ul.nav.navbar-nav
+            %li.active
+              %a{href: "#"} Home
+            %li
+              %a{href: "#about"} About
+            %li
+              %a{href: "#contact"} Contact
     = yield
     -# Javascripts
     = javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js'
-    = javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js'
+    -#= javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js'
     = javascript_include_tag 'application'
 
-    - if build?
+    -# if build?
       -# Google Analytics
       :javascript
         var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
