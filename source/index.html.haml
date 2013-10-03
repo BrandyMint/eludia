@@ -3,38 +3,33 @@ title: brandymint. We build web, mobile, backend for brands, businesses and star
 body_class: index
 ---
 
-.container
-  .row
-    .col-lg-12.welcome-content
-      %h1.welcome-header
-        We build
-        %strong web, mobile, backend
-      %h3.welcome-subheader for brands, businesses and startups
+.page-container
+  .container
+    .row
+      .col-lg-12.welcome-content
+        %h1.welcome-header
+          We build
+          .linebreak-sm
+          %strong
+            web, mobile
+          .linebreak-sm.linebreak-md
+          and
+          %strong backend
+        %h3.welcome-subheader for brands, businesses and startups
 
-      .browse-projects
-        %a.btn.btn-default.btn-large Browse projects
+        -#.browse-projects
+          %a.btn.btn-default.btn-large Browse projects
 
 
 .container.marketing
   .row
-    .col-lg-4
-      %img.img-circle{alt: "Generic placeholder image", src: "http://lorempixel.com/140/140", }/
-      %h2 Heading
-      %p Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.
-      %p
-        %a.btn.btn-default{href: "#"} View details »
-    .col-lg-4
-      %img.img-circle{alt: "Generic placeholder image", src: "http://lorempixel.com/140/140", }/
-      %h2 Heading
-      %p Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
-      %p
-        %a.btn.btn-default{href: "#"} View details »
-    .col-lg-4
-      %img.img-circle{alt: "Generic placeholder image", src: "http://lorempixel.com/140/140", }/
-      %h2 Heading
-      %p Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-      %p
-        %a.btn.btn-default{href: "#"} View details »
+    - [:one, :two, :three].each do |title|
+      .col-sm-4
+        %img.img-circle{alt: "Generic placeholder image", src: "http://lorempixel.com/140/140/abstract", }
+        %h2= title
+        %p Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.
+        %p
+          %a.btn.btn-default{href: "#"} View details »
 .container
   %hr.featurette-divider
   .row.featurette
@@ -44,17 +39,18 @@ body_class: index
         %span.text-muted It'll blow your mind.
       %p.lead Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
     .col-md-5
-      %img.featurette-image.img-responsive{alt: "Generic placeholder image", src: "http://lorempixel.com/500/500", }/
+      %img.featurette-image.img-responsive{alt: "Generic placeholder image", src: "http://lorempixel.com/500/500/abstract", }
   %hr.featurette-divider/
   .row.featurette
     .col-md-5
-      %img.featurette-image.img-responsive{alt: "Generic placeholder image", src: "http://lorempixel.com/500/500", }/
+      %img.featurette-image.img-responsive{alt: "Generic placeholder image", src: "http://lorempixel.com/500/500/abstract", }
     .col-md-7
       %h2.featurette-heading
         Oh yeah, it's that good.
         %span.text-muted See for yourself.
-      %p.lead Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
-  %hr.featurette-divider/
+      %p.lead
+        Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+  %hr.featurette-divider
   .row.featurette
     .col-md-7
       %h2.featurette-heading
@@ -62,46 +58,6 @@ body_class: index
         %span.text-muted Checkmate.
       %p.lead Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
     .col-md-5
-      %img.featurette-image.img-responsive{alt: "Generic placeholder image", src: "http://lorempixel.com/500/500", }/
-  %hr.featurette-divider/
-%footer
-  %p.pull-right
-    %a{href: "#"} Back to top
-  %p
-    &copy; Brandymint, 2010&ndash;2013
-    %a{href: "#"} Privacy
-    \·
-    %a{href: "#"} Terms
-
-
-
-
-
-
-
-
-
-
-
--#.container
-
-  .top-navbar
-    .logo
-      = link_to 'brandymint', '/'
-    .button
-      = link_to 'menu', '#j-navbar-top', data: { toggle: :collapse}
-
-  .navbar-top.collapse#j-navbar-top
-    %ul.menu-collapse.inline.row-fluid
-      %li.span2
-        = link_to 'menu1', '/', title: 'menu1'
-      %li.span2
-        = link_to 'menu2', '/', title: 'menu2'
-      %li.span2
-  .welcome
-    %h1 We build <strong>web, mobile, backend</strong>
-    %h3 for brands, businesses and startups
-
-  .browse_projects
-    <button class="btn btn-large" type="button"><strong>BROWSE PROJECTS &nbsp;&nbsp;&nbsp; ></strong></button>
+      %img.featurette-image.img-responsive{alt: "Generic placeholder image", src: "http://lorempixel.com/500/500/abstract", }
+  %hr.featurette-divider
 

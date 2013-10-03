@@ -1,26 +1,38 @@
 //= require_tree .
-@import bootstrap/variables
-@import variables
-@import mixins
-@import bootstrap
-@import fonts
-@import compass/typography/lists/horizontal-list
-@import compass/css3
-@import fontello/fontello
-@import fontello/fontello-codes
-//@import hover-block
+@import base
 
-// Interfacy elements and pages
-@import scaffolding
-@import typography
-@import icons
-//@import buttons
-
-
-.navbar-brand-logo
-  max-width: 160px
-  margin-top: 6px
+.page-container
+  padding-top: 50px
+  margin-bottom: 40px
 
 .welcome-content
-  padding-bottom: 2em
+  padding:
+    top: 2em
+    bottom: 3em
+  @media screen and (min-width: 960px)
+    padding:
+      top: 4em
+      bottom: 8em
+
+.welcome-header,
+.welcome-subheader
+  color: #fff
+  text-shadow: 0 1px 1px rgba(0,0,0,0.2)
+  -webkit-font-smoothing: antialiased
+
+.welcome-header
+  font-size: 4em
+  line-height: 1.2em
+  margin-bottom: 10px
+
+.welcome-subheader
+  margin:
+    top: 0
+    bottom: 2em
+  font-weight: 300
+
+body.index
+  .page-container
+    background: url('../images/index_background_480.jpg') top left
+    background-size: cover
 

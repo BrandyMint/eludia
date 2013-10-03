@@ -1,7 +1,8 @@
 {
-  "name": "brandymint2013",
+  "name": "brandymint2014",
   "version": "0.1",
   "dependencies": {
+    "jquery": "latest"
   },
   "ignore": [
     "**/.*",

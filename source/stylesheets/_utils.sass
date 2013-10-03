@@ -1,3 +1,6 @@
+@import bootstrap/variables
+@import variables
+
 .hoverable-container
   .hoverable
     visibility: hidden
@@ -36,16 +39,10 @@ hr.mini
   margin: 0.5em 0
 
 hr.light
-  border-color: lighten($hrBorder,3%)
+  border-color: lighten($grayLightest,3%)
 
 hr.no-shadow
   border-bottom: 0
-
-.center-block
-  +center-block
-
-.user-select-none
-  +user-select(none)
 
 @each $margin in top, bottom, right, left
   .no-margin-#{$margin}
@@ -72,7 +69,9 @@ hr.no-shadow
       background: $rowHoverBackground
 
 .gray-link
-  +link-colors($textColor, $linkColorHover)
+  color: $textColor
+  &:hover
+    color: $linkColorHover
 
 .block-link
   display: block
@@ -83,9 +82,17 @@ hr.no-shadow
   font-weight: normal
 
 .gray-light-link
-  +link-colors($grayLight, darken($grayLight,10%))
+  color: $grayLight
+  &:hover
+    color: darken($grayLight,10%)
 
 .tooltip
   font-weight: normal
+
+@each $bp in (xs $screen-xs, sm $screen-sm, md $screen-md)
+  .linebreak-#{nth($bp,1)}
+    display: inline
+    @media screen and (max-width: nth($bp,2))
+      display: block
 
 
