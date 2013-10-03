@@ -16,3 +16,5 @@
 /.sass-cache
 
 /source/vendor/components
+/source/vendor
+

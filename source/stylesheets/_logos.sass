@@ -1,0 +1,21 @@
+.tech-logo-block
+  //background-repeat: no-repeat
+  //background-size: cover auto
+  text-align: center
+  
+.tech-logo-label
+  padding:
+    top: 6px
+    bottom: 10px
+  text-transform: uppercase
+  font-weight: 300
+
+.tech-logo-image
+  display: block
+  max-height: 60px
+  margin: 0 auto
+
+//@each $logo in ruby, rails, rspec, clojure, postgres, elasticsearch, redis, html5, css3, haml, sass, coffeescript, backbone, apple, android
+  .tech-logo-#{$logo}
+    background-image: url("../images/tech_logos/#{$logo}.svg")
+
