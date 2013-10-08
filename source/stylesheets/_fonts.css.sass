@@ -21,6 +21,8 @@ $smallHeaderSize: 13px
 body, p, h1, h2, h3, h4, h5, h6
   line-height: 1.3em
   font-family: $baseFontFamily
+
+body, p
   font-weight: 300
 
 //body, p
@@ -31,6 +33,7 @@ textarea
 
 h1, h2, h3, h4, h5, h6
   text-shadow: 0 1px 0 $white
+  font-weight: 500
 
 h1
   font-size: $baseFontSize * 2.3
@@ -60,3 +63,7 @@ h4 small
 h1, h2, h3, h4, h5, h6
   strong
     font-weight: 900
+
+@each $weight in (light 100, normal 300, medium 500, bold 700, black 900)
+  .font-weight-#{nth($weight,1)}
+    font-weight: nth($weight,2)

@@ -1,0 +1,29 @@
+.row.featurette
+  .col-md-7
+    %h2.featurette-heading.font-weight-normal
+      Convead.com
+      %br
+      %span.text-muted Lead your business to better sales
+    %p.lead
+      Convead is a
+      %strong high-load realtime system
+      and CRM service that reveals your customers' behaviuor.
+      Define filters and segments for visitors and communicate with clients and newcomers to help them 
+      with finding necessary information and purchasing your products.
+
+    %h5.no-margin-bottom Technologies
+    .project-technologies
+      - technologies = ['Websockets', 'Faye', 'Coffeescript', 'Backbone', 'Marionette']
+      - technologies.each_with_index do |t, i|
+        %span= t
+    %h5.no-margin-bottom Methodologies
+    .project-technologies
+      - methodologies = ['Test-driven development', 'Domain-driven development', 'Scrum']
+      - methodologies.each_with_index do |t, i|
+        %span= t
+
+    %br
+
+  .col-md-5
+    %img.featurette-image.img-responsive{alt: "Brandymint projects: Convead", src: "images/projects/convead.jpg" }
+

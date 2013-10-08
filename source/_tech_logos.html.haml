@@ -1,12 +1,39 @@
-.container
-  %h3 Armed with modern stack of technologies
-  %br
-  .row
-    - tech_logos = [:ruby, :rails, :clojure, :postgres, :elasticsearch, :redis, :html5, :css3, :haml, :sass, :coffeescript, :backbone ]
-    -#  :apple, :android
-    - tech_logos.each do |logo|
-      .col-xs-3.col-sm-2.col-md-1.col-lg-1.tech-logo-block
-        //%div{class: "tech-logo tech-logo-#{logo}"}
-        %img.tech-logo-image{ src: "images/tech_logos/#{logo}.svg" }
-        %br
-        -#%small.tech-logo-label.muted= logo
+%section.container.technologies-container
+  %h3.technologies-title We use modern stack of technologies
+  -# for text-only item use :no_logo_<name>, name is technology name
+  - tech_logos = {ruby: 'Ruby', rails: 'Ruby on Rails', clojure: 'Clojure',
+    postgres: 'PostgreSQL', elasticsearch: 'Elasticsearch', redis: 'Redis', no_logo_faye: 'Faye',
+      backbone: 'Backbone.js', html5: 'HTML5', css3: 'CSS3', haml: 'HAML', sass: 'SASS', coffeescript: 'CoffeeScript'  }
+  -#  :apple, :android
+  %ul.tech-logos.unstyled
+    - tech_logos.each_pair do |logo, title|
+      -#.col-xs-3.col-sm-2.col-md-1.col-lg-1.tech-logo-block
+      %li{class: "pull-left tech-logo tech-logo-#{logo}"}
+        - unless logo.to_s.match("no_logo")
+          %img.tech-logo-image.pull-left{ src: "images/tech_logos/#{logo}.svg" }
+        .pull-left.tech-logo-label.muted= title
+        .clearfix
+
+    .clearfix
+
+%hr.mini
+
+%section.container.technologies-container
+  %h3.technologies-container Approach with smart principles
+  %ul.methods-list
+    %li
+      %strong Scrum
+      &mdash; iterative and agile process based on team work with clients involved
+    %li
+      %strong Lean production
+      &mdash; we deliver as fast as possible and keep product scalable
+    %li
+      %strong Test&ndash;driven development
+      (TDD)
+    %li
+      %strong Domain&ndash;driven development
+      (DDD)
+    %li
+      %strong Continuous integration
+      (CI)
+%hr
