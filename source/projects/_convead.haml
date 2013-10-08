@@ -1,22 +1,31 @@
-.row.featurette
+.row.project-block
+  .col-md-5
+    %img.project-image.img-responsive{alt: "Brandymint projects: Convead", src: "images/projects/convead.jpg" }
+
   .col-md-7
-    %h2.featurette-heading.font-weight-normal
+    %h2.project-title
       Convead.com
-      %br
-      %span.text-muted Lead your business to better sales
-    %p.lead
+      //%br
+      //%span.text-muted Lead your business to better sales
+    %p.project-description
       Convead is a
       %strong high-load realtime system
-      and CRM service that reveals your customers' behaviuor.
+      and CRM service that reveals your customers' behaviour.
       Define filters and segments for visitors and communicate with clients and newcomers to help them 
       with finding necessary information and purchasing your products.
+    
+    %h5.technology-title Features
+    .project-technologies
+      - technologies = ['Realtime monitoring', 'Support chat', 'CRM', 'Data segments', 'Data filters']
+      - technologies.each_with_index do |t, i|
+        %span= t
 
-    %h5.no-margin-bottom Technologies
+    %h5.technology-title Technologies
     .project-technologies
       - technologies = ['Websockets', 'Faye', 'Coffeescript', 'Backbone', 'Marionette']
       - technologies.each_with_index do |t, i|
         %span= t
-    %h5.no-margin-bottom Methodologies
+    %h5.technology-title Methodologies
     .project-technologies
       - methodologies = ['Test-driven development', 'Domain-driven development', 'Scrum']
       - methodologies.each_with_index do |t, i|
@@ -24,6 +33,4 @@
 
     %br
 
-  .col-md-5
-    %img.featurette-image.img-responsive{alt: "Brandymint projects: Convead", src: "images/projects/convead.jpg" }
 

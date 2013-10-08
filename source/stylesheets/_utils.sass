@@ -89,7 +89,8 @@ hr.no-shadow
 .tooltip
   font-weight: normal
 
-@each $bp in (xs $screen-xs, sm $screen-sm, md $screen-md)
+
+@each $bp in (xs $screen-xs, sm $screen-sm, md $screen-md, lg $screen-lg)
   .linebreak-#{nth($bp,1)}
     display: inline
     @media screen and (max-width: nth($bp,2))

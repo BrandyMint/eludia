@@ -2,19 +2,25 @@
   .page-container
     .container
       .row
-        .col-lg-12.welcome-content
+        .col-md-6.col-md-offset-3.welcome-content
           %h1.welcome-header
             We build
-            .linebreak-sm
+            %br
+            //.linebreak-sm
             %strong
               web, mobile
-            .linebreak-sm.linebreak-md
+            %br
+            //.linebreak-sm.linebreak-md
             and
             %strong backend
-          %h3.welcome-subheader
+          -#%h3.welcome-subheader
             for brands, businesses
             .linebreak-xs
             and startups
+          .welcome-subheader
+            %a.btn.btn-transparent-white{ href: '#projects' }
+              Things that work
+
 
           -#.browse-projects
             %a.btn.btn-default.btn-large Browse projects

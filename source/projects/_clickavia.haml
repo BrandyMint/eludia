@@ -1,0 +1,38 @@
+.row.project-block
+  .col-md-5
+    %img.project-image.img-responsive{alt: "Brandymint projects: Convead", src: "images/projects/clickavia.jpg" }
+
+  .col-md-7
+    %h2.project-title
+      %img{src: 'images/projects/clickavia_logo.svg'}
+      //%br
+      //%span.text-muted 
+    %p.project-description
+      Clickavia provides 
+      %strong comfortable service to find and buy airline tickets.
+      These great folks asked to analyze existing codebase and refactor some modules to rise code quality level at first.
+      Later they offered us to develop mobile applications so their customers could search and buy tickets everywhere they go.
+      That work included separate
+      %strong server-side API
+      and iPhone/iPad applications (now in alpha).
+    
+    %h5.technology-title Features
+    .project-technologies
+      - technologies = ['Code analysis and refactoring', 'Custom server-side API', 'iOS development']
+      - technologies.each_with_index do |t, i|
+        %span= t
+
+    %h5.technology-title Technologies
+    .project-technologies
+      - technologies = ['Ruby', 'Objective-C']
+      - technologies.each_with_index do |t, i|
+        %span= t
+    %h5.technology-title Methodologies
+    .project-technologies
+      - methodologies = ['Rapid prototyping', 'Scrum']
+      - methodologies.each_with_index do |t, i|
+        %span= t
+
+    %br
+
+

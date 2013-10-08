@@ -21,11 +21,22 @@ li.tech-logo
 .tech-logo-label
   padding: 10px 10px
   font-weight: 300
+
+.tech-logo-label,
+.tech-logo-image
   height: 40px
+  @media screen and (max-width: $screen-xs)
+    height: 30px
 
 .tech-logo-image
   display: block
-  height: 40px
+
+ul.methods-list
+  margin-left: 0
+  padding-left: 10px
+  & > li
+    margin-bottom: 10px
+
 
 //@each $logo in ruby, rails, rspec, clojure, postgres, elasticsearch, redis, html5, css3, haml, sass, coffeescript, backbone, apple, android
   .tech-logo-#{$logo}

@@ -1,6 +1,7 @@
 //= require_tree .
 @import base
-@import logos
+@import tech_methods
+@import projects
 
 .page-container
   padding-top: 50px
@@ -12,29 +13,55 @@
   padding:
     top: 2em
     bottom: 2em
-  @media screen and (min-width: 960px)
+  @media screen and (min-width: $screen-lg)
     padding:
       top: 4em
-      bottom: 8em
+      bottom: 6em
 
 .welcome-header,
 .welcome-subheader
+  font-weight: 300
   color: #fff
   text-shadow: 0 1px 1px rgba(0,0,0,0.2)
   -webkit-font-smoothing: antialiased
 
-.welcome-header
-  font-size: 50px
-  line-height: 1.2em
-  margin-bottom: 10px
-  @media screen and (max-width: $screen-xs)
-    font-size: 40px
+.welcome-header,
+.large-header
+  font-size: 40px
+  line-height: 1.1em
+  margin-bottom: 20px
+  @media screen and (min-width: $screen-sm)
+    font-size: 70px
+  @media screen and (min-width: $screen-lg)
+    font-size: 90px
 
 .welcome-subheader
+  @extend h3
   margin:
     top: 0
     bottom: 2em
   font-weight: 300
+
+  .btn-transparent-white
+    font:
+      size: 15px
+      weight: 300
+    @media screen and (min-width: $screen-md)
+      font-size: 20px
+    text-transform: uppercase
+    letter-spacing: 2px
+    display: inline-block
+    min-width: 200px
+    padding: 8px 20px
+    border: 1px solid rgba(255,255,255,0.3)
+    +border-radius(4px)
+    color: #fff
+    background: rgba(0,0,0,0.1)
+    +transition(background 0.2s ease, border 0.2s ease)
+    &:hover, &:focus
+      color: #fff
+      background: rgba(0,0,0,0.5)
+      border-color: rgba(255,255,255,0.5)
 
 body.index
   .page-container
@@ -42,4 +69,20 @@ body.index
   .page-container-image
     background: url('../images/index_background_480.jpg') top left
     background-size: cover
+
+
+.projects-header-image
+  //background: url('../images/index_background_480.jpg') top left
+  //background-size: cover
+.projects-header-container
+  //background: rgba(0,0,0,0.3)
+.projects-header
+  //@extend .large-header
+  font-size: 40px
+  //color: #fff
+  -webkit-font-smoothing: antialiased
+  text-align: center
+  padding: 1em 0 1.2em 0
+
+
 
