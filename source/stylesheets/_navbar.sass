@@ -4,9 +4,18 @@
 
 .navbar.application-navbar
   @extend .navbar-inverse
-  background: rgba(0,0,0,0.7)
+  background: rgba(0,0,0,0.8)
   //background: none
   border-bottom: 0
+  +transition(opacity 0.2s ease, height 0.2s ease)
+  opacity: 1
+  height: auto
+  overflow: auto
+  &.transparent
+    opacity: 0
+    height: 0
+    overflow: hidden
+
   .navbar-toggle
     border: 0
 
@@ -32,7 +41,7 @@
           text-align: center
 
   .navbar-collapse.in
-    background: rgba(0,0,0,0.3)
+    //background: rgba(0,0,0,0.3)
 
 .navbar-brand-logo
   max-width: 120px
