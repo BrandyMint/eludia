@@ -93,6 +93,7 @@ configure :build do
   ignore "/javascripts/application/*"
   ignore "/javascripts/vendor/lib/*"
   ignore "/stylesheets/vendor/*"
+  ignore "/vendor/components/*"
   ignore "*.rb"
 
   activate :minify_css

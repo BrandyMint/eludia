@@ -1,7 +1,28 @@
+@import bootstrap/mixins
+@import mixins
 @import variables
+
+.projects-header-image
+  background: url('../images/background_blurred200.jpg') top left
+  background-size: cover
+  margin:
+    top: 30px
+    bottom: 20px
+
+.projects-header-container
+  background: rgba(255,255,255,0.3)
+.projects-header
+  @extend .large-header
+  font-weight: 700
+  color: #fff
+  text-shadow: none
+  -webkit-font-smoothing: antialiased
+  text-align: center
+  padding: 50px 0
 
 .project-image
   margin-bottom: 10px
+  +border-radius(4px)
 
 .project-title
   margin: 20px 0
