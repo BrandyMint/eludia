@@ -14,11 +14,13 @@ Dir[File.join(File.dirname(__FILE__), 'models', '*.rb')].each{ |file| require fi
 # Helpers
 require 'config/routes'
 require 'config/helpers'
+require 'config/icon_helper'
 require 'builder'
 
 helpers do
   include RouteHelpers
   include ApplicationHelpers
+  include IconHelper
 end
 
 ##############################
