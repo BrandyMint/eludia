@@ -7,18 +7,19 @@
       Convead.com
       //%br
       //%span.text-muted Lead your business to better sales
+    
+    -#%h5.project-features-title Features
+    .project-features
+      - features = ['2000 requests per second', 'Scalability', 'Realtime monitoring', 'Support chat', 'CRM', 'Data segments and filters']
+      - features.each_with_index do |t, i|
+        %span= t
+
     %p.project-description
       Convead is a
       %strong high-load realtime system
       and CRM service that reveals your customers' behaviour.
       Define filters and segments for visitors and communicate with clients and newcomers to help them 
       with finding necessary information and purchasing your products.
-    
-    %h5.technology-title Features
-    .project-technologies
-      - technologies = ['Realtime monitoring', 'Support chat', 'CRM', 'Data segments', 'Data filters']
-      - technologies.each_with_index do |t, i|
-        %span= t
 
     %h5.technology-title Technologies
     .project-technologies
@@ -30,7 +31,11 @@
       - methodologies = ['Test-driven development', 'Domain-driven development', 'Scrum']
       - methodologies.each_with_index do |t, i|
         %span= t
-
     %br
+
+    %a.pull-right.btn.btn-default.btn-project-link{href: 'http://convead.com/', target: :blank}
+      convead.com &rarr;
+    .clearfix
+
 
 

@@ -35,40 +35,41 @@
     -# Stylesheets
     = stylesheet_link_tag 'application'
   %body{class: current_page.data.body_class || 'page'}
+    %a{name: :top}
     .navbar.application-navbar.navbar-fixed-top
       .container
-        -#%button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", type: "button"}
-          %span.icon-bar
-          %span.icon-bar
-          %span.icon-bar
         %a.pull-left{href: "#"}
           %img.navbar-brand-logo{src: '../images/logo_brandymint.svg', alt: 'Brandymint'}
+        
+        %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", type: "button"}
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
 
-        -#.navbar-collapse.collapse
-          %ul.nav.navbar-nav
-            %li.active
+        .navbar-collapse.collapse
+          %ul.nav.navbar-nav.pull-right
+            -#%li.active
               %a{href: "#"} Home
             %li
-              %a{href: "#about"} About
+              %a{href: "#projects"} Projects
             %li
-              %a{href: "#contact"} Contact
+              %a{href: "#contacts"} Contacts
+        .clearfix
     = yield
 
-%footer
-  %p.pull-right
-    %a{href: "#"} Back to top
-  %p
-    &copy; Brandymint, 2010&ndash;2013
+%footer.application-footer
+  %a{ name: 'contacts'}
+  = partial 'contacts'
 
-  -# Javascripts
-  = javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js'
-  -#= javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js'
-  = javascript_include_tag 'application'
+-# Javascripts
+= javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js'
+-#= javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js'
+= javascript_include_tag 'application'
 
-  -# if build?
-    -# Google Analytics
-    :javascript
-      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-      s.parentNode.insertBefore(g,s)}(document,'script'));
+-# if build?
+  -# Google Analytics
+  :javascript
+    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));

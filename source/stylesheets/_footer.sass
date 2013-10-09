@@ -1,0 +1,28 @@
+@import variables
+
+.application-footer
+  padding: 30px 0
+  margin-top: 60px
+  background: $grayDark
+  color: $grayLighter
+  -webkit-font-smoothing: antialiased
+  h1, h2, h3, h4, h5, h5, h6
+    text-shadow: none
+  a
+    color: lighten($linkColor, 40%)
+    &:hover
+      color: lighten($linkColor, 50%)
+  hr
+    border-top: 1px solid darken($grayDark, 10%)
+.footer-map-block
+  background: darken($grayDark, 10%)
+  padding: 10px
+  margin-top: 10px
+  ymaps, img
+    max-width: 100%
+  .close
+    text-shadow: none
+    color: $grayLightest
+    &:hover
+      color: #fff
+

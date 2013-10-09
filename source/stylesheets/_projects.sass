@@ -1,9 +1,14 @@
 @import variables
 
+.project-image
+  margin-bottom: 10px
+
 .project-title
-  margin:
-    //top: 0
-    bottom: 10px
+  margin: 20px 0
+  @media screen and (min-width: $screen-md)
+    margin:
+      top: 0
+      bottom: 10px
 
 .technology-title
   margin:
@@ -13,6 +18,18 @@
 .project-description
   font-size: $baseFontSize * 1.2
   line-height: 1.5em
+
+.project-features
+  margin-bottom: 20px
+  & > span
+    font-size: 17px
+    line-height: 42px
+    font-weight: 700
+    padding: 6px 10px
+    margin-right: 10px
+    border: 1px solid $grayLightest
+    white-space: nowrap
+
 
 .project-technologies
   & > span
