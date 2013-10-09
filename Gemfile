@@ -18,3 +18,7 @@ gem 'compass-rails', require: false
 #gem "jquery-rails"
 #gem 'therubyracer'
 gem 'rb-inotify', '~> 0.9', :require => false
+
+group :deploy do
+   gem 'capistrano', :require => false
+end
