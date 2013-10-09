@@ -12,6 +12,12 @@ GEM
       i18n (~> 0.6)
       multi_json (~> 1.0)
     builder (3.2.0)
+    capistrano (2.15.5)
+      highline
+      net-scp (>= 1.0.0)
+      net-sftp (>= 2.0.0)
+      net-ssh (>= 2.0.14)
+      net-ssh-gateway (>= 1.1.0)
     chunky_png (1.2.8)
     coffee-script (2.2.0)
       coffee-script-source
@@ -33,6 +39,7 @@ GEM
     fssm (0.2.10)
     haml (4.0.2)
       tilt
+    highline (1.6.19)
     hike (1.2.2)
     http_parser.rb (0.5.3)
     http_router (0.10.2)
@@ -82,6 +89,13 @@ GEM
       sprockets-helpers (~> 1.0.0)
       sprockets-sass (~> 1.0.0)
     multi_json (1.7.3)
+    net-scp (1.1.2)
+      net-ssh (>= 2.6.5)
+    net-sftp (2.1.2)
+      net-ssh (>= 2.6.5)
+    net-ssh (2.7.0)
+    net-ssh-gateway (1.2.0)
+      net-ssh (>= 2.6.5)
     padrino-core (0.10.7)
       activesupport (~> 3.2.0)
       http_router (~> 0.10.2)
@@ -141,6 +155,7 @@ DEPENDENCIES
   activesupport (~> 3.2.8)
   bootstrap-sass (= 3.0.0.0)!
   builder
+  capistrano
   compass-rails
   middleman (~> 3.1.0.rc.1)
   middleman-google-analytics
