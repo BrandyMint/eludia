@@ -9,19 +9,25 @@ $ ->
   #console.log 'application.js.coffee loaded'
   #$(document).on 'scroll', (e) ->
 
+  userAgent = navigator.userAgent
+
+  android = userAgent.match(/(Android)/g)
+  ios = userAgent.match(/(iPhone)/g) || userAgent.match(/(iPad)/g)
+
   lastScrollTop = 0
-  $(window).on 'scroll', (event) ->
-    st = $(this).scrollTop()
-    if st > 300
-      if st >= lastScrollTop || st == 0
-        @showNavbar()
-        # downscroll code
+  unless (ios || android)
+    $(window).on 'scroll', (event) ->
+      st = $(this).scrollTop()
+      if st > 300
+        if st >= lastScrollTop || st == 0
+          @showNavbar()
+          # downscroll code
+        else
+          @hideNavbar()
+          # upscroll code
       else
-        @hideNavbar()
-        # upscroll code
+        #@showNavbar()
       lastScrollTop = st
-    else
-      @showNavbar()
 
   $('.navbar-collapse a')
     .on 'click', (e) ->
@@ -30,9 +36,9 @@ $ ->
 
 
 @showNavbar = ->
-  $('.application-navbar').delay(200).addClass('transparent')
+  $('.application-navbar.navbar-fixed-top').delay(200).addClass('transparent')
 
 @hideNavbar = ->
-  $('.application-navbar').removeClass('transparent')
+  $('.application-navbar.navbar-fixed-top').removeClass('transparent')
 
 
