@@ -18,7 +18,7 @@ $ ->
   unless (ios || android)
     $(window).on 'scroll', (event) ->
       st = $(this).scrollTop()
-      if st > 300
+      if st > 100
         if st >= lastScrollTop || st == 0
           @showNavbar()
           # downscroll code

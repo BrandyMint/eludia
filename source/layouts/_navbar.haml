@@ -1,0 +1,20 @@
+.navbar.application-navbar.navbar-fixed-top
+  .container
+    %a.pull-left{href: "#"}
+      %img.navbar-brand-logo{src: '../images/logo_brandymint.svg', alt: 'Brandymint'}
+    
+    %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", type: "button"}
+      %span.icon-bar
+      %span.icon-bar
+      %span.icon-bar
+
+    .navbar-collapse.collapse
+      %ul.nav.navbar-nav.pull-right
+        -#%li.active
+          %a{href: "#"} Home
+        %li
+          %a{href: "#projects"} Our work
+        %li
+          %a{href: "#contacts"} Contact us
+    .clearfix
+
