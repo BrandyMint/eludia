@@ -129,6 +129,7 @@ after_configuration do
   sprockets.append_path 'vendor/javascripts'
   sprockets.append_path 'vendor/stylesheets'
   sprockets.append_path 'source/stylesheets/fonts'
+  #sprockets.append_path 'source/images'
 end
 
 

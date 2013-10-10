@@ -3,6 +3,10 @@
 @import base
 @import tech_methods
 @import projects
+@import utils
+
+@import navbar
+@import footer
 
 .page-container
   padding-top: 50px
@@ -58,9 +62,9 @@
     +border-radius(4px)
     color: #fff
     background: rgba(0,0,0,0.1)
-    +transition(background 0.2s ease, border 0.2s ease)
+    +transition(background 0.2s ease, border 0.2s ease, color 0.2s ease)
     &:hover, &:focus
-      color: #fff
+      color: $brandColor
       background: rgba(0,0,0,0.5)
       border-color: rgba(255,255,255,0.5)
 

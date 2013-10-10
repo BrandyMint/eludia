@@ -3,19 +3,20 @@
 .application-footer
   padding: 30px 0
   margin-top: 60px
-  background: $grayDark
+  background: $footerBackground
   color: $grayLighter
   -webkit-font-smoothing: antialiased
   h1, h2, h3, h4, h5, h5, h6
     text-shadow: none
   a
-    color: lighten($linkColor, 40%)
+    +transition(color 0.2s ease)
+    color: desaturate(lighten($brandColor, 20%), 20%)
     &:hover
-      color: lighten($linkColor, 50%)
+      color: lighten($brandColor, 30%)
   hr
-    border-top: 1px solid darken($grayDark, 10%)
+    border-top: 1px solid darken($footerBackground, 10%)
 .footer-map-block
-  background: darken($grayDark, 10%)
+  background: darken($footerBackground, 10%)
   padding: 10px
   margin-top: 10px
   ymaps, img
