@@ -1,0 +1,58 @@
+.container
+  .row
+    %section.col-md-8.col-md-offset-3
+      .technologies-container
+        %h2.services-header
+          Our services
+        %h4.services-subheader
+          We develop and improve digital&nbsp;products.
+          %br
+          Define, develop, test, make&nbsp;better.
+        - services_list = ['Full stack applications', 'SaaS solutions', 'Cloud&ndash;based backends', 
+          'Code analysis and refactoring', 'Performance optimization', 'Responsive design', 
+            'iOS and Android apps development', 'APIs for mobile and web apps']
+      .services-list
+        - services_list.each_with_index do |s,i|
+          %h4.services-list-item.pull-left
+            = s.html_safe
+        .clearfix
+%hr
+.container
+  .row
+    %section.col-md-6
+      .technologies-container
+        %h3.technologies-title Modern stack of technologies
+        -# for text-only item use :no_logo_<name>, name is technology name
+        - tech_logos = {'ruby.svg' => 'Ruby', 'rails.svg' => 'Ruby on Rails', 'clojure.svg' => 'Clojure',
+          'postgres.svg' => 'PostgreSQL', 'elasticsearch.svg' => 'Elasticsearch', 'aws.svg' => '',  'redis.svg' => 'Redis', 'faye.png' => 'Faye',
+            'backbone.svg' => 'Backbone.js', 'marionette.png' => 'Marionette', 'html5.svg' => 'HTML5', 'css3.svg' => 'CSS3', 'haml.svg' => 'HAML', 'sass.svg' => 'SASS', 
+              'coffeescript.svg' => 'CoffeeScript', 'apple.svg' => 'iOS', 'android.svg' => 'Android' }
+        %ul.tech-logos.unstyled
+          - tech_logos.each_pair do |logo, title|
+            -#.col-xs-3.col-sm-2.col-md-1.col-lg-1.tech-logo-block
+            %li{class: "pull-left tech-logo tech-logo-#{logo}"}
+              - unless logo.to_s.match("no_logo")
+                %img.tech-logo-image.pull-left{ src: "images/tech_logos/#{logo}" }
+              .pull-left.tech-logo-label.muted= title
+              .clearfix
+          .clearfix
+      %hr.mini.visible-sm.visible-xs
+    %section.col-md-6
+      .technologies-container
+        %h3.technologies-title Smart process principles
+        %ul.methods-list
+          %li
+            %strong Scrum
+            &mdash; iterative and agile process based on team work with clients involved
+          %li
+            %strong Lean production
+            &mdash; we deliver as fast as possible and keep product scalable
+          %li
+            %strong Test&ndash;driven development
+            (TDD)
+          %li
+            %strong Domain&ndash;driven development
+            (DDD)
+          %li
+            %strong Continuous integration
+            (CI)

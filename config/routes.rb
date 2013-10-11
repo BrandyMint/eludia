@@ -5,7 +5,7 @@ module RouteHelpers
 
   def production_url
     ## Update this with you production URL
-    "http://www.production_url.com"
+    "http://www.brandymint.com"
   end
 
   def page_path
