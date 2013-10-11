@@ -1,19 +1,13 @@
 #  require_tree ./vendor
 #  require_tree ./lib
 #= require jquery/jquery.min
-# require jquery-mobile
 #= require bootstrap
 
 $ ->
   #$(".collapse").collapse()
-  #console.log 'application.js.coffee loaded'
-  #$(document).on 'scroll', (e) ->
-
   userAgent = navigator.userAgent
-
   android = userAgent.match(/(Android)/g)
   ios = userAgent.match(/(iPhone)/g) || userAgent.match(/(iPad)/g)
-
   lastScrollTop = 0
   unless (ios || android)
     $(window).on 'scroll', (event) ->

@@ -1,0 +1,40 @@
+%a{ :name => 'contacts' }
+.container
+  .row
+    .col-sm-6.col-md-3
+      .pull-left
+        %span.glyphicon.glyphicon-send.icon-color-gray-light
+        &nbsp;
+      .pull-left
+        %h5.no-margin-top= link_to 'danil@brandymint.ru', 'mailto:danil@brandymint.ru'
+      .clearfix
+
+    .col-sm-6.col-md-4
+      .pull-left
+        %span.glyphicon.glyphicon-earphone.icon-color-gray-light
+        &nbsp;
+      .pull-left
+        %h5.no-margin-top
+          = link_to 'danil_pismenny', 'skype:danil_pismenny'
+        %h5
+          = link_to 'tanya_elacheva', 'skype:tanya_elacheva'
+        %h5.no-margin-bottom
+          %span.phonenumber
+            -#= link_to '+79033891228', 'skype:+79033891228'
+            +7 903 389 12 28
+            &nbsp;
+          %small.muted Danil Pismenny
+        %br
+      .clearfix
+    .col-sm-6.col-md-5
+      = partial 'map_link'
+      %br
+      %span.glyphicon.glyphicon-paperclip.icon-color-gray-light
+      = link_to 'Bank details'.html_safe, 'https://docs.google.com/document/d/1bDvbMnH396FZZNk74YtxNkb_O-kWTicpiVLAfo_92_E/edit', target: :blank
+      %br
+%hr
+.container
+  %p
+    &copy; Brandymint LLC, 2010&ndash;2013
+
+
