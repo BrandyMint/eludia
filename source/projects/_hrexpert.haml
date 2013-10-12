@@ -1,0 +1,32 @@
+.row.project-block
+  .col-md-5
+    %img.project-image.img-responsive{alt: "Brandymint projects: hrexpert", src: "images/projects/hrexpert.jpg" }
+
+  .col-md-7
+    -#%img.project-icon.pull-left{src: 'images/projects/hrexpert_logo.png'}
+    %h2.project-title.pull-left
+      HRExpert
+    .clearfix
+    
+    .project-features
+      - features = ['Server-side API', 'Data sync']
+      - features.each_with_index do |t, i|
+        %span= t
+
+    %p.project-description
+      iPad application for HR specialists that saves time and helps to organize interviews.
+   
+    %h5.technology-title Technologies
+    .project-technologies
+      - technologies = ['iOS development']
+      - technologies.each_with_index do |t, i|
+        %span= t
+    %h5.technology-title Methodologies
+    .project-technologies
+      - methodologies = ['Scrum']
+      - methodologies.each_with_index do |t, i|
+        %span= t
+
+    %br
+
+

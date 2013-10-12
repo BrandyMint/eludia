@@ -20,6 +20,13 @@
   text-align: center
   padding: 50px 0
 
+
+.project-block
+  @media screen and (min-width: $screen-md)
+  padding:
+    top: 20px
+    bottom: 20px
+
 .project-image
   margin-bottom: 10px
   +border-radius(4px)
@@ -32,6 +39,9 @@
       bottom: 10px
   img
     width: 172px
+    &.project-icon
+      width: auto
+      height: 96px
 
 .technology-title
   margin:
