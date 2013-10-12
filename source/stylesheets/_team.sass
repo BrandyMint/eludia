@@ -15,12 +15,16 @@
   @extend .col-md-6
   margin-bottom: $grid-gutter-width
   +box-sizing(border-box)
-.team-list-item-content
+
+.team-list-item-content,
+.team-list-item-content-short
   padding: 10px
   background: #fff
   +border-radius(4px)
   +box-shadow(0 1px 1px rgba(0,0,0,0.1))
   +box-shadow(border-box)
+
+.team-list-item-content
   @media screen and (min-width: $screen-sm)
     height: 220px
     overflow: hidden
