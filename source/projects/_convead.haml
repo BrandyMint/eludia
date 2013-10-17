@@ -1,4 +1,51 @@
+//= ProjectBlock.first
+
+= data.projects.first
+
 .row.project-block
+  .col-md-5
+    %img.project-image.img-responsive{alt: "Brandymint projects: Convead", src: "images/projects/convead.jpg" }
+
+  .col-md-7
+    %h2.project-title
+      Convead.com
+      //%br
+      //%span.text-muted Lead your business to better sales
+    
+    -#%h5.project-features-title Features
+    .project-features
+      - features = ['100k+ requests per minute', 'Scalable cloud-based solution', 'Realtime monitoring', 'Support chat widget', 'CRM', 'Data segments and filters']
+      - features.each_with_index do |t, i|
+        %span= t
+
+    %p.project-description
+      Convead is a
+      %strong high-load realtime system
+      and CRM service that reveals your customers' behaviour.
+      Define filters and segments for visitors and communicate with clients and newcomers to help them 
+      with finding necessary information and purchasing your products.
+
+    %h5.technology-title Technologies
+    .project-technologies
+      - technologies = ['Ruby on Rails', 'Erlang', 'Sinatra', 'Websockets', 'Faye', 'CoffeeScript', 'Backbone', 'Marionette']
+      - technologies.each_with_index do |t, i|
+        %span= t
+    %h5.technology-title Methodologies
+    .project-technologies
+      - methodologies = ['Test-driven development', 'Domain-driven development', 'Scrum']
+      - methodologies.each_with_index do |t, i|
+        %span= t
+    %br
+
+    %a.pull-right.btn.btn-default.btn-project-link{href: 'http://convead.com/', target: :blank}
+      convead.com &rarr;
+    .clearfix
+
+
+
+
+
+-#.row.project-block
   .col-md-5
     %img.project-image.img-responsive{alt: "Brandymint projects: Convead", src: "images/projects/convead.jpg" }
 

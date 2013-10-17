@@ -1,0 +1,32 @@
+-
+  slug: convead
+  title: Convead
+  url: 'http://convead.com'
+  image: 'convead.png'
+  description: |
+    "Convead is a high-load realtime system and CRM service that reveals your customers'
+    behaviour. Define filters and segments for visitors and communicate with clients and 
+    newcomers to help them with finding necessary information and purchasing your products."
+  features:
+    1: 100k+ requests per minute
+    2: Scalable cloud-based solution
+    3: Realtime monitoring
+    4: Support chat widget
+    5: CRM
+    6: Data segments and filters
+  technologies:
+    1: Ruby on Rails
+    2: Erlang
+    3: Sinatra
+    4: Websockets
+    5: Faye
+    6: CoffeeScript
+    7: Backbone
+    8: Marionette
+  methodologies:
+    1: Test-driven development
+    2: Domain-driven development
+    3: Scrum
+
+
+
