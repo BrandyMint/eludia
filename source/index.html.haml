@@ -32,7 +32,6 @@ body_class: index
     .row.project-block
       .col-md-5
         %img.project-image.img-responsive{alt: "Brandymint projects: #{p.slug}", src: "images/projects/#{p.slug}.jpg" }
-
       .col-md-7
         %h2.project-title
           = p.title
@@ -40,29 +39,24 @@ body_class: index
           - features = p.features
           - features.each_pair do |k,v|
             %span= v
-
         %p.project-description
-          = Haml::Filters::Markdown.render p.description
-          -#  Convead is a
-            %strong high-load realtime system
-            and CRM service that reveals your customers' behaviour.
-            Define filters and segments for visitors and communicate with clients and newcomers to help them 
-            with finding necessary information and purchasing your products.
-
+          -# using markdown:
+          = md p.description
         %h5.technology-title Technologies
         .project-technologies
-          -# technologies = ['Ruby on Rails', 'Erlang', 'Sinatra', 'Websockets', 'Faye', 'CoffeeScript', 'Backbone', 'Marionette']
-          -# technologies.each_with_index do |t, i|
-            %span= t
+          - technologies = p.technologies
+          - technologies.each_pair do |k,v|
+            %span= v
         %h5.technology-title Methodologies
         .project-technologies
-          -# methodologies = ['Test-driven development', 'Domain-driven development', 'Scrum']
-          -# methodologies.each_with_index do |t, i|
-            %span= t
+          - methodologies = p.methodologies
+          - methodologies.each_pair do |k,v|
+            %span= v
         %br
 
       %a.pull-right.btn.btn-default.btn-project-link{href: 'http://convead.com/', target: :blank}
-        convead.com &rarr;
+        = p.url
+        &rarr;
       .clearfix
 
 
