@@ -4,9 +4,10 @@
   url: 'http://convead.com'
   image: 'convead.png'
   description: |
-    "Convead is a high-load realtime system and CRM service that reveals your customers'
+    # markdown
+    __Convead__ is a high-load realtime system and CRM service that reveals your customers
     behaviour. Define filters and segments for visitors and communicate with clients and 
-    newcomers to help them with finding necessary information and purchasing your products."
+    newcomers to help them with finding necessary information and purchasing your products.
   features:
     1: 100k+ requests per minute
     2: Scalable cloud-based solution

@@ -42,11 +42,12 @@ body_class: index
             %span= v
 
         %p.project-description
-          Convead is a
-          %strong high-load realtime system
-          and CRM service that reveals your customers' behaviour.
-          Define filters and segments for visitors and communicate with clients and newcomers to help them 
-          with finding necessary information and purchasing your products.
+          = Haml::Filters::Markdown.render p.description
+          -#  Convead is a
+            %strong high-load realtime system
+            and CRM service that reveals your customers' behaviour.
+            Define filters and segments for visitors and communicate with clients and newcomers to help them 
+            with finding necessary information and purchasing your products.
 
         %h5.technology-title Technologies
         .project-technologies
