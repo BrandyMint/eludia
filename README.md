@@ -1,32 +1,28 @@
-# Middleman Boilerplate Template
+# Brandymint static site
 ------
 
-## Intro
+## Development
 
-This is a feature-packed [Middleman](http://middlemanapp.com/) project template. Essentially it is an evolving collection or regularly used helpers, models, mixins, frameworks and examples to aid with rapid static site generation. 
+`bundle install` first.
 
-[Middleman](http://middlemanapp.com/) is a static site generator based on Sinatra. Providing dozens of templating languages (Haml, Sass, Compass, Slim, CoffeeScript, and more). Makes minification, compression, cache busting, Yaml data (and more) an easy part of your development cycle.
+`bundle exec middleman` starts a server on `0.0.0.0:4567` (liveupdate included).
 
+`bundle exec middleman build` builds a static site in `build` folder.
 
-## Usage
+---
 
-Download and install into ~/.middleman (you'll have to create this directory if it's not already there). You can then use it with the `--template` flag on `middleman init`. For example: `middleman init your-project --template=middleman-boilerplate`
+## Data and content
 
-For more help follow [Middleman's project template instructions](http://middlemanapp.com/getting-started/).
+`models` folder contains models.
 
-## Features
-- Middleman 3.0.6  
-- Middleman LiveReload
-- [Twitter Bootstrap](http://twitter.github.com/bootstrap/) 2.1.1  
-- [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate)   
-- [HAML](http://haml.info/)  
-- [SASS](http://sass-lang.com/)  
-- [Bourbon](http://thoughtbot.com/bourbon/) SASS mixins  
-- Markdown support
-- and more 
+Data is stored in `data` folder in .yml files — *in process*
 
+Access data in templates with `= data.yml_file.key...` objects, like `= data.projects.first.title`
 
+---
 
-## Whats missing?
-- Finish Model examples
-- Documentation  
+## What to do?
+- Migrate all data to yml
+- Large texts in markdown (use redcarpet)
+- Locale switch
+- Russian content
