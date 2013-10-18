@@ -4,8 +4,9 @@ class Project
 
   def self.build(yaml)
     project = project.new
-    project.key = yaml['key'] || "Unknown"
-    project.title = yaml['title'] || "Unknown"
+    project.slug = yaml['slug'] || "Unknown"
+    project.title = yaml['title']
+    project.logo = yaml['logo']
     project.url = yaml['url'] || "Unknown"
     #project.slug = "#{project.title.downcase}"
     project.image = yaml['image'] || "Unknown"

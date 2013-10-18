@@ -11,8 +11,9 @@
   margin-bottom: 0.7em
 
 .team-list-item
-  @extend .col-lg-4
-  @extend .col-md-6
+  //@extend .col-lg-4
+  //@extend .col-md-6
+  @extend .col-lg-12
   margin-bottom: $grid-gutter-width
   +box-sizing(border-box)
 
@@ -25,11 +26,15 @@
   +box-shadow(border-box)
 
 .team-list-item-content
-  @media screen and (min-width: $screen-sm)
+  //@media screen and (min-width: $screen-sm)
     height: 220px
     overflow: hidden
     text-overflow: ellipsis
 
+
+.team-list-photo
+  img
+    max-width: 100%
 
 .team-list-name,
 .team-list-position,
@@ -38,14 +43,13 @@
   margin-bottom: 0.5em
 
 .team-list-name
-  margin-top: 0.3em
+  margin-top: 0.5em
   font-size: 1.2em
   font-weight: 700
 .team-list-position
   font-weight: 500
 .team-list-experience
-  display: none
-  //@extend small
+  @extend small
   //@extend .col-md-1
 .team-list-skills
   font-size: 14px
