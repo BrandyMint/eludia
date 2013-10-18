@@ -1,0 +1,163 @@
+-
+  slug: convead
+  title: Convead
+  url: 'http://convead.com'
+  image: 'convead.jpg'
+  description: |
+    __Convead__ is a high-load realtime system and CRM service that reveals your customers
+    behaviour. Define filters and segments for visitors and communicate with clients and 
+    newcomers to help them with finding necessary information and purchasing your products.
+  features:
+    1: 100k+ requests per minute
+    2: Scalable cloud-based solution
+    3: Realtime monitoring
+    4: Support chat widget
+    5: CRM
+    6: Data segments and filters
+  technologies:
+    1: Ruby on Rails
+    2: Erlang
+    3: Sinatra
+    4: Websockets
+    5: Faye
+    6: CoffeeScript
+    7: Backbone
+    8: Marionette
+  methodologies:
+    1: Test-driven development
+    2: Domain-driven development
+    3: Scrum
+-
+  slug: clickavia
+  logo: clickavia_logo.svg
+  url: 'http://clickavia.ru/'
+  image: 'clickavia.jpg'
+  description: |
+    Clickavia provides 
+    __comfortable service to find and buy airline tickets__.
+    These great folks asked to analyze existing codebase and refactor some modules to rise code quality level at first.
+    Later they offered us to develop mobile applications so their customers could search and buy tickets everywhere they go.
+    That work included separate
+    __server-side API__
+    and iPhone/iPad applications (now in alpha).
+  features:
+    1: Code analysis and refactoring (ruby)
+    2: Custom server-side API
+    3: iOS development
+  technologies:
+    1: Ruby
+    2: Objective-C
+  methodologies:
+    1: Rapid prototyping
+    2: Scrum
+-
+  slug: swapurban
+  logo: swapurban_logo.svg
+  url: http://swapurban.com
+  image: 'swapurban.jpg'
+  description: |
+    More and more people prefer to exchange between each other instead of buying all new.
+    __SwapUrban__
+    focuses on this fact and offers a service to swap books.
+    It is based on
+    __Amazon's book search__
+    so you can find any book there, add it to your wishlist and get notified if someone offers it (or get rid of your unused books).
+    __Swap process__
+    has its own iterface with price balance between offers and wants.
+    __Realtime chat__  helps to communicate seamless and define exchange details.
+    
+    There's a strong accent on  __geolocation–based communities and filtering__ so you don't need to waste your time searching offers nearby.
+    
+    This startup founders came to us with ideas in their bright minds, and we built the product from the very start,
+    including paper prototypes and intercative one.
+    
+    SwapUrban is __award–winning participant of Venture Fair 2013 (Kazan, Russia)__.
+  features:
+    1: Realtime communication
+    2: Amazon Search API
+    3: Geolocation
+  technologies:
+    1: Ruby on Rails
+    2: Faye
+  methodologies:
+    1: Rapid prototyping
+    2: Scrum
+    3: Test-driven development
+-
+  slug: investcafe
+  logo: investcafe_logo.svg
+  url: http://investcafe.ru
+  image: 'investcafe.jpg'
+  description: |
+    Investcafe is Russia’s first independent research firm that provides institutional investors with unbiased analysis 
+    and insight from a team of experts.
+    
+    We were involved in this project when it was popular source of market news and analytics.
+    The project was growing fast and needed to become scalable and reliable.
+    Originally it based on Bitrix CMS and our mission was to develop new platform with bucket of additional features.
+    We chose Ruby on Rails and carefully took existing database to the new environment.
+    Development included full redesign with responsive design approach.
+  features:
+    1: 300,000 pageviews per day
+    2: Migrating to custom platform
+    3: Database transfer
+    4: Custom server-side API
+    5: Redesign
+    6: Responsive design
+    7: iOS development
+  technologies:
+    1: Ruby on Rails
+    2: Objective-C
+  methodologies:
+    1: Rapid prototyping
+    2: Scrum
+    3: Test–driven development
+-
+  slug: hrexpert
+  title: HRexpert
+  appstore: 'https://itunes.apple.com/ru/app/hr-ehpert/id665800658?l=en&mt=8'
+  image: 'hrexpert.jpg'
+  description: |
+    iPad application for HR specialists that saves time and helps to organize interviews.
+  features:
+    1: Server–side API
+    2: Data sync
+  technologies:
+    1: iOS development
+  methodologies:
+    1: Scrum
+-
+  slug: chebru
+  title: Cheb.ru android app
+  image: 'chebru.jpg'
+  google_play: 'https://play.google.com/store/apps/details?id=ru.brandymint.chebru'
+  description: |
+    A guide to Cheboksary city with offline database, streets and companies search, location-based smart search results.
+  features:
+    1: Offline database
+    2: Google and Yandex maps
+    3: Geolocation
+  technologies:
+    1: Android development
+  methodologies:
+    1: Scrum
+-
+  slug: anna
+  title: "Coats'n'Shorts"
+  image: 'anna.jpg'
+  appstore: 'https://itunes.apple.com/ru/app/anin-den/id583847885?mt=8'
+  description: |
+    Coats'n'Shorts for iOS, an update to its popular educational dress up game for children under six. 
+    Complete with interactive and colorful backgrounds, Coats'n'Shorts teaches children how to choose 
+    the right clothes for different seasons, occasions, and holidays. Users proceed through twelve levels 
+    by helping Anna mix and match tops, bottoms, and accessories to create the perfect outfit. 
+    Ideal for teaching young kids how to match, categorize, and choose clothing, 
+    Coats'n'Shorts rewards players with a unique prize upon the completion of each level.
+  features:
+    1: Hand-crafted illustrations
+    2: Animations
+    3: In–App purchases
+  technologies:
+    1: iOS Development
+  methodologies:
+    1: Scrum

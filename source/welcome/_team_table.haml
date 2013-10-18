@@ -1,102 +1,30 @@
-.team-list.row
-  .team-list-item
-    .team-list-item-content
-      .team-list-name
-        %a{href: "https://github.com/dapi", target: "_blank"} Danil Pismenny
-      .team-list-position team lead
-      .team-list-experience ~15 years
-      .team-list-skills team building and leading, system architect, Ruby, Ruby On Rails, Rack, EventMachine, CoffeeScript, Backbone, Marionette, Postgresql (pl/pgsql), Elasticsearch, Redis (pub/sub), Faye, Websockets/EventSource, git flow, Strong OOP (GRASP, SOLID, DDD), TDD (rspec, cucumber, minitest)
-      //.s1 Perl, PHP, C, Pascal, Asm x86, Linux
-      //.s1 clojure, FP
-
-  .team-list-item
-    .team-list-item-content
-      .team-list-name
-        %a{href: "https://github.com/aleksxor", target: "_blank"} Alexey Khoroshev
-      .team-list-position senior developer
-      .team-list-experience ~20 years
-      .team-list-skills Ruby (Ruby On Rails, Sinatra); PHP (Zend Framework, Yii, Symfony 2.x, 1.x); JavaScript (CoffeeScript, Backbone, Marionette, Angular.js, Node.js, jQuery, MooTools); MySql; PostgreSql (pl/pgsql); Faye; TDD (rspec, cucumber)
-      //.s1 Asm x86, z80; C/C++; Perl; Erlang (ejabberd); Lua; Linux/FreeBSD; Java
-      //.s1 clojure/java, clojurescript
-      
-  .team-list-item
-    .team-list-item-content
-      .team-list-name
-        %a{href: "https://github.com/unloved", target: "_blank"} Alexander Logunov
-      .team-list-position regular+ developer
-      .team-list-experience 6 years
-      .team-list-skills Ruby (Rails, Sinatra, Rack); PHP (Yii); JavaScript (CoffeeScript, Backbone, jQuery); MySql; PostgreSql; Faye; ElasticSearch, Git
-      //.s1 Pascal/Delphi
-      //.s1 unity3d
-      
-  .team-list-item
-    .team-list-item-content
-      .team-list-name
-        %a{href: "https://github.com/sibsfinx", target: "_blank"} Alexander Mescheryakov
-      .team-list-position ux/ui/front-end developer
-      .team-list-experience 6 years
-      .team-list-skills User Experience and Interface Design (web, mobile apps, mobile and responsive web), Prototyping, Front-end Development (Ruby on Rails, Sinatra, PHP), Mobile Apps (iOS/Objective-C, Android/Java), HTML5/HAML, CSS3/SCSS/SASS, Javascript (CoffeeScript, JQuery, MooTools), Git, Graphic and Web Design
-      //.s1 Graphic Design, Branding, Web Design, Front-end Development
-      //.s1 ios development, computer science, project/product management
-      
-  .team-list-item
-    .team-list-item-content
-      .team-list-name
-        %a{href: "https://github.com/Nitr", target: "_blank"} Eugeny Stepanov
-      .team-list-position regular developer
-      .team-list-experience 3 years
-      .team-list-skills Ruby/RubyOnRails, PHP, JavaScript(CoffeeScript, Backbone, JQuery, SpineJS, Marionette, RequireJS), MySQL, PostgreSQL, Faye, OOP(GRASP, GOF, SOLID), Elasticsearch, Solr, Git, Svn
-      //.s1 C/C++, Perl, PicASM
-      //.s1 metaprogramming
-
-  .team-list-item
-    .team-list-item-content
-      .team-list-name
-        %a{href: "https://github.com/illarionov", target: "_blank"} Alexey Illarionov
-      .team-list-position devops
-      .team-list-experience 8 years
-      .team-list-skills Network Administration, Linux/FreeBSD, bash scripting, Chef,  Android
-      //.s1 C, Perl, ruby, Linux/FreeBSD, Java
-      //.s1 SCM Chef
-
-  .team-list-item
-    .team-list-item-content-short
-      .team-list-name
-        %a{href: "https://github.com/denisdbv", target: "_blank"} Denis Dubov
-      .team-list-position iOS senior developer
-      //.team-list-experience 8 years
-      //.team-list-skills Network Administration, Linux/FreeBSD, bash scripting, Chef,  Android
-      //.s1 C, Perl, ruby, Linux/FreeBSD, Java
-      //.s1 SCM Chef
-
-  .team-list-item
-    .team-list-item-content-short
-      .team-list-name
-        %a{href: "https://github.com/anaumov", target: "_blank"} Alexey Naumov
-      .team-list-position regular developer, iOS junior
-      //.team-list-experience 8 years
-      //.team-list-skills Network Administration, Linux/FreeBSD, bash scripting, Chef,  Android
-      //.s1 C, Perl, ruby, Linux/FreeBSD, Java
-      //.s1 SCM Chef
-
-  .team-list-item
-    .team-list-item-content-short
-      .team-list-name
-        %a{href: "https://github.com/heretge", target: "_blank"} Andrey Sidorov
-      .team-list-position ruby junior developer
-      //.team-list-experience 8 years
-      //.team-list-skills Network Administration, Linux/FreeBSD, bash scripting, Chef,  Android
-      //.s1 C, Perl, ruby, Linux/FreeBSD, Java
-      //.s1 SCM Chef
-
-  .team-list-item
-    .team-list-item-content-short
-      .team-list-name
-        %a{href: "https://github.com/bespalow", target: "_blank"} Victor Bespalov
-      .team-list-position iOS junior
-      //.team-list-experience 8 years
-      //.team-list-skills Network Administration, Linux/FreeBSD, bash scripting, Chef,  Android
-      //.s1 C, Perl, ruby, Linux/FreeBSD, Java
-      //.s1 SCM Chef
-
+-#.team-list.row
+.team-list
+  - team = data.team
+  - team.each do |t|
+    .team-list-item
+      .team-list-item-content
+        .row
+          .col-lg-2.col-sm-4.team-list-photo
+            - if t.photo.present?
+              %img{ src: "images/team/#{t.photo}" }
+            - else
+              %img{ src: 'images/team/none.png' }
+          .col-lg-10.col-sm-8
+            .team-list-name
+              - if t.name
+                - if t.github
+                  = link_to t.name, t.github, target: :blank
+                - else
+                  = t.name
+            .team-list-position
+              = t.position if t.position
+            .team-list-experience
+              - if t.experience
+                = t.experience
+                in industry
+            .team-list-skills
+              = t.skills if t.skills
+            -#.team-list-background
+            -#.team-list-learning
 

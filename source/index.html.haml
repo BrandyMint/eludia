@@ -24,10 +24,56 @@ body_class: index
     %h1.projects-header
       Our work
 
-- projects = [:convead, :clickavia, :investcafe, :swapurban, :hrexpert, :chebru, :anna]
+-# projects = [:convead, :clickavia, :investcafe, :swapurban, :hrexpert, :chebru, :anna]
+- projects = data.projects
 - projects.each_with_index do |p,i|
   .container
-    = partial "projects/#{p}.haml"
+    -#= partial "projects/#{p}.haml"
+    .row.project-block
+      .col-md-5
+        - if p.image
+          %img.project-image.img-responsive{alt: "Brandymint projects: #{p.slug}", src: "images/projects/#{p.image}" }
+      .col-md-7
+        %h2.project-title
+          - if p.title
+            = p.title
+          - if p.logo
+            %img{ src: "images/projects/#{p.logo}" }
+        .project-features
+          - features = p.features if p.features
+          - features.each_pair do |k,v|
+            %span= v
+        %p.project-description
+          = md p.description if p.description
+        %h5.technology-title Technologies
+        .row
+          .col-md-7
+            .project-technologies
+              - technologies = p.technologies if p.technologies
+              - technologies.each_pair do |k,v|
+                %span= v
+            %h5.technology-title Methodologies
+            .project-technologies
+              - methodologies = p.methodologies if p.methodologies
+              - methodologies.each_pair do |k,v|
+                %span= v
+            %br
+          .col-md-5
+            - if p.url.present?
+              %a.pull-right.btn.btn-default.btn-project-link{href: p.url, target: :blank}
+                = p.url
+                &rarr;
+            .clearfix
+            - if p.appstore.present?
+              %a.pull-right{href: p.appstore, target: :blank}
+                = image_tag('badge_appstore-lrg.gif')
+            .clearfix
+            - if p.google_play.present?
+              %a.pull-right{href: p.google_play, target: :blank}
+                = image_tag('google_play.png')
+            .clearfix
+
+
   - unless i == (projects.count - 1)
     %hr
 
