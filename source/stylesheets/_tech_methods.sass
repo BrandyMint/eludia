@@ -75,10 +75,12 @@ li.tech-logo
 
 ul.methods-list
   margin-left: 0
-  padding-left: 10px
+  padding-left: 0
   & > li
-    margin-bottom: 10px
-
+    margin: 15px 0
+    list-style: none
+    padding: 10px 0 20px 0
+    border-bottom: 1px solid darken(#fff,5%)
 
 //@each $logo in ruby, rails, rspec, clojure, postgres, elasticsearch, redis, html5, css3, haml, sass, coffeescript, backbone, apple, android
   .tech-logo-#{$logo}
