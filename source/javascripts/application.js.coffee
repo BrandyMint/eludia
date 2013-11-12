@@ -1,7 +1,13 @@
+#  require_tree ../vendor/components
 #  require_tree ./vendor
 #  require_tree ./lib
 #= require jquery/jquery.min
 #= require bootstrap
+#= require underscore/underscore
+#= require backbone/backbone
+#= require backbone.routefilter/src/backbone.routefilter
+#= require backbone.babysitter/lib/backbone.babysitter
+#= require backbone.marionette/lib/backbone.marionette
 
 $ ->
   #$(".collapse").collapse()
