@@ -1,4 +1,5 @@
 #= require jquery/jquery
+#= require modernizr/modernizr
 #= require bootstrap
 #= require underscore/underscore
 #= require backbone/backbone
