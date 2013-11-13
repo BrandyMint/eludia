@@ -145,6 +145,7 @@
   slug: anna
   title: "Coats'n'Shorts"
   image: 'anna.jpg'
+  image_link: 'http://coatsnshorts.com/'
   appstore: 'https://itunes.apple.com/ru/app/anin-den/id583847885?mt=8'
   description: |
     Coats'n'Shorts for iOS, an update to its popular educational dress up game for children under six. 
