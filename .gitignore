@@ -15,4 +15,4 @@
 # Ignore Sass' cache
 /.sass-cache
 
-source/javascripts/vendor/
+source/javascripts/vendor

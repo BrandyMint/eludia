@@ -1,7 +1,6 @@
 #  require_tree ./vendor
-
 #= require jquery/jquery
-#= require bootstrap/bootstrap
+#= require bootstrap
 #= require underscore/underscore
 #= require backbone/backbone
 #= require backbone.marionette/lib/backbone.marionette
