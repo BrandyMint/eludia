@@ -4,10 +4,9 @@
   "dependencies": {
     "jquery": "latest",
     "jquery-mobile": "latest",
+    "bootstrap.css": "latest",
     "underscore": "latest",
     "backbone": "latest",
-    "backbone.routefilter": "latest",
-    "backbone.babysitter": "latest",
     "backbone.marionette": "latest"
   },
   "ignore": [
