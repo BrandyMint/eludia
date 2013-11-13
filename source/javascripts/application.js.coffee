@@ -1,7 +1,9 @@
-#  require_tree ./vendor
-#  require_tree ./lib
-#= require jquery/jquery.min
+#= require jquery/jquery
+#= require modernizr/modernizr
 #= require bootstrap
+#= require underscore/underscore
+#= require backbone/backbone
+#= require backbone.marionette/lib/backbone.marionette
 
 $ ->
   #$(".collapse").collapse()
