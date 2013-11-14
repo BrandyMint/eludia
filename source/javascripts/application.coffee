@@ -4,6 +4,14 @@
 #= require underscore/underscore
 #= require backbone/backbone
 #= require backbone.marionette/lib/backbone.marionette
+#= require application.init
+#= require_tree ./application/controllers
+#= require_tree ./application/collections
+#= require_tree ./application/helpers
+#= require_tree ./application/models
+#= require_tree ./application/templates
+#= require_tree ./application/views
+#= require_tree ./application/routers
 
 $ ->
   #$(".collapse").collapse()
@@ -36,5 +44,3 @@ $ ->
 
 @hideNavbar = ->
   $('.application-navbar.navbar-fixed-top').removeClass('transparent')
-
-
