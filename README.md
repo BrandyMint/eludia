@@ -7,7 +7,7 @@
 
 `bundle exec middleman` starts a server on `0.0.0.0:4567` (liveupdate included).
 
-`bundle exec middleman build` builds a static site in `build` folder.
+`bundle exec middleman build --verbose` builds a static site in `build` folder.
 
 ---
 
