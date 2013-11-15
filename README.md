@@ -19,6 +19,12 @@ Data is stored in `data` folder in .yml files — *in process*
 
 Access data in templates with `= data.yml_file.key...` objects, like `= data.projects.first.title`
 
+## Deploy
+
+`cap deploy`
+
+Работает авто-деплой из jenkins-а
+
 ---
 
 ## What to do?
