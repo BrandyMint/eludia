@@ -16,3 +16,4 @@
 /.sass-cache
 
 source/javascripts/vendor
+source/vendor/
