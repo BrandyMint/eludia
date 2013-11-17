@@ -17,19 +17,7 @@
         %li
           %a{href: "#{root_app_path}#contacts"} Contact us
         %li
-          %a.btn-hire-us{href: "#", data: {toggle: :modal, target: '#hire-us-modal'} } Hire us
+          = partial 'hire_us'
     .clearfix
-
-#hire-us-modal.modal.fade
-  .modal-dialog
-    .modal-content
-      .modal-header
-        %a.close{ 'data-dismiss': 'modal'} &times;
-        %h4.modal-title Hire us
-      .modal-body
-        %p Drop us a line to
-        %a{ href: 'mailto:danil@brandymint.ru' } danil@brandymint.ru
-        and we'll discuss your project, ideas and vision.
-        We also define estimates quite fast and offer flexible process pricing.
 
 

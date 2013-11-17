@@ -1,0 +1,26 @@
+#hire-us-modal.modal.fade{ role: :dialog}
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %a.close{ data: {dismiss: :modal} }
+          = "&times;".html_safe
+        %h4.modal-title Hire us
+      .modal-body
+        %p 
+          Drop us a line to
+          %a{ href: 'mailto:danil@brandymint.ru' }
+            danil@brandymint.ru
+          and we'll discuss your project, ideas and vision.
+          We also define estimates quite fast and offer flexible process pricing.
+      .modal-footer
+        .row
+          .col-sm-6.col-sm-offset-3
+            %a.btn.btn-lg.btn-block.btn-success{ href: 'mailto:danil@brandymint.ru' }
+              Write a letter
+          -#.col-xs-6
+            %a.btn.btn-block.btn-default{ data: {dismiss: :modal}}
+              .text-muted
+                No, thanks
+
+
+
