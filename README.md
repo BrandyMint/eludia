@@ -1,6 +1,10 @@
 # Brandymint static site
 ------
 
+## Generating new project
+
+`middleman init project_name --template=middleman-brandymint-template`
+
 ## Development
 
 `bundle install` first.
