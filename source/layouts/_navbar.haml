@@ -1,23 +1,15 @@
-.navbar.application-navbar.navbar-fixed-top
+.navbar.application-navbar.navbar-static-top
   .container
     %a.pull-left{href: "#{root_app_path}"}
-      %img.navbar-brand-logo{src: "#{root_app_path}images/logo_brandymint.svg", alt: 'Brandymint'}
+      .navbar-brand App
+      //%img.navbar-brand-logo{src: "#{root_app_path}images/logo_brandymint.svg", alt: 'Brandymint'}
     
     %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", type: "button"}
       %span.icon-bar
       %span.icon-bar
       %span.icon-bar
 
-    .navbar-collapse.collapse
-      %ul.nav.navbar-nav.pull-right
-        -#%li.active
-          %a{href: "#"} Home
-        %li
-          %a{href: "#{root_app_path}#projects"} Our work
-        %li
-          %a{href: "#{root_app_path}#contacts"} Contact us
-        %li
-          = partial 'hire_us'
     .clearfix
+
 
 
