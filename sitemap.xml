@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7" lang="en-us"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie10 lt-ie9 lt-ie8" lang="en-us"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie10 lt-ie9" lang="en-us"> <![endif]-->
+<!--[if IE 9]> <html class="no-js lt-ie10 lt-ie9" lang="en-us"> <![endif]-->
+<!--[if lt IE 10]> <html class="no-js lt-ie10" lang="en-us"> <![endif]-->
+<!--[if !IE]> > <![endif]-->
+<html class='no-js' lang='en'>
+  <!-- <![endif] -->
+  <head>
+    <title>BrandyMint &mdash; web and mobile applications development</title>
+    <meta charset='utf-8' content='text/html' http-equiv='content-type'>
+    <meta content='ie=edge,chrome=1' http-equiv='x-ua-compatible'>
+    <meta content='web and mobile application development company' name='description'>
+    <meta content='веб-разработка, web development, web-разработка, веб-разработчики, web-разработчики, мобильные приложения, iOS-приложения, iOS, Android-приложения, андроид-приложения, Android, андроид, разработчики мобильных приложений, разработка игр, iPad, игры для iPad, приложения для iPad, заказать приложение, заказать приложение appstore, заказать приложение ipad, заказать приложение iOS, заказать веб-приложение, заказать SaaS, разработка Saas, облачные приложения, облачные решения, Ruby, Ruby on Rails, Rails, заказать Ruby-приложение, разработка на Ruby, разработка на Ruby on Rails, Rails-разработчики, Ruby-разработчики, комплексные решения, команда разработчиков, команда разработчиков Ruby, команда разработчиков Ruby on Rails' name='keywords'>
+    <meta content='Brandy Mint LLC' name='author'>
+    <meta content='initial-scale=1.0,width=device-width' name='viewport'>
+    <meta content='yes' name='apple-mobile-web-app-capable'>
+    <meta content='translucent-black' name='apple-mobile-web-app-status-bar-style'>
+    <link href='/images/favicon.ico' rel='shortcut icon'>
+    <link href='/images/apple-touch-icon-precomposed.png' rel='apple-touch-icon-precomposed'>
+    <link href='/images/apple-touch-icon-76x76-precomposed.png' rel='apple-touch-icon-precomposed' sizes='76x76'>
+    <link href='/images/apple-touch-icon-120x120-precomposed.png' rel='apple-touch-icon-precomposed' sizes='120x120'>
+    <link href='/images/apple-touch-icon-152x152-precomposed.png' rel='apple-touch-icon-precomposed' sizes='152x152'>
+    <link href="/stylesheets/application.css?1385467298" media="screen" rel="stylesheet" type="text/css" />
+  </head>
+  <body class='page'>
+    <div class='application-container'>
+      <a name='top'></a>
+      <div class='navbar application-navbar navbar-static-top'>
+        <div class='container'>
+          <a class='pull-left' href='/'>
+            <div class='navbar-brand'>App</div>
+            <!-- /%img.navbar-brand-logo{src: "#{root_app_path}images/logo_brandymint.svg", alt: 'Brandymint'} -->
+          </a>
+          <button class='navbar-toggle' data-target='.navbar-collapse' data-toggle='collapse' type='button'>
+            <span class='icon-bar'></span>
+            <span class='icon-bar'></span>
+            <span class='icon-bar'></span>
+          </button>
+          <div class='clearfix'></div>
+        </div>
+      </div>
+      <?xml version="1.0" encoding="UTF-8"?>
+      <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+        <url>
+          <loc>http://www.brandymint.com/pages/chebru.html</loc>
+          <lastmod>2013-11-26T00:00:00+04:00</lastmod>
+          <changefreq>monthly</changefreq>
+          <priority>0.5</priority>
+        </url>
+        <url>
+          <loc>http://www.brandymint.com/pages/rubyulsk.html</loc>
+          <lastmod>2013-11-26T00:00:00+04:00</lastmod>
+          <changefreq>monthly</changefreq>
+          <priority>0.5</priority>
+        </url>
+        <url>
+          <loc>http://www.brandymint.com/index.html</loc>
+          <lastmod>2013-11-26T00:00:00+04:00</lastmod>
+          <changefreq>monthly</changefreq>
+          <priority>0.5</priority>
+        </url>
+        <url>
+          <loc>http://www.brandymint.com/error.html</loc>
+          <lastmod>2013-11-26T00:00:00+04:00</lastmod>
+          <changefreq>monthly</changefreq>
+          <priority>0.5</priority>
+        </url>
+      </urlset>
+      <footer class='application-footer'>
+        <a name='contacts'></a>
+      </footer>
+    </div>
+  </body>
+</html>
+<script src="/javascripts/application.js?1385467276" type="text/javascript"></script>
