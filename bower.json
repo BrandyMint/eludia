@@ -2,8 +2,7 @@
   "name": "brandymint2014",
   "version": "0.1",
   "dependencies": {
-    "jquery": "latest",
-    "jquery-mobile": "latest"
+    "jquery": "latest"
   },
   "ignore": [
     "**/.*",
