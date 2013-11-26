@@ -1,23 +1,7 @@
-@import variables
-@import mixins
-@import bootstrap/mixins
-
-.navbar.application-navbar
-  @extend .navbar-inverse
-  background: rgba(0,0,0,0.8)
-  //background: none
+.navbar.navbar-system
+  @extend .navbar-default
+  //background: rgba(0,0,0,0.8)
   border-bottom: 0
-  +transition(opacity 0.2s ease, height 0.2s ease)
-  opacity: 1
-  height: auto
-  overflow: auto
-  &.transparent
-    opacity: 0
-    height: 0
-    overflow: hidden
-
-  .navbar-toggle
-    border: 0
 
   .nav.navbar-nav
     & > li
