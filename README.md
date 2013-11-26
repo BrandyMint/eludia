@@ -1,9 +1,5 @@
-# Brandymint static site
+# Eludia redesign static site
 ------
-
-## Generating new project
-
-`middleman init project_name --template=middleman-brandymint-template`
 
 ## Development
 
@@ -30,9 +26,3 @@ Access data in templates with `= data.yml_file.key...` objects, like `= data.pro
 Работает авто-деплой из jenkins-а
 
 ---
-
-## What to do?
-- Migrate all data to yml
-- Large texts in markdown (use redcarpet)
-- Locale switch
-- Russian content
