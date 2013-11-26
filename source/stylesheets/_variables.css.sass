@@ -18,7 +18,7 @@ $greenLightTransparent: rgba(143,200,0,0.75)
 $brandColor: hsl(75, 100%, 40%)
 
 $blue: #08c
-$blueBrandColor: #1A94C4
+$blueBrandColor: #33A0FF
 $white: #fff
 $black: #000
 $red: #E65151
@@ -44,28 +44,38 @@ $bodyBackground: #fff
 $headingsColor: $textColor
 $headingsFontWeight: bold
 
-/* system navbar */
-
-$navbarSystemBackground: #33A0FF
-$navbarSystemText: lighten($textColor,20%)
-$navbarSystemTextShadowColor: rgba(0,0,0,0.3)
-$navbarSystemLinkColor: #ddd
-$navbarSystemLinkColorHover: lighten($blueBrandColor, 40%)
-$navbarSystemLinkColorActive: #fff
-$navbarSystemLinkBackgroundHover: transparent
-$navbarSystemLinkBackgroundActive: rgba(0,0,0,0.25)
 
 /* navbar system */
 
-$navbarMenuBackground: #33A0FF
+$navbarSystemBackground: #e6e6e6
+$navbarSystemText: #666666
+$navbarSystemTextShadowColor: transparent
+$navbarSystemLinkColor: darken($navbarSystemText, 10%)
+$navbarSystemLinkColorHover: $blueBrandColor
+$navbarSystemLinkColorActive: $navbarSystemLinkColorHover
+$navbarSystemLinkBackground: transparent
+$navbarSystemLinkBackgroundHover: transparent
+$navbarSystemLinkBackgroundActive: transparent
+
+$navbarSystem: $navbarSystemBackground $navbarSystemText $navbarSystemTextShadowColor $navbarSystemLinkColor $navbarSystemLinkColorHover $navbarSystemLinkColorActive $navbarSystemLinkBackground $navbarSystemLinkBackgroundHover $navbarSystemLinkBackgroundActive
+
+
+/* navbar menu */
+
+$navbarMenuBackground: $blueBrandColor
 $navbarMenuText: lighten($textColor,20%)
 $navbarMenuTextShadowColor: rgba(0,0,0,0.3)
 $navbarMenuLinkColor: #ddd
 $navbarMenuLinkColorHover: lighten($blueBrandColor, 40%)
 $navbarMenuLinkColorActive: #fff
+$navbarMenuLinkBackground: transparent
 $navbarMenuLinkBackgroundHover: transparent
 $navbarMenuLinkBackgroundActive: rgba(0,0,0,0.25)
 
+$navbarMenu: $navbarMenuBackground $navbarMenuText $navbarMenuTextShadowColor $navbarMenuLinkColor $navbarMenuLinkColorHover $navbarMenuLinkColorActive $navbarMenuLinkBackground $navbarMenuLinkBackgroundHover $navbarMenuLinkBackgroundActive
+
+
+/* buttons */
 
 $btnPrimaryBackground: $blue
 $btnPrimaryBackgroundHighlight: adjust-hue($btnPrimaryBackground, 10%)
