@@ -121,6 +121,11 @@ configure :build do
   # set :http_path, "/Content/images/"
 end
 
+activate :deploy do |deploy|
+  deploy.method = :git
+  deploy.build_before = true
+end
+
 after_configuration do
   @bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
   @bower_assets_path = File.join "#{root}", @bower_config["directory"]

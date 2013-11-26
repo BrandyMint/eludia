@@ -19,7 +19,11 @@ Data is stored in `data` folder in .yml files — *in process*
 
 Access data in templates with `= data.yml_file.key...` objects, like `= data.projects.first.title`
 
----
+## Развёртывание на eludia.icfdev.ru
+
+  middleman deploy
+
+Работает авто-деплой ветки master из jenkins-а
 
 ## What to do?
 - Migrate all data to yml
