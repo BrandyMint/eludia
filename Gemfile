@@ -12,6 +12,12 @@ gem "middleman-deploy"
 gem "middleman-livereload"
 gem "middleman-google-analytics"
 gem "middleman-navigation"
+gem 'eco'
+
+group :assets do
+  gem 'haml_coffee_assets'
+  gem 'execjs'
+end
 
 #gem "middleman-core"
 gem 'bootstrap-sass', '3.0.0.0', :require => false, :github => 'thomas-mcdonald/bootstrap-sass'

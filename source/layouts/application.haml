@@ -12,8 +12,7 @@
   %body{class: current_page.data.body_class || 'page'}
     .application-container
       %a{name: :top}
-      = partial 'layouts/navbar_system'
-      = partial 'layouts/navbar_menu'
+      = partial 'layouts/navbars'
       = yield
 
       = partial 'layouts/footer'
