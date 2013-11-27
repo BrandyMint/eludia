@@ -23,6 +23,13 @@ Access data in templates with `= data.yml_file.key...` objects, like `= data.pro
 
   middleman deploy
 
+## Ссылки:
+
+https://trello.com/b/L2ipO6wF/eludia
+
+
+## Автодеплой
+
 Работает авто-деплой ветки master из jenkins-а
 
 ## What to do?
