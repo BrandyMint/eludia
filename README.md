@@ -3,7 +3,9 @@
 
 ## Development
 
-`bundle install` first.
+`bundle install`
+
+`bower install`
 
 `bundle exec middleman` starts a server on `0.0.0.0:4567` (liveupdate included).
 
