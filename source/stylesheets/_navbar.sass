@@ -1,19 +1,29 @@
-.navbar.navbar-system
-  @extend .navbar-default
-  //background: rgba(0,0,0,0.8)
+@mixin customNavbar($navbarStyle)
+  $navbarBackground: nth($navbarStyle, 1)
+  $navbarText: nth($navbarStyle, 2)
+  $navbarTextShadowColor: nth($navbarStyle, 3)
+  $navbarLinkColor: nth($navbarStyle, 4)
+  $navbarLinkColorHover: nth($navbarStyle, 5)
+  $navbarLinkColorActive: nth($navbarStyle, 6)
+  $navbarLinkBackground: nth($navbarStyle, 7)
+  $navbarLinkBackgroundHover: nth($navbarStyle, 8)
+  $navbarLinkBackgroundActive: nth($navbarStyle, 9)
+  @extend .navbar-inverse
+  background: $navbarBackground
   border-bottom: 0
-
+  margin: 0
+  color: $navbarText
   .nav.navbar-nav
     & > li
       & > a
-        color: $grayLightest
+        color: $navbarLinkColor
         font-weight: 700
         -webkit-font-smoothing: antialiased
         +transition(color 0.2s ease, background 0.2s ease)
-        background: none
+        background: $navbarLinkBackground
         &:hover
-          color: $brandColor
-          background: rgba(0,0,0,0.3)
+          color: $navbarLinkColorHover
+          background: $navbarLinkBackgroundHover
         &.btn-hire-us
           @extend .btn
           @extend .btn-success
@@ -22,19 +32,16 @@
           text-transform: uppercase
           &, &:hover
             border: none
-    @media screen and (max-width: $screen-xs)
-      margin: 0
-      width: 100%
-      & > li
-        & > a
-          margin: 10px auto
-          padding: 10px
-          display: block
-          text-align: center
-          &.btn-hire-us
-            display: block
-  .navbar-collapse.in
-    //background: rgba(0,0,0,0.3)
+  .navbar-brand
+    color: $navbarLinkColor
+    &:hover
+      color: $navbarLinkColorHover
+
+.navbar
+  &.navbar-menu
+    +customNavbar($navbarMenu)
+  &.navbar-system
+    +customNavbar($navbarSystem)
 
 .navbar-brand-logo
   max-width: 120px
