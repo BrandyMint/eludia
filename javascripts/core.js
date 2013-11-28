@@ -1,0 +1,1 @@
+!function(){this.App=this.Eludia.App=new Marionette.Application,App.addRegions({navbars:"@navbars"}),App.addInitializer(function(){return App.collections={navbar:new Eludia.Collections.NavCollection},new Eludia.Controllers.NavController({region:App.navbars})}),App.start()}.call(this);
