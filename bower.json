@@ -2,7 +2,9 @@
   "name": "brandymint2014",
   "version": "0.1",
   "dependencies": {
-    "jquery": "latest"
+    "jquery": "latest",
+    "backbone.marionette": "latest",
+    "jquery.role": "git://github.com/kossnocorp/role"
   },
   "ignore": [
     "**/.*",

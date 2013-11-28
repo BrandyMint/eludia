@@ -2,6 +2,14 @@
 #  require_tree ./lib
 #= require jquery/jquery.min
 #= require bootstrap
+#= require underscore/underscore-min
+#= require backbone/backbone-min
+#= require backbone.marionette/lib/backbone.marionette.min
+#= require jquery.role/lib/jquery.role.min
+#= require namespaces
+#= require_tree ./templates
+#= require_tree ./application
+#= require core
 
 $ ->
   #$(".collapse").collapse()
