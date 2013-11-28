@@ -5,5 +5,10 @@ class Eludia.Views.NavbarMenuItemView extends Marionette.ItemView
   events:
     'click' : '_click'
 
-  _click: ->
-    App.vent.trigger 'navbar_menu_list_item:clicked', @
+  _click: (e) ->
+    e.preventDefault()
+    @_toggleState()
+    App.vent.trigger 'navbar_menu_item:clicked', @
+
+  _toggleState: ->
+    @$el.toggleClass('active').siblings().removeClass('active')
