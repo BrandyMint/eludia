@@ -6,9 +6,28 @@ class Eludia.Views.NavbarMenuItemView extends Marionette.ItemView
     'click' : '_click'
 
   _click: (e) ->
-    e.preventDefault()
+    if @model.get('items')
+      e.preventDefault()
+      @_openMenu()
+    else
+      # reset parent region and send route
     @_toggleState()
-    App.vent.trigger 'navbar_menu_item:clicked', @
+
+  render: ->
+    if @model.get('level') == 3 && @model.get('items')
+      super.$el.append @_children()
+    else
+      super
+
+  _openMenu: ->
+    App.models.menu.set
+      items: @model.get('items')
+      level: @model.get('level')
 
   _toggleState: ->
     @$el.toggleClass('active').siblings().removeClass('active')
+
+  _children: ->
+    collection = new Eludia.Collections.NavCollection(@model.get('items'), level: @model.get('level')+1, parse: true)
+    view = new Eludia.Views.NavbarMenuView collection: collection
+    view.render().$el
