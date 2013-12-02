@@ -3,6 +3,7 @@
 App.addRegions
   navbars: '@navbars'
   menu_region_level2: '@navbar-menu-level2'
+  menu_region_level3: '@navbar-menu-level3'
 
 App.addInitializer (settings) ->
   App.views = {}

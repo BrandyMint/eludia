@@ -6,6 +6,6 @@ class Eludia.Views.MenuItem extends Marionette.ItemView
     'click' : '_click'
 
   _click: (e) ->
-    @model.trigger 'itemview:click', @
     e.stopPropagation()
     e.preventDefault()
+    @model.trigger 'itemview:click', @
