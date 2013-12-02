@@ -1,5 +1,5 @@
-class Eludia.Views.NavbarMenuItemView extends Marionette.ItemView
-  template: JST["templates/navbar/navbar_menu_item"]
+class Eludia.Views.MenuItemView extends Marionette.ItemView
+  template: JST["app/templates/navbar/menu_item"]
   tagName: 'li'
 
   events:
@@ -11,23 +11,22 @@ class Eludia.Views.NavbarMenuItemView extends Marionette.ItemView
       @_openMenu()
     else
       # reset parent region and send route
+
     @_toggleState()
 
-  render: ->
+  onRender: ->
     if @model.get('level') == 3 && @model.get('items')
-      super.$el.append @_children()
-    else
-      super
+      @$el.append @_4th_level_children()
 
   _openMenu: ->
-    App.models.menu.set
+    App.models.menu_state.set
       items: @model.get('items')
       level: @model.get('level')
 
   _toggleState: ->
     @$el.toggleClass('active').siblings().removeClass('active')
 
-  _children: ->
-    collection = new Eludia.Collections.NavCollection(@model.get('items'), level: @model.get('level')+1, parse: true)
-    view = new Eludia.Views.NavbarMenuView collection: collection
+  _4th_level_children: ->
+    collection = new Eludia.Collections.MenuCollection(@model.get('items'), level: @model.get('level')+1, parse: true)
+    view = new Eludia.Views.MenuView collection: collection
     view.render().$el
