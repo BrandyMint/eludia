@@ -1,45 +1,136 @@
 [
    {
-      "label":"&Портал",
+      "id":"baf23c2cec7f219c2c4486158864bf4e",
+      "label":"Портал",
       "items":[
          {
+            "href":"/?type=msgs&action=create&id_msg_type=1&__edit=1",
+            "id":"ee7e484fc18612f8d798637dfa675c9d",
             "label":"Создать сообщение"
          },
          {
+            "href":"/?type=msgs",
+            "id":"7e264844e4fc7ea0a5ea239f44bc9736",
+            "label":"Сообщения"
+         },
+         {
+            "href":"/?type=news",
+            "id":"69df1f85b0abbce850b5feb29bddcb2a",
+            "label":"Новости"
+         },
+         {
+            "href":"/?type=forum",
+            "id":"67b67f0bad308311c5a6f1d33df1fc17",
             "label":"Форум"
          }
       ]
    },
    {
-      "label":"&Задачи",
+      "label":"Задачи",
+      "id":"tasks",
       "items":[
          {
+            "href":"/?type=tasks&action=create",
+            "id":"add_task",
             "label":"Добавить задачу"
          },
          {
+            "href":"/?type=tasks",
+            "id":"18529cea78cb0357fdb454665ab21e11",
+            "label":"Список задач"
+         },
+         {
+            "href":"/i/myCalendar/web-app/index.html",
+            "id":"35836cab785c307eaae16002e9c2e397",
+            "label":"Календарь"
+         },
+         {
             "label":"Процессы",
+            "id":"task_routes",
             "items":[
                {
+                  "href":"/?type=tr_selection_start",
+                  "id":"3cb70fae8cc60e7a505ac110481a2908",
                   "label":"Запуск процесса по параметрам"
                },
                {
-                  "label":"Процессы"
+                  "label":"Доступные для запуска процессы",
+                  "id":"task_routes_list",
+                  "items":[
+                     {
+                        "href":"/?type=task_route_start&id_task_route=3",
+                        "id":"d3cab69fd2a6acc6a75658726b96fcb6",
+                        "label":"3. Согласование протокола"
+                     }
+                  ]
+               },
+               {
+                  "href":"/?type=task_route_items",
+                  "id":"24f25539871721ba283311a340daa6e7",
+                  "label":"Список процессов"
                }
             ]
          },
          {
-            "label":"Календарь"
+            "href":"/?type=report_folders",
+            "label":"Отчеты",
+            "id":"task_reports",
+            "items":[
+               {
+                  "href":"/?type=task_stats",
+                  "id":"9b8f27829d65ce69e7bf0375bad40c3b",
+                  "label":"Исполнительская дисциплина"
+               },
+               {
+                  "href":"/?type=task_stats2",
+                  "id":"5317732a40f63b1bdd8f784154794fb9",
+                  "label":"Загруженность сотрудников"
+               },
+               {
+                  "id":"6bcad1d1e692ae07bb8d1d95f1c914f1",
+                  "label":"Группа пользовательских отчетов 1",
+                  "items":[
+                     {
+                        "id":"69a3b64a125314f4b3a306216a7f1b1e",
+                        "label":"Пользовательский отчет 1"
+                     },
+                     {
+                        "id":"3db7e3323710dedad9ce176a904085d6",
+                        "label":"Пользовательский отчет 2"
+                     },
+                     {
+                        "id":"7a4ce5fa48f3640898fe30312ae3974f",
+                        "label":"Пользовательский отчет 3"
+                     }
+                  ]
+               },
+               {
+                  "id":"ca5a82bc474403f28a27f56184fbc80f",
+                  "label":"Группа пользовательских отчетов 2",
+                  "items":[
+                     {
+                        "id":"69a3b64a125314f4b3a306216a7f1b1e",
+                        "label":"Пользовательский отчет 1"
+                     },
+                     {
+                        "id":"3db7e3323710dedad9ce176a904085d6",
+                        "label":"Пользовательский отчет 2"
+                     },
+                     {
+                        "id":"7a4ce5fa48f3640898fe30312ae3974f",
+                        "label":"Пользовательский отчет 3"
+                     }
+                  ]
+               }
+            ]
          },
          {
-            "label":"Исполнительская дисциплина"
-         },
-         {
-            "label":"Загруженность сотрудников"
-         },
-         {
+            "id":"c768583eda068a0ea8e167a068c2fc94",
             "label":"Функции",
             "items":[
                {
+                  "href":"/?type=tasks_cancel&id=-1",
+                  "id":"fd5c47212a8f9400f84d03bb57fb4f85",
                   "label":"Отменить задачи за период"
                }
             ]
@@ -47,19 +138,64 @@
       ]
    },
    {
-      "label":"&Документы",
+      "id":"docs",
+      "label":"Документы",
       "items":[
          {
+            "href":"/?type=doc_type_select&can_close_window=1",
+            "id":"0f789d760b67b7dbd3baa1972d51a888",
             "label":"Добавить документ"
          },
          {
+            "href":"/?type=doc_folders",
+            "id":"doc_folders",
+            "label":"Архив документов"
+         },
+         {
+            "href":"/?type=docs_register",
+            "id":"59257365345c43174c35332289f67a6e",
             "label":"Реестр договоров"
          },
          {
+            "href":"/?type=report_folders",
             "label":"Отчеты",
+            "id":"docs_reports",
             "items":[
                {
-                  "label":"Справка о договорах"
+                  "id":"6bcad1d1e692ae07bb8d1d95f1c914f1",
+                  "label":"Группа пользовательских отчетов 1",
+                  "items":[
+                     {
+                        "id":"69a3b64a125314f4b3a306216a7f1b1e",
+                        "label":"Пользовательский отчет 1"
+                     },
+                     {
+                        "id":"3db7e3323710dedad9ce176a904085d6",
+                        "label":"Пользовательский отчет 2"
+                     },
+                     {
+                        "id":"7a4ce5fa48f3640898fe30312ae3974f",
+                        "label":"Пользовательский отчет 3"
+                     }
+                  ]
+               },
+               {
+                  "id":"ca5a82bc474403f28a27f56184fbc80f",
+                  "label":"Группа пользовательских отчетов 2",
+                  "items":[
+                     {
+                        "id":"69a3b64a125314f4b3a306216a7f1b1e",
+                        "label":"Пользовательский отчет 1"
+                     },
+                     {
+                        "id":"3db7e3323710dedad9ce176a904085d6",
+                        "label":"Пользовательский отчет 2"
+                     },
+                     {
+                        "id":"7a4ce5fa48f3640898fe30312ae3974f",
+                        "label":"Пользовательский отчет 3"
+                     }
+                  ]
                }
             ]
          }
@@ -67,67 +203,138 @@
    },
    {
       "label":"Номенклатура",
+      "id":"products",
       "items":[
          {
+            "href":"/?type=products",
+            "id":"81c70a1adf787091e4440cc89157e26b",
             "label":"Номенклатура изделий"
          },
          {
-            "label":"Найти в Холдинге"
-         },
-         {
+            "href":"/?type=voc_groups&__tree=1&id_voc_group_type=1&r=product_productions&id_voc_group=1&all_types=1",
+            "id":"ab5345370aaed1c1acfe975619fe1c37",
             "label":"Способы изготовления"
          },
          {
+            "href":"/?type=product_alternative_roll&to_dt=1&from_menu=1",
+            "id":"fe21da26afa529fe7ad53770209470a4",
             "label":"Реестр альтернативных замен"
          },
          {
-            "label":"Цены и нормативные затраты"
-         },
-         {
+            "href":"/?type=product_specs_statements",
+            "id":"439ac98af1e4ad5680fb279b1621f40d",
             "label":"Печать документов"
          },
          {
+            "href":"/?type=report_folders",
+            "id":"1884d1e33baaf37c5444c334163e40a8",
             "label":"Отчеты",
             "items":[
                {
+                  "href":"/?type=product_structures_down&to_dt=1",
+                  "id":"6b22b4aa6dd271f9b45801be11576869",
                   "label":"Структура изделия"
                },
                {
+                  "href":"/?type=product_structures_up&to_dt=1",
+                  "id":"7113270e6c51ab8e048ce1bba923b6d8",
                   "label":"Входимость номенклатуры"
                },
                {
-                  "label":"Затраты на изделие"
-               },
-               {
-                  "label":"Ведомость технологических маршрутов"
-               },
-               {
-                  "label":"Использование оборудования"
-               },
-               {
+                  "href":"/?type=product_structures_labor&can_close_window=1",
+                  "id":"9a25414951613f901721be379ee9dc71",
                   "label":"Сводная ведомость трудовых затрат"
                },
                {
+                  "href":"/?type=product_structures_outlays",
+                  "id":"4de68df03e2b8aa32103cd3cca48bbf1",
                   "label":"Сводная ведомость материальных затрат"
                },
                {
+                  "href":"/?type=product_structures_expenses",
+                  "id":"523cfb11bd551628eb57d02e0dad6ceb",
+                  "label":"Затраты на изделие"
+               },
+               {
+                  "href":"/?type=product_structures_workshops&can_close_window=1",
+                  "id":"bf12252068daba004c69f5f4fcff8abf",
+                  "label":"Ведомость технологических маршрутов"
+               },
+               {
+                  "href":"/?type=product_structures_equipments&to_dt=1",
+                  "id":"fefb1c3d71dfcf81ac91aa92e7ecff1c",
+                  "label":"Использование оборудования"
+               },
+               {
+                  "href":"/?type=products_usage",
+                  "id":"48715c1a895a0d32a068ea14cc7efeca",
                   "label":"Использование номенклатуры"
                },
                {
+                  "href":"/?type=products_users_log",
+                  "id":"ee1522818a3b8bb6f4052d9e6c68e1e4",
                   "label":"Ввод номенклатуры"
+               },
+               {
+                  "id":"6bcad1d1e692ae07bb8d1d95f1c914f1",
+                  "label":"Группа пользовательских отчетов 1",
+                  "items":[
+                     {
+                        "id":"69a3b64a125314f4b3a306216a7f1b1e",
+                        "label":"Пользовательский отчет 1"
+                     },
+                     {
+                        "id":"3db7e3323710dedad9ce176a904085d6",
+                        "label":"Пользовательский отчет 2"
+                     },
+                     {
+                        "id":"7a4ce5fa48f3640898fe30312ae3974f",
+                        "label":"Пользовательский отчет 3"
+                     }
+                  ]
+               },
+               {
+                  "id":"ca5a82bc474403f28a27f56184fbc80f",
+                  "label":"Группа пользовательских отчетов 2",
+                  "items":[
+                     {
+                        "id":"69a3b64a125314f4b3a306216a7f1b1e",
+                        "label":"Пользовательский отчет 1"
+                     },
+                     {
+                        "id":"3db7e3323710dedad9ce176a904085d6",
+                        "label":"Пользовательский отчет 2"
+                     },
+                     {
+                        "id":"7a4ce5fa48f3640898fe30312ae3974f",
+                        "label":"Пользовательский отчет 3"
+                     }
+                  ]
                }
             ]
          },
          {
+            "id":"c768583eda068a0ea8e167a068c2fc94",
             "label":"Функции",
             "items":[
                {
+                  "href":"/?type=goto_peer_server&peer_server=RPM&to_type=voc_groups&to___tree=1&to_id_voc_group_type=1&to_r=products&to_multi_select=1",
+                  "id":"432a29fcd5882900a4e8a9d915397d18",
+                  "label":"Найти в Холдинге"
+               },
+               {
+                  "href":"/?type=imports",
+                  "id":"5c89220a4dda8d08eeb507b853e40d3f",
                   "label":"Импорт номенклатуры"
                },
                {
+                  "href":"/?type=product_export_tc",
+                  "id":"edcb8aa5a0a5c1e7e070c0241900e425",
                   "label":"Экспорт в Siemens Teamcenter"
                },
                {
+                  "href":"/?type=products_copy_technology",
+                  "id":"6215695b14cef9d77267f2f12a7525a6",
                   "label":"Создать копию технологии"
                }
             ]
@@ -135,125 +342,226 @@
       ]
    },
    {
+      "href":"/?type=voc_warehouses",
+      "id":"voc_warehouses",
       "label":"Склады",
       "items":[
          {
+            "href":"/?type=movement_inventories",
+            "id":"70e389a4722c7f3d92a8d200bdddd55a",
             "label":"Остатки на складах"
          },
          {
-            "label":"Прогноз остатков на складах"
-         },
-         {
+            "href":"/?type=movement_receipts",
+            "id":"4e69b7c3150572b620149dd34b1d4f97",
             "label":"Реестр перемещений"
          },
          {
+            "id":"6d8365a5856fcd224e28b1a84f008071",
             "label":"Документы",
             "items":[
                {
+                  "href":"/?type=movement_receipts&id_movement_receipt_type_=4",
+                  "id":"ae489aab5b729babf201c4904c507afd",
                   "label":"Внутреннее перемещение"
                },
                {
+                  "href":"/?type=movement_receipts&id_movement_receipt_type_=2",
+                  "id":"d7d170cc399d6cb430fc375c575fc7f5",
                   "label":"Акт оприходования"
                },
                {
+                  "href":"/?type=movement_receipts&id_movement_receipt_type_=3",
+                  "id":"59c492e15dce5cf1aa92164d35e05454",
                   "label":"Акт списания"
                },
                {
+                  "href":"/?type=movement_receipts&id_movement_receipt_type_=9",
+                  "id":"91579048b90e6f956f1591b91da8944f",
                   "label":"Акт передачи в ремонт"
                },
                {
+                  "href":"/?type=movement_receipts&id_movement_receipt_type_=6",
+                  "id":"8fcbb9f8b3b7042043e5a13c77c5d2f0",
                   "label":"Списание под заказ"
                },
                {
+                  "href":"/?type=movement_receipts&id_movement_receipt_type_=7",
+                  "id":"27a11f07de2faee5daa3e138b5e4bf1f",
                   "label":"Приход из производства"
                },
                {
+                  "href":"/?type=movement_receipts&id_movement_receipt_type_=1",
+                  "id":"6ed49512f04fa389a7b6cbc20cd14a46",
                   "label":"Приходный ордер"
                },
                {
+                  "href":"/?type=movement_receipts&id_movement_receipt_type_=11",
+                  "id":"1094e3e588440703e382d089ac96a41d",
                   "label":"Возврат поставщику"
                },
                {
+                  "id":"shipment",
                   "label":"Отгрузка"
                },
                {
+                  "href":"/?type=movement_receipts&id_movement_receipt_type_=12",
+                  "id":"10f2e70186bcb179b78aef0b00fe47e8",
                   "label":"Возврат от покупателя"
                },
                {
+                  "href":"/?type=movement_receipts&id_movement_receipt_type_=8",
+                  "id":"b68e3d6e8c6e697fb6348561d540cf18",
                   "label":"Акт пересчёта ЕИ"
                },
                {
+                  "href":"/?type=movement_receipts&id_movement_receipt_type_=13",
+                  "id":"90d8cc1c43f80a3469367962b2be0ca7",
                   "label":"Акт изменений"
                },
                {
+                  "href":"/?type=dt_fit_to_ext",
+                  "id":"96a5f2fe96fc262437c8340d8a117e7b",
                   "label":"Продление срока годности"
                }
             ]
          },
          {
+            "href":"/?type=inventory_adjustments",
+            "id":"b51a226acda03ceefefb16000d76bfff",
+            "label":"Ведомости инвентаризации"
+         },
+         {
+            "id":"d4a5c313540291946467918d129a48b1",
             "label":"Комплектование",
             "items":[
                {
+                  "href":"/?type=order_picking_tasks",
+                  "id":"35774399003e431f430ddc2e77b57c2b",
                   "label":"Задания на комплектование"
                },
                {
+                  "href":"/?type=order_picking_tasks_deficit",
+                  "id":"e7ae9565ecd5b72d2d0ca045be7c01da",
                   "label":"Дефицит на складах комплектации"
+               },
+               {
+                  "href":"/?type=movement_roo",
+                  "id":"541673868b3995d23eb7743d08d4fdbe",
+                  "label":"Резервирование ТМЦ"
                }
             ]
          },
          {
-            "label":"Ведомости инвентаризации"
-         },
-         {
-            "label":"Уровень запасов"
-         },
-         {
-            "label":"Резервирование ТМЦ"
-         },
-         {
+            "href":"/?type=report_folders",
+            "id":"1884d1e33baaf37c5444c334163e40a8",
             "label":"Отчеты",
             "items":[
                {
+                  "href":"/?type=movement_inventories_card&id=1",
+                  "id":"f03a723929769f88d7269be25f1afe2f",
                   "label":"Карточка складского учета"
                },
                {
+                  "href":"/?type=movements_on_warehouse&__edit=1",
+                  "id":"28cf08662867a75d5f1998968ae112c8",
                   "label":"Оборотная ведомость"
                },
                {
+                  "href":"/?type=movements_product&__edit=1&id=-1",
+                  "id":"670b6eea97ff354bf78aac4c85655b58",
                   "label":"История движения номенклатуры"
                },
                {
+                  "href":"/?type=movements_on_warehouse_period",
+                  "id":"2e451f69b03d0201456bf6a65e91db3b",
                   "label":"Движение по складу"
                },
                {
+                  "href":"/?type=movement_inventories_on_warehouses",
+                  "id":"6c2c6ed3c4c6eca35159e8f4944d2a1c",
                   "label":"Движение остатков на складах"
                },
                {
-                  "label":"Места хранения на складе"
-               },
-               {
+                  "href":"/?type=movement_inventory_series_report",
+                  "id":"5333d319347934f449fc9fdaa3edf5a3",
                   "label":"Срок годности изделий на складе"
                },
                {
+                  "href":"/?type=outlays_limit_card",
+                  "id":"d9df7a4643edd6f8b9090c3145b8a5c8",
                   "label":"Лимитная карта (норматив)"
                },
                {
+                  "id":"acee24915a69c97e3ee1fceadaea4f0e",
                   "label":"Лимитная карта (для перегрузки в 1С)"
                },
                {
+                  "href":"/?type=forecast_inventories",
+                  "id":"eac60fe590aec94526c0a3c6cd90074e",
+                  "label":"Прогноз остатков на складах"
+               },
+               {
+                  "href":"/?type=voc_warehouse_products&register=1",
+                  "id":"cab953b4313e7267aaa66b4a29c08ad1",
+                  "label":"Уровень запасов"
+               },
+               {
+                  "id":"b7a3344011500394d2d41dfd84a161b5",
                   "label":"АВВА РУС",
                   "items":[
                      {
+                        "href":"/?type=movements_report&__edit=1",
+                        "id":"73d427353a76218c69d9402dc1f352b9",
                         "label":"Отчет о движении материальных ценностей"
+                     }
+                  ]
+               },
+               {
+                  "id":"6bcad1d1e692ae07bb8d1d95f1c914f1",
+                  "label":"Группа пользовательских отчетов 1",
+                  "items":[
+                     {
+                        "id":"69a3b64a125314f4b3a306216a7f1b1e",
+                        "label":"Пользовательский отчет 1"
+                     },
+                     {
+                        "id":"3db7e3323710dedad9ce176a904085d6",
+                        "label":"Пользовательский отчет 2"
+                     },
+                     {
+                        "id":"7a4ce5fa48f3640898fe30312ae3974f",
+                        "label":"Пользовательский отчет 3"
+                     }
+                  ]
+               },
+               {
+                  "id":"ca5a82bc474403f28a27f56184fbc80f",
+                  "label":"Группа пользовательских отчетов 2",
+                  "items":[
+                     {
+                        "id":"69a3b64a125314f4b3a306216a7f1b1e",
+                        "label":"Пользовательский отчет 1"
+                     },
+                     {
+                        "id":"3db7e3323710dedad9ce176a904085d6",
+                        "label":"Пользовательский отчет 2"
+                     },
+                     {
+                        "id":"7a4ce5fa48f3640898fe30312ae3974f",
+                        "label":"Пользовательский отчет 3"
                      }
                   ]
                }
             ]
          },
          {
+            "id":"c768583eda068a0ea8e167a068c2fc94",
             "label":"Функции",
             "items":[
                {
+                  "href":"/?type=inventory_histories&id=-1",
+                  "id":"1618da3db85d2e9149fc2e28c83cab3c",
                   "label":"Пересчет остатков"
                }
             ]
@@ -262,53 +570,92 @@
    },
    {
       "label":"Отгрузка",
+      "id":"shipment",
       "items":[
          {
-            "label":"Обслуживаемая техника"
-         },
-         {
+            "href":"/?type=shipment_orders",
+            "id":"94009beb79c37da560afc88a19075c75",
             "label":"График отгрузки"
          },
          {
+            "href":"/?type=shipment_directions",
+            "id":"5cd1cb4c5ffc53639887cf069e79b0eb",
             "label":"Распоряжения на отгрузку"
          },
          {
+            "href":"/?type=doc_pay_stages_report",
+            "id":"30b711d7efe1dff5cc6dccc0b83e5928",
             "label":"График поступлений по договорам"
          },
          {
+            "href":"/?type=technics",
+            "id":"12c2cbcbe90100397ed1e3e2eed70732",
+            "label":"Обслуживаемая техника"
+         },
+         {
+            "href":"/?type=report_folders",
+            "id":"1884d1e33baaf37c5444c334163e40a8",
             "label":"Отчеты",
             "items":[
                {
+                  "href":"/?type=shipment_orders_monthly",
+                  "id":"dbd8a51e34559a9d5ab3742f8bf03f68",
                   "label":"График отгрузки на месяц"
                },
                {
+                  "href":"/?type=production_plan",
+                  "id":"91ce34d37fd88b7fea01e3916f41af99",
                   "label":"План производства (от графика отгрузки)"
                },
                {
+                  "href":"/?type=bdds_receipts_day",
+                  "id":"a01ec7601db62fd815324307a1a845af",
+                  "label":"Поступления за день"
+               },
+               {
+                  "href":"/?type=bdds_incoming_report&recalc=1",
+                  "id":"4dd48e540b09382d16043b3bc49ebd9b",
+                  "label":"Поступления за период"
+               },
+               {
+                  "id":"427f073efd80db2f288b104481b8cd8d",
                   "label":"Исполнение договоров"
                },
                {
-                  "label":"Отгрузка за год"
-               },
-               {
-                  "label":"Для РЖД",
+                  "id":"6bcad1d1e692ae07bb8d1d95f1c914f1",
+                  "label":"Группа пользовательских отчетов 1",
                   "items":[
                      {
-                        "label":"Электронные счета-фактуры"
+                        "id":"69a3b64a125314f4b3a306216a7f1b1e",
+                        "label":"Пользовательский отчет 1"
                      },
                      {
-                        "label":"Протоколы экспорта (электронные счета-фактуры)"
+                        "id":"3db7e3323710dedad9ce176a904085d6",
+                        "label":"Пользовательский отчет 2"
+                     },
+                     {
+                        "id":"7a4ce5fa48f3640898fe30312ae3974f",
+                        "label":"Пользовательский отчет 3"
                      }
                   ]
                },
                {
-                  "label":"Поступления за день"
-               },
-               {
-                  "label":"Поступления за период"
-               },
-               {
-                  "label":"Поступления за период (внешние обороты)"
+                  "id":"ca5a82bc474403f28a27f56184fbc80f",
+                  "label":"Группа пользовательских отчетов 2",
+                  "items":[
+                     {
+                        "id":"69a3b64a125314f4b3a306216a7f1b1e",
+                        "label":"Пользовательский отчет 1"
+                     },
+                     {
+                        "id":"3db7e3323710dedad9ce176a904085d6",
+                        "label":"Пользовательский отчет 2"
+                     },
+                     {
+                        "id":"7a4ce5fa48f3640898fe30312ae3974f",
+                        "label":"Пользовательский отчет 3"
+                     }
+                  ]
                }
             ]
          }
@@ -316,103 +663,199 @@
    },
    {
       "label":"Производство",
+      "id":"production",
       "items":[
          {
+            "href":"/?type=orders&is_plan=1",
+            "id":"b172483daf032fff773bd9f9b6b29686",
             "label":"План производства"
          },
          {
+            "href":"/?type=orders",
+            "id":"faa87cc94b4952ec46a1b297c9adf263",
             "label":"Производственные заказы"
          },
          {
+            "href":"/?type=orders_voc_operations_report",
+            "id":"2b042a4a8e451cc8767ae9611f77279b",
             "label":"Выполняемые работы"
          },
          {
+            "href":"/?type=orders_daily_plan_reports",
+            "id":"e6aaf7eeb38682951b9fd0cfebf58c0a",
             "label":"Ежедневный план-отчет о работе"
          },
          {
+            "href":"/?type=order_specs_report",
+            "id":"c596c35428f3dc1103ad0d3f3abf11f5",
             "label":"Потребности под заказ"
          },
          {
+            "href":"/?type=plans",
+            "id":"11be25ea4b92723660705a39acfdea7d",
             "label":"Моделирование плана"
          },
          {
+            "href":"/?type=buying_needs",
+            "id":"c9a12c11934630ae2add2df9bf9cd1fb",
             "label":"Потребности"
          },
          {
+            "href":"/?type=report_folders",
+            "id":"1884d1e33baaf37c5444c334163e40a8",
             "label":"Отчеты",
             "items":[
                {
+                  "href":"/?type=orders_monthly",
+                  "id":"79100cfdaac83cc25fac386fa721faeb",
                   "label":"График производства на месяц"
                },
                {
+                  "href":"/?type=orders_plan",
+                  "id":"c6bcac5914050cecd988e131069aa23a",
                   "label":"План производства на месяц"
                },
                {
+                  "href":"/?type=orders_workcenter_items_analysis&id=-1",
+                  "id":"8f9199e90230e759853baf47f2e19b12",
                   "label":"Анализ загрузки мощностей"
                },
                {
+                  "href":"/?type=orders_execute_report",
+                  "id":"f590b217155e8b118b43c283c6341214",
                   "label":"Выполнение плана производства"
                },
                {
+                  "href":"/?type=orders_execute_grafics&clear_report=1",
+                  "id":"fde43a091ccaf2c614f316138734c4b4",
                   "label":"Выполнение графиков производства"
                },
                {
+                  "href":"/?type=orders_execute_spec_grafics&clear_report=1",
+                  "id":"04088f1dc0d2681712aa75cfc6ba06b3",
                   "label":"График выполнения поузловой сборки изделия"
                },
                {
+                  "id":"486505ad89f043699aef5177f9231eb3",
                   "label":"Потребности под заказы (дефицит)"
                },
                {
+                  "href":"/?type=statistic_movement_receipt_7&only_params=1",
+                  "id":"d693d95580b06544efdc53dea125b7eb",
                   "label":"Статистика по готовой продукции"
                },
                {
-                  "label":"Калужский завод",
+                  "id":"7dcbd6066297406bfd62b7b1f2d9f1d3",
+                  "label":"Группа РПМ",
                   "items":[
                      {
+                        "href":"/?type=orders_year",
+                        "id":"9421c0bee8df6670d6384793e6af19e1",
                         "label":"План изготовления на год"
                      },
                      {
+                        "href":"/?type=orders_year_repair",
+                        "id":"cf712809c34856eec438b1ab75a5325a",
                         "label":"План ремонта на год"
                      },
                      {
+                        "href":"/?type=rpt_order_execution",
+                        "id":"0605487e49c761131795647b10067708",
                         "label":"Выполнение производственной программы"
                      },
                      {
+                        "href":"/?type=orders_materials",
+                        "id":"1182ae503524b52e614ae17d7d3de38c",
                         "label":"Расход материалов по установленным нормативам (П6)"
                      }
                   ]
                },
                {
+                  "id":"b7a3344011500394d2d41dfd84a161b5",
                   "label":"АВВА РУС",
                   "items":[
                      {
+                        "href":"/?type=orders_polifan",
+                        "id":"0f91710132928b1a05c33308d0ed1d89",
                         "label":"Отчет о выполнении плановых показателей за месяц по участку"
                      },
                      {
+                        "href":"/?type=order_specs_change_analysis",
+                        "id":"199c2474cfe85b657190557e1aa8e0e6",
                         "label":"Анализ отклонений списания под выпуск продукции"
                      },
                      {
+                        "href":"/?type=orders_technical_report",
+                        "id":"6b4beb0659222112022b0f7f9270fbd5",
                         "label":"Производственно-технический отчет"
                      },
                      {
+                        "href":"/?type=orders_raport",
+                        "id":"f20ea5e36d3ead69d5d6ed06b1431d12",
                         "label":"Рапорт по производству"
                      },
                      {
+                        "href":"/?type=movements_on_dep&__edit=1",
+                        "id":"c1b7961416324c74fff9ebfd0f397288",
                         "label":"Общая сводная по цеху (участку)"
                      }
                   ]
                },
                {
+                  "id":"98aebf5ebcbcba3ba9994324586c6e1a",
                   "label":"УКМ",
                   "items":[
                      {
+                        "id":"fc722555e542d00418b0886fb41d77a9",
                         "label":"График комплектации на изделие (дефицит)"
                      },
                      {
+                        "id":"76438ff20dfba16ebe93b5064a927635",
                         "label":"График изготовления на месяц (УВЗ)"
                      },
                      {
+                        "id":"6cb29121b0bc8d9d637f8b1db1bd804b",
                         "label":"График комплектования на месяц (УВЗ)"
+                     },
+                     {
+                        "id":"b247105920f98f3191e3f4dd61110ee8",
+                        "label":"Потребность в закупке на месяц (дефицит)"
+                     }
+                  ]
+               },
+               {
+                  "id":"6bcad1d1e692ae07bb8d1d95f1c914f1",
+                  "label":"Группа пользовательских отчетов 1",
+                  "items":[
+                     {
+                        "id":"69a3b64a125314f4b3a306216a7f1b1e",
+                        "label":"Пользовательский отчет 1"
+                     },
+                     {
+                        "id":"3db7e3323710dedad9ce176a904085d6",
+                        "label":"Пользовательский отчет 2"
+                     },
+                     {
+                        "id":"7a4ce5fa48f3640898fe30312ae3974f",
+                        "label":"Пользовательский отчет 3"
+                     }
+                  ]
+               },
+               {
+                  "id":"ca5a82bc474403f28a27f56184fbc80f",
+                  "label":"Группа пользовательских отчетов 2",
+                  "items":[
+                     {
+                        "id":"69a3b64a125314f4b3a306216a7f1b1e",
+                        "label":"Пользовательский отчет 1"
+                     },
+                     {
+                        "id":"3db7e3323710dedad9ce176a904085d6",
+                        "label":"Пользовательский отчет 2"
+                     },
+                     {
+                        "id":"7a4ce5fa48f3640898fe30312ae3974f",
+                        "label":"Пользовательский отчет 3"
                      }
                   ]
                }
@@ -421,88 +864,257 @@
       ]
    },
    {
-      "label":"БДДС",
+      "label":"Финансы",
+      "id":"bdds",
       "items":[
          {
-            "label":"Начать планирование"
+            "href":"/?type=dmnds",
+            "id":"8cd9ca345e8b12216b6c13acb6b968d8",
+            "label":"Заявки на оплату"
          },
          {
+            "id":"dea9749b8738da16d136f79f4bbee6ca",
+            "label":"Согласование заявок на оплату",
+            "items":[
+               {
+                  "id":"87d62ace1d78152499eba562c006dbc7",
+                  "label":"Изменить Заявку на оплату (фин.отдел)",
+                  "items":[
+                     {
+                        "id":"e0d86105c1de548fd42d612fde1da3ca",
+                        "label":"Изменить Заявку на оплату"
+                     }
+                  ]
+               },
+               {
+                  "id":"ddbeef873f0f7e3dedcc440fdb86e98e",
+                  "label":"Изменить Заявку на оплату (ЦФО)",
+                  "items":[
+                     {
+                        "id":"e0d86105c1de548fd42d612fde1da3ca",
+                        "label":"Изменить Заявку на оплату"
+                     }
+                  ]
+               },
+               {
+                  "id":"fa0f69a51fe72111dace9d048437fd80",
+                  "label":"Согласование заявок  с ответственным за бюджет ЦФО",
+                  "items":[
+                     {
+                        "href":"/?type=dmnds_task_routes_tasks&id_task_route_task=1",
+                        "id":"b280c0891846632c25c34ee1a940c589",
+                        "label":"Проверить заявку на оплату и отправить на согласование"
+                     },
+                     {
+                        "id":"a8ce56be8b3fbf6c5ec958ad00612aa6",
+                        "label":"Утвердить заявку на оплату в ЦФО"
+                     },
+                     {
+                        "id":"3eee61fe7f967ed76fd39ba61440cf15",
+                        "label":"Изменить заявку на оплату"
+                     }
+                  ]
+               },
+               {
+                  "id":"f7d124952f67e850bd106826affa1016",
+                  "label":"Согласование заявок на оплату с Бухгалтерией и Фин.отделом",
+                  "items":[
+                     {
+                        "id":"ca72c0c3a32ff858b2469f6a024145c2",
+                        "label":"Отметить \"Включить в реестр\" заявку на оплату и отправить на согласование"
+                     },
+                     {
+                        "id":"911c9d32876d7aa78bc1279800dad371",
+                        "label":"Проверить заявку на оплату в Бухгалтерии"
+                     },
+                     {
+                        "id":"2d48a3b8c0a5d749fc41e3876c68ff9b",
+                        "label":"Проверить заявку на оплату в Фин.отделе"
+                     },
+                     {
+                        "id":"3eee61fe7f967ed76fd39ba61440cf15",
+                        "label":"Изменить заявку на оплату"
+                     },
+                     {
+                        "id":"3028cee1acb995e8b9ac12d54b69aa81",
+                        "label":"Изменить заявку на оплату Ответственному"
+                     },
+                     {
+                        "id":"e5a6edeaed10a0dfd0899810efc72a68",
+                        "label":"Проверить заявку на оплату в ЦФО (после изменения)"
+                     },
+                     {
+                        "id":"a76d55403a679660430b5f31ebe986a9",
+                        "label":"Отметить \"Включить в реестр\" в заявке на оплату и отправить на согласование (после изменения)"
+                     }
+                  ]
+               }
+            ]
+         },
+         {
+            "href":"/?type=dmnds_frames",
+            "id":"2d9a84c2a5df021087decff65e427f1d",
             "label":"Формирование реестра"
          },
          {
+            "href":"/?type=bdds_pays_registers",
+            "id":"4e8d76587f21b45f1a25b4b1f4b3e17f",
             "label":"Реестр платежей"
          },
          {
+            "href":"/?type=bdds_pays",
+            "id":"d0eedefc68583b4ee11043174cb60879",
             "label":"Платежи"
          },
          {
+            "href":"/?type=voc_agent_accounts_rests",
+            "id":"7bef58bd0cdcd9459d7ff1085dd09226",
             "label":"Остатки на счетах"
          },
          {
+            "href":"/?type=voc_credit_docs",
+            "id":"af0f7babbe684a8af60c11e206d9c6cc",
             "label":"Кредитные договоры",
             "items":[
                {
+                  "href":"/?type=voc_credit_docs",
+                  "id":"af0f7babbe684a8af60c11e206d9c6cc",
                   "label":"Кредитные договоры"
                },
                {
+                  "href":"/?type=voc_credit_letters",
+                  "id":"bbfb925e6d62a47dc4cdbe65ac67f300",
                   "label":"Аккредитивы"
                },
                {
+                  "href":"/?type=voc_guarantees",
+                  "id":"79f5f81d91d3ab4018e44abdc7069146",
                   "label":"Банковские гарантии"
                }
             ]
          },
          {
+            "href":"/?type=bdds_agreement_lists",
+            "id":"2b6779f9b87bb8586dba90278b5c34a2",
             "label":"Согласование списка платежей"
          },
          {
+            "href":"/?type=report_folders",
+            "id":"1884d1e33baaf37c5444c334163e40a8",
             "label":"Отчеты",
             "items":[
                {
+                  "href":"/?type=deps_budget",
+                  "id":"b7c5f94abfc65ea352ab39469b67881b",
                   "label":"Отчет по БДДС"
                },
                {
-                  "label":"Рапорт об исполнении БДДС"
-               },
-               {
+                  "href":"/?type=deps_budget_cfos",
+                  "id":"472c70c4b19c0c03a8fddf05ee7b892e",
                   "label":"Отчет по БДДС (ЦФО)"
                },
                {
-                  "label":"Исполнение БДДС (период)"
-               },
-               {
-                  "label":"Отчет по оплате"
-               },
-               {
-                  "label":"Задолженность по контрагентам"
-               },
-               {
-                  "label":"Остатки Online"
-               },
-               {
+                  "href":"/?type=bdds_execution",
+                  "id":"8b2b262c06cd240a070a270b66758b5d",
                   "label":"Исполнение БДДС"
                },
                {
+                  "href":"/?type=bdds_month_execution",
+                  "id":"a76d9e75972cd16bc0a96cb2fa36257c",
+                  "label":"Исполнение БДДС (период)"
+               },
+               {
+                  "href":"/?type=bdds_pays_report&id=-1",
+                  "id":"7b82b3f39c7d6ca26f627d557973d689",
+                  "label":"Отчет по оплате"
+               },
+               {
+                  "href":"/?type=voc_agent_debts&id=-1",
+                  "id":"29deed935e897ad9952779ae726592f7",
+                  "label":"Задолженность по контрагентам"
+               },
+               {
+                  "href":"/?type=voc_agent_accounts_rests_online",
+                  "id":"05ca7dfacd2cb029e4e28e2b3ce67e98",
+                  "label":"Остатки Online"
+               },
+               {
+                  "href":"/?type=bdds_receipts_day",
+                  "id":"a01ec7601db62fd815324307a1a845af",
                   "label":"Поступления за день"
                },
                {
+                  "href":"/?type=bdds_incoming_report&recalc=1",
+                  "id":"4dd48e540b09382d16043b3bc49ebd9b",
                   "label":"Поступления за период"
                },
                {
+                  "id":"d8dc891d16cdca205fc74bc00eabe119",
                   "label":"Поступления за период (внешние обороты)"
                },
                {
+                  "href":"/?type=invest_project_report",
+                  "id":"ef314ae673866a401d21f2697f9e92bf",
                   "label":"Отчет по инвестиционным проектам"
                },
                {
+                  "id":"509dbcc8532edf2f91eb5cfddef02471",
                   "label":"Обороты по расчетным счетам в банках"
+               },
+               {
+                  "id":"6bcad1d1e692ae07bb8d1d95f1c914f1",
+                  "label":"Группа пользовательских отчетов 1",
+                  "items":[
+                     {
+                        "id":"69a3b64a125314f4b3a306216a7f1b1e",
+                        "label":"Пользовательский отчет 1"
+                     },
+                     {
+                        "id":"3db7e3323710dedad9ce176a904085d6",
+                        "label":"Пользовательский отчет 2"
+                     },
+                     {
+                        "id":"7a4ce5fa48f3640898fe30312ae3974f",
+                        "label":"Пользовательский отчет 3"
+                     }
+                  ]
+               },
+               {
+                  "id":"ca5a82bc474403f28a27f56184fbc80f",
+                  "label":"Группа пользовательских отчетов 2",
+                  "items":[
+                     {
+                        "id":"69a3b64a125314f4b3a306216a7f1b1e",
+                        "label":"Пользовательский отчет 1"
+                     },
+                     {
+                        "id":"3db7e3323710dedad9ce176a904085d6",
+                        "label":"Пользовательский отчет 2"
+                     },
+                     {
+                        "id":"7a4ce5fa48f3640898fe30312ae3974f",
+                        "label":"Пользовательский отчет 3"
+                     }
+                  ]
                }
             ]
          },
          {
-            "label":"АВВА-РУС",
+            "id":"c768583eda068a0ea8e167a068c2fc94",
+            "label":"Функции",
             "items":[
                {
+                  "id":"eae54eccf8ecf8924bb1bcf68cd2db69",
+                  "label":"Начать планирование БДДС"
+               },
+               {
+                  "href":"/?type=dmnds_cancel&id=-1",
+                  "id":"b9c51e8083c7092b43522faddfed0a60",
+                  "label":"Отменить заявки на оплату (период)"
+               },
+               {
+                  "href":"/?type=deps_limit_load",
+                  "id":"461e5db5a8879bbfc66fb98aa7c12d1d",
                   "label":"Загрузка БДДС"
                }
             ]
@@ -511,208 +1123,290 @@
    },
    {
       "label":"Заявки",
+      "id":"dmnds",
       "items":[
          {
+            "href":"/?type=dmnds",
+            "id":"8cd9ca345e8b12216b6c13acb6b968d8",
             "label":"Заявки на оплату"
          },
          {
+            "id":"dea9749b8738da16d136f79f4bbee6ca",
             "label":"Согласование заявок на оплату",
             "items":[
                {
-                  "label":"Изменить Заявку на оплату (фин.отдел)",
+                  "id":"b4ede02ee7f6d5a6ae58ca9260e7fffb",
+                  "label":"Отправить в оплату",
                   "items":[
                      {
-                        "label":"Изменить Заявку на оплату"
-                     }
-                  ]
-               },
-               {
-                  "label":"Изменить Заявку на оплату (ЦФО)",
-                  "items":[
-                     {
-                        "label":"Изменить Заявку на оплату"
-                     }
-                  ]
-               },
-               {
-                  "label":"Согласование заявок  с ответственным за бюджет ЦФО",
-                  "items":[
-                     {
+                        "href":"/?type=dmnds_task_routes_tasks&id_task_route_task=1",
+                        "id":"b280c0891846632c25c34ee1a940c589",
                         "label":"Проверить заявку на оплату и отправить на согласование"
                      },
                      {
-                        "label":"Утвердить заявку на оплату в ЦФО"
+                        "href":"/?type=dmnds_task_routes_tasks&id_task_route_task=191",
+                        "id":"dd430f46b99779249d13bc1b8396f15f",
+                        "label":"Включить заявку в реестр на оплату"
                      },
                      {
-                        "label":"Изменить заявку на оплату"
+                        "href":"/?type=dmnds_task_routes_tasks&id_task_route_task=8",
+                        "id":"bfe56b679b26615f50af63aa9e41801a",
+                        "label":"Исправить заявку на оплату"
                      }
                   ]
                },
                {
-                  "label":"Согласование заявок на оплату с Бухгалтерией и Фин.отделом",
+                  "id":"4f9ce11268d497ae6971854eb362d6f1",
+                  "label":"Согласование заявок (Москва)",
                   "items":[
                      {
-                        "label":"Отметить \"Включить в реестр\" заявку на оплату и отправить на согласование"
+                        "href":"/?type=dmnds_task_routes_tasks&id_task_route_task=1",
+                        "id":"b280c0891846632c25c34ee1a940c589",
+                        "label":"Проверить заявку на оплату и отправить на согласование"
                      },
                      {
-                        "label":"Проверить заявку на оплату в Бухгалтерии"
+                        "href":"/?type=dmnds_task_routes_tasks&id_task_route_task=2",
+                        "id":"956f950fd4d1e0ec7056561457258598",
+                        "label":"Согласовать заявку на оплату в ЦФО"
                      },
                      {
-                        "label":"Проверить заявку на оплату в Фин.отделе"
+                        "href":"/?type=dmnds_task_routes_tasks&id_task_route_task=4",
+                        "id":"ff2f013d96d78d372e7e59087637b698",
+                        "label":"Включить заявку в реестр на согласование"
                      },
                      {
-                        "label":"Изменить заявку на оплату"
+                        "href":"/?type=dmnds_task_routes_tasks&id_task_route_task=191",
+                        "id":"dd430f46b99779249d13bc1b8396f15f",
+                        "label":"Включить заявку в реестр на оплату"
                      },
                      {
-                        "label":"Изменить заявку на оплату Ответственному"
-                     },
+                        "href":"/?type=dmnds_task_routes_tasks&id_task_route_task=8",
+                        "id":"bfe56b679b26615f50af63aa9e41801a",
+                        "label":"Исправить заявку на оплату"
+                     }
+                  ]
+               },
+               {
+                  "id":"2a64eacc4403f9925d7558e516da310c",
+                  "label":"Согласование срочных заявок (Москва)",
+                  "items":[
                      {
-                        "label":"Проверить заявку на оплату в ЦФО (после изменения)"
-                     },
-                     {
-                        "label":"Отметить \"Включить в реестр\" в заявке на оплату и отправить на согласование (после изменения)"
+                        "href":"/?type=dmnds_task_routes_tasks&id_task_route_task=199",
+                        "id":"6fbad210729f3ca701529034734ffb78",
+                        "label":"Проверить срочную заявку на оплату. Включить заявку в реестр на оплату"
                      }
                   ]
                }
             ]
          },
          {
-            "label":"Отменить заявки на оплату (период)"
-         },
-         {
+            "id":"cc8efd42a426e498ae9c61f278639d7c",
             "label":"Журнал регистрации заявок на оплату"
          }
       ]
    },
    {
       "label":"Закупка",
+      "id":"buying",
       "items":[
          {
+            "href":"/?type=buying_orders",
+            "id":"171d989e92e6308e753e2fdba55ccafb",
             "label":"Заказы на закупку"
          },
          {
+            "href":"/?type=consignments",
+            "id":"6ae1b04e928f5d2a016a2ce118d2c2c2",
             "label":"Партии поставки"
          },
          {
+            "href":"/?type=expense_reports",
+            "id":"156bf9c35e7eea9cece561287a8e0c34",
             "label":"Авансовые отчёты"
          },
          {
+            "href":"/?type=buying_dmnds",
+            "id":"017ef46385d6044792dbda35fea9e2cb",
             "label":"Заявки на закупку/Требования"
          },
          {
+            "href":"/?type=buying_needs",
+            "id":"c9a12c11934630ae2add2df9bf9cd1fb",
             "label":"Потребности"
          },
          {
+            "href":"/?type=suppliers",
+            "id":"a2de7c93a5310160b1b5b8134b1ec297",
             "label":"Реестр поставщиков"
          },
          {
-            "label":"Заявки на оплату"
-         },
-         {
-            "label":"Согласование заявок на оплату",
-            "items":[
-               {
-                  "label":"Изменить Заявку на оплату (фин.отдел)",
-                  "items":[
-                     {
-                        "label":"Изменить Заявку на оплату"
-                     }
-                  ]
-               },
-               {
-                  "label":"Изменить Заявку на оплату (ЦФО)",
-                  "items":[
-                     {
-                        "label":"Изменить Заявку на оплату"
-                     }
-                  ]
-               },
-               {
-                  "label":"Согласование заявок  с ответственным за бюджет ЦФО",
-                  "items":[
-                     {
-                        "label":"Проверить заявку на оплату и отправить на согласование"
-                     },
-                     {
-                        "label":"Утвердить заявку на оплату в ЦФО"
-                     },
-                     {
-                        "label":"Изменить заявку на оплату"
-                     }
-                  ]
-               },
-               {
-                  "label":"Согласование заявок на оплату с Бухгалтерией и Фин.отделом",
-                  "items":[
-                     {
-                        "label":"Отметить \"Включить в реестр\" заявку на оплату и отправить на согласование"
-                     },
-                     {
-                        "label":"Проверить заявку на оплату в Бухгалтерии"
-                     },
-                     {
-                        "label":"Проверить заявку на оплату в Фин.отделе"
-                     },
-                     {
-                        "label":"Изменить заявку на оплату"
-                     },
-                     {
-                        "label":"Изменить заявку на оплату Ответственному"
-                     },
-                     {
-                        "label":"Проверить заявку на оплату в ЦФО (после изменения)"
-                     },
-                     {
-                        "label":"Отметить \"Включить в реестр\" в заявке на оплату и отправить на согласование (после изменения)"
-                     }
-                  ]
-               }
-            ]
-         },
-         {
+            "href":"/?type=report_folders",
+            "id":"1884d1e33baaf37c5444c334163e40a8",
             "label":"Отчеты",
             "items":[
                {
+                  "href":"/?type=consignments_history",
+                  "id":"33473b1f2bd237e1cb3db1f353cf6252",
                   "label":"История поставок"
                },
                {
+                  "href":"/?type=buying_orders_report",
+                  "id":"5e81713ad0d5d954a2908d3f73d26d15",
                   "label":"График поставки на месяц"
                },
                {
+                  "href":"/?type=order_specs_buying",
+                  "id":"9fc1f54e1754694bdfab02daa1b634d2",
                   "label":"Анализ потребностей под производство"
                },
                {
-                  "label":"Калужский завод",
+                  "id":"7dcbd6066297406bfd62b7b1f2d9f1d3",
+                  "label":"Группа РПМ",
                   "items":[
                      {
+                        "href":"/?type=orders_completions&id=-1",
+                        "id":"4d91130a8188d3865644df3347de94da",
                         "label":"План комплектации производства"
                      }
                   ]
                },
                {
+                  "id":"846723efb84c071f4f82dab2e19865cc",
                   "label":"АВВА-РУС",
                   "items":[
                      {
+                        "href":"/?type=orders_specs_quantity_report",
+                        "id":"6fbc2c95121896c1bf032d9983776a89",
                         "label":"Расчет количества субстанций и комплектующих на оперативный план производства"
                      },
                      {
+                        "href":"/?type=buying_orders_group_report",
+                        "id":"9f7b00a67c575fe78bcbe62fc79badad",
                         "label":"График поставки на месяц (группа)"
                      },
                      {
+                        "href":"/?type=a_ingredient_calc_report",
+                        "id":"4fe2d22d1bb33f18a38d113905a7d1fb",
                         "label":"Расчет количества субстанций и комплектующих на план производства по плану продаж"
                      },
                      {
-                        "label":"Расчёт плановой себестоимости"
+                        "id":"ebd4c6726714abcdff126c08677c3ec5",
+                        "label":"Расчет плановой себестоимости"
+                     }
+                  ]
+               },
+               {
+                  "id":"6bcad1d1e692ae07bb8d1d95f1c914f1",
+                  "label":"Группа пользовательских отчетов 1",
+                  "items":[
+                     {
+                        "id":"69a3b64a125314f4b3a306216a7f1b1e",
+                        "label":"Пользовательский отчет 1"
+                     },
+                     {
+                        "id":"3db7e3323710dedad9ce176a904085d6",
+                        "label":"Пользовательский отчет 2"
+                     },
+                     {
+                        "id":"7a4ce5fa48f3640898fe30312ae3974f",
+                        "label":"Пользовательский отчет 3"
+                     }
+                  ]
+               },
+               {
+                  "id":"ca5a82bc474403f28a27f56184fbc80f",
+                  "label":"Группа пользовательских отчетов 2",
+                  "items":[
+                     {
+                        "id":"69a3b64a125314f4b3a306216a7f1b1e",
+                        "label":"Пользовательский отчет 1"
+                     },
+                     {
+                        "id":"3db7e3323710dedad9ce176a904085d6",
+                        "label":"Пользовательский отчет 2"
+                     },
+                     {
+                        "id":"7a4ce5fa48f3640898fe30312ae3974f",
+                        "label":"Пользовательский отчет 3"
                      }
                   ]
                }
             ]
+         }
+      ]
+   },
+   {
+      "label":"CRM",
+      "id":"crm",
+      "items":[
+         {
+            "id":"voc_agents",
+            "label":"Контрагенты"
          },
          {
-            "label":"Функции",
+            "id":"acae1ceb9b221400d68cf188fa6d6bf7",
+            "label":"Контактные лица"
+         },
+         {
+            "id":"7911ebf1d0508ea9448659af714609eb",
+            "label":"Маркетинговые акции"
+         },
+         {
+            "id":"1419dd8fee71cfaaf50666e549f120fc",
+            "label":"СМИ"
+         },
+         {
+            "id":"d7cdbc19021fb9eec893a7e147fed6bf",
+            "label":"Публикации"
+         },
+         {
+            "id":"voc_regions",
+            "label":"Регионы"
+         },
+         {
+            "id":"7c4a01fd306fcf4fd8acaaf0aa52e84b",
+            "label":"Региональные программы"
+         },
+         {
+            "href":"/?type=report_folders",
+            "id":"1884d1e33baaf37c5444c334163e40a8",
+            "label":"Отчеты",
             "items":[
                {
-                  "label":"Отменить заявки на оплату (период)"
+                  "id":"6bcad1d1e692ae07bb8d1d95f1c914f1",
+                  "label":"Группа пользовательских отчетов 1",
+                  "items":[
+                     {
+                        "id":"69a3b64a125314f4b3a306216a7f1b1e",
+                        "label":"Пользовательский отчет 1"
+                     },
+                     {
+                        "id":"3db7e3323710dedad9ce176a904085d6",
+                        "label":"Пользовательский отчет 2"
+                     },
+                     {
+                        "id":"7a4ce5fa48f3640898fe30312ae3974f",
+                        "label":"Пользовательский отчет 3"
+                     }
+                  ]
+               },
+               {
+                  "id":"ca5a82bc474403f28a27f56184fbc80f",
+                  "label":"Группа пользовательских отчетов 2",
+                  "items":[
+                     {
+                        "id":"69a3b64a125314f4b3a306216a7f1b1e",
+                        "label":"Пользовательский отчет 1"
+                     },
+                     {
+                        "id":"3db7e3323710dedad9ce176a904085d6",
+                        "label":"Пользовательский отчет 2"
+                     },
+                     {
+                        "id":"7a4ce5fa48f3640898fe30312ae3974f",
+                        "label":"Пользовательский отчет 3"
+                     }
+                  ]
                }
             ]
          }
@@ -720,711 +1414,1290 @@
    },
    {
       "label":"Планы",
+      "id":"plans",
       "items":[
          {
-            "label":"Прайсы"
+            "id":"39cfb266321cce9fbf756ed1d7b6e1d3",
+            "label":"Продуктовые планы (документы)"
          },
          {
-            "label":"Годовой план продаж"
+            "id":"ed3c7e13b584c9a835f6952432be20d2",
+            "label":"Продуктовые планы"
          },
          {
-            "label":"Годовой план закупок"
+            "id":"846723efb84c071f4f82dab2e19865cc",
+            "label":"АВВА-РУС",
+            "items":[
+               {
+                  "href":"/?type=a_prices",
+                  "id":"f593c22ecd9834747ce8915c6a90e43b",
+                  "label":"Прайсы"
+               },
+               {
+                  "href":"/?type=a_sales_plans",
+                  "id":"e5cfb478762a517f79d272c6c6afff56",
+                  "label":"Годовой план продаж"
+               },
+               {
+                  "href":"/?type=a_procurement_plans",
+                  "id":"ca3f3db233b339f0326927dbca1f2cee",
+                  "label":"Годовой план закупок"
+               },
+               {
+                  "href":"/?type=a_month_sales_plans",
+                  "id":"65a7dde6ef9c67a372202c0b7e3a7180",
+                  "label":"Месячный план продаж"
+               },
+               {
+                  "href":"/?type=a_month_production_plans",
+                  "id":"e7f3eaff139a501c82c92b702f6accb0",
+                  "label":"Месячный план производства"
+               },
+               {
+                  "href":"/?type=a_month_procurement_plans",
+                  "id":"2397111e536a690926cbcd644141f634",
+                  "label":"Месячный план закупок"
+               }
+            ]
          },
          {
-            "label":"Месячный план продаж"
-         },
-         {
-            "label":"Месячный план производства"
-         },
-         {
-            "label":"Месячный план закупок"
+            "href":"/?type=report_folders",
+            "id":"1884d1e33baaf37c5444c334163e40a8",
+            "label":"Отчеты",
+            "items":[
+               {
+                  "id":"6bcad1d1e692ae07bb8d1d95f1c914f1",
+                  "label":"Группа пользовательских отчетов 1",
+                  "items":[
+                     {
+                        "id":"69a3b64a125314f4b3a306216a7f1b1e",
+                        "label":"Пользовательский отчет 1"
+                     },
+                     {
+                        "id":"3db7e3323710dedad9ce176a904085d6",
+                        "label":"Пользовательский отчет 2"
+                     },
+                     {
+                        "id":"7a4ce5fa48f3640898fe30312ae3974f",
+                        "label":"Пользовательский отчет 3"
+                     }
+                  ]
+               },
+               {
+                  "id":"ca5a82bc474403f28a27f56184fbc80f",
+                  "label":"Группа пользовательских отчетов 2",
+                  "items":[
+                     {
+                        "id":"69a3b64a125314f4b3a306216a7f1b1e",
+                        "label":"Пользовательский отчет 1"
+                     },
+                     {
+                        "id":"3db7e3323710dedad9ce176a904085d6",
+                        "label":"Пользовательский отчет 2"
+                     },
+                     {
+                        "id":"7a4ce5fa48f3640898fe30312ae3974f",
+                        "label":"Пользовательский отчет 3"
+                     }
+                  ]
+               }
+            ]
          }
       ]
    },
    {
+      "href":"/?type=report_folders",
+      "label":"Отчеты",
+      "id":"reports",
+      "items":[
+         {
+            "id":"6bcad1d1e692ae07bb8d1d95f1c914f1",
+            "label":"Группа пользовательских отчетов 1",
+            "items":[
+               {
+                  "id":"69a3b64a125314f4b3a306216a7f1b1e",
+                  "label":"Пользовательский отчет 1"
+               },
+               {
+                  "id":"3db7e3323710dedad9ce176a904085d6",
+                  "label":"Пользовательский отчет 2"
+               },
+               {
+                  "id":"7a4ce5fa48f3640898fe30312ae3974f",
+                  "label":"Пользовательский отчет 3"
+               }
+            ]
+         },
+         {
+            "id":"ca5a82bc474403f28a27f56184fbc80f",
+            "label":"Группа пользовательских отчетов 2",
+            "items":[
+               {
+                  "id":"69a3b64a125314f4b3a306216a7f1b1e",
+                  "label":"Пользовательский отчет 1"
+               },
+               {
+                  "id":"3db7e3323710dedad9ce176a904085d6",
+                  "label":"Пользовательский отчет 2"
+               },
+               {
+                  "id":"7a4ce5fa48f3640898fe30312ae3974f",
+                  "label":"Пользовательский отчет 3"
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "id":"vocs",
       "label":"Справочники",
       "items":[
          {
-            "label":"Производственные",
+            "label":"Номенклатура",
+            "id":"voc_products",
             "items":[
                {
+                  "href":"/?type=voc_groups",
+                  "id":"a743e12b7f2b86bc54af7a5987e15c3e",
+                  "label":"Классификаторы номенклатуры"
+               },
+               {
+                  "href":"/?type=voc_units",
+                  "id":"ecf1ed9173f50289ed8b11c82b54f6fe",
+                  "label":"Единицы измерения"
+               },
+               {
+                  "id":"41c98658cb36e43b383454e0ba116913",
+                  "label":"Перевод единиц измерений"
+               },
+               {
+                  "href":"/?type=voc_analog_kinds",
+                  "id":"68ad6dc7e555ce802ebf60cab3ea2a67",
+                  "label":"Виды аналогов"
+               },
+               {
+                  "href":"/?type=voc_drawing_formats",
+                  "id":"d44872ed1e34cf45a6afc9a1e56cffa8",
+                  "label":"Форматы чертежей"
+               },
+               {
+                  "href":"/?type=voc_preparation_kinds",
+                  "id":"cd184efac3002e3793a01da39dfd612f",
+                  "label":"Виды заготовок"
+               },
+               {
+                  "href":"/?type=voc_alternative_substitute_types",
+                  "id":"513d3f51ccd23a3417ae0f012624bd8e",
+                  "label":"Типы альтернативных замен"
+               },
+               {
+                  "href":"/?type=voc_agent_producers",
+                  "id":"08ae780ef694568c67c207340dfd1b3b",
+                  "label":"Производители продукции"
+               },
+               {
+                  "id":"40eb1968a6e08c00082fd0db9a37142b",
+                  "label":"Название норм"
+               }
+            ]
+         },
+         {
+            "label":"Производство",
+            "id":"voc_production",
+            "items":[
+               {
+                  "href":"/?type=voc_operations",
+                  "id":"0faee6691f338e8f1e4e70a7e5c590ee",
                   "label":"Технологические операции"
                },
                {
+                  "href":"/?type=doc_field_folders&id_doc_type_bind=192",
+                  "id":"ec673086ed2d9ac0cf48d563972d016e",
                   "label":"Параметры для режимов обработки"
                },
                {
+                  "href":"/?type=voc_transition_text_folders",
+                  "id":"8f8fe3ce07b383fdd80d0f785f638e09",
                   "label":"Типовые тексты переходов"
                },
                {
+                  "href":"/?type=workcenters",
+                  "id":"180d92897481f6c606ac01e99a67b35d",
                   "label":"Рабочие центры"
                },
                {
-                  "label":"Типы оборудования"
-               },
-               {
+                  "id":"c62e75fa05a6402f7edd024a5c50f550",
                   "label":"Доступ операторов к РЦ"
                },
                {
+                  "href":"/?type=voc_equipment_types",
+                  "id":"a022f518eb1de9d89f3e363635a2f4bd",
                   "label":"Типы оборудования"
                },
                {
+                  "href":"/?type=voc_equipments",
+                  "id":"a135d099dafa8b134285278df67df8a5",
                   "label":"Оборудование"
                },
                {
+                  "href":"/?type=doc_field_folders&id_doc_type_bind=191",
+                  "id":"9f8c46de0f73e6ae00a3614f7a3998df",
                   "label":"Характеристики оборудования"
                },
                {
+                  "href":"/?type=voc_professions",
+                  "id":"06cf59df76d6918a79c10ada754f4531",
                   "label":"Профессии"
                },
                {
+                  "href":"/?type=voc_ranks",
+                  "id":"e8bccc4ff1aa5c21f38ab29376593e54",
                   "label":"Разряды"
                },
                {
+                  "href":"/?type=voc_dispatchers",
+                  "id":"ab71d5dea10726c7a505c3e87608ddfb",
                   "label":"Ответственные диспетчеры"
                },
                {
+                  "href":"/?type=voc_waste_groups",
+                  "id":"c109b118a806eac13e6e7214d4af4cbc",
                   "label":"Группы отходов"
                },
                {
+                  "href":"/?type=voc_product_routes",
+                  "id":"c09b98039969b091419f2ab1883155d7",
                   "label":"Виды работ"
                },
                {
+                  "href":"/?type=voc_technologists",
+                  "id":"726cbefa1899abc70b532e3644a04bbb",
                   "label":"Справочник работ"
                },
                {
+                  "href":"/?type=voc_order_change_reasons",
+                  "id":"faba1692ace7a3fd0c12746647e0e600",
                   "label":"Причины изменений в заказе"
                },
                {
+                  "href":"/?type=voc_order_backlog_reasons",
+                  "id":"395f307d7c7c63c8c07d3e4a32d1c258",
                   "label":"Причины отставаний в заказах"
                }
             ]
          },
          {
-            "label":"Склады",
+            "label":"Контрагенты",
+            "id":"voc_agents",
             "items":[
                {
-                  "label":"Типы складов"
+                  "id":"voc_agents",
+                  "label":"Контрагенты"
                },
                {
-                  "label":"Типы мест хранения"
+                  "id":"8616a20e6e12d5e49d5c77d19c555ba9",
+                  "label":"Контрагенты (справочник потребителя)"
                },
                {
+                  "href":"/?type=voc_agents_tree",
+                  "id":"2530625a726d4c9508a3fdc9a2235fbd",
+                  "label":"Классификатор контрагентов"
+               },
+               {
+                  "href":"/?type=voc_agent_types",
+                  "id":"05298325bf9d0412c2f7cacebbae577b",
+                  "label":"Типы контрагентов"
+               },
+               {
+                  "href":"/?type=voc_olf",
+                  "id":"dd42a0d856abf7c7c7b11e3ea71631b7",
+                  "label":"ОПФ"
+               },
+               {
+                  "href":"/?type=voc_banks",
+                  "label":"Банки",
+                  "id":"voc_banks"
+               },
+               {
+                  "id":"50e6ab8a968954b96ac2120d030b637b",
+                  "label":"Кураторы"
+               },
+               {
+                  "id":"8afe12658d64d82acf14382957b72f93",
+                  "label":"Виды деятельности"
+               },
+               {
+                  "id":"c7046aecdad41957276c76ae0d7fd1b7",
+                  "label":"Виды адресов"
+               },
+               {
+                  "id":"130f1a02dc8b1a3ce88bb518a43564c1",
+                  "label":"Виды связи"
+               },
+               {
+                  "id":"78c55c5518b116563af9636705288b4c",
+                  "label":"Виды событий"
+               },
+               {
+                  "id":"3ba487bc77b636759e0f49d54a6ecc04",
+                  "label":"Виды отношений"
+               },
+               {
+                  "id":"70193532573b0d09bfbe449164271802",
+                  "label":"Лояльности"
+               },
+               {
+                  "id":"4f36dc3bb3914fac8764c1253eb74f28",
+                  "label":"Виды влияний"
+               },
+               {
+                  "id":"3125ed1d8a04cb8850aaef65e73d665f",
+                  "label":"Виды обращений"
+               },
+               {
+                  "id":"358c0eb932fdfe8b02e289da19e2127d",
+                  "label":"Должности контактных лиц"
+               },
+               {
+                  "id":"6cc5985fa01a61539fa2d867c982623a",
+                  "label":"Коммерческие условия"
+               }
+            ]
+         },
+         {
+            "href":"/?type=voc_warehouses",
+            "label":"Склады",
+            "id":"voc_stores",
+            "items":[
+               {
+                  "href":"/?type=voc_warehouses",
+                  "id":"voc_warehouses",
                   "label":"Склады"
                },
                {
+                  "href":"/?type=voc_warehouse_types",
+                  "id":"cbe7e37208b6ecdb353daee9c8a448c7",
+                  "label":"Типы складов"
+               },
+               {
+                  "id":"d110ad5e044a7adf3f586720c4a888c9",
+                  "label":"Типы мест хранения"
+               },
+               {
+                  "href":"/?type=voc_kinds_stocks",
+                  "id":"33c5052a47426a0aa387c4775bf50817",
                   "label":"Виды запасов"
                },
                {
+                  "href":"/?type=voc_warehouses_voc_kinds_stock_routes",
+                  "id":"fef6ce3cfc688167bcc4968dc181f9fc",
                   "label":"Разрешённые перемещения"
                },
                {
+                  "href":"/?type=movement_receipt_types",
+                  "id":"0ce174fffb515bd7806aaf5379714ea8",
                   "label":"Типы документов на перемещение"
                },
                {
-                  "label":"Материалы для автоматического списания"
-               },
-               {
+                  "href":"/?type=voc_closed_periods&kind=0",
+                  "id":"65b137eb91ba06c57535cbd19d5f4de6",
                   "label":"Закрытые периоды"
                },
                {
+                  "href":"/?type=voc_auto_movement_products",
+                  "id":"3cdb7845630df060455e0bbca19df6d8",
+                  "label":"Материалы для автоматического списания"
+               },
+               {
+                  "href":"/?type=dt_fit_to_ext_reasons",
+                  "id":"0a336e8093cc73edf69638be41588b41",
                   "label":"Причины изменения срока годности"
                }
             ]
          },
          {
-            "label":"Номенклатура",
-            "items":[
-               {
-                  "label":"Классификаторы номенклатуры"
-               },
-               {
-                  "label":"Группы параметров"
-               },
-               {
-                  "label":"Параметры номенклатуры"
-               },
-               {
-                  "label":"Единицы измерения"
-               },
-               {
-                  "label":"Перевод единиц измерений"
-               },
-               {
-                  "label":"Форматы чертежей"
-               },
-               {
-                  "label":"Виды заготовок"
-               },
-               {
-                  "label":"Типы альтернативных замен"
-               },
-               {
-                  "label":"Производители продукции"
-               },
-               {
-                  "label":"Название норм"
-               },
-               {
-                  "label":"Виды аналогов"
-               }
-            ]
-         },
-         {
-            "label":"Контрагенты",
-            "items":[
-               {
-                  "label":"Контрагенты"
-               },
-               {
-                  "label":"Контрагенты (справочник потребителя)"
-               },
-               {
-                  "label":"Классификатор контрагентов"
-               },
-               {
-                  "label":"Банки"
-               },
-               {
-                  "label":"ОПФ"
-               },
-               {
-                  "label":"Регионы"
-               },
-               {
-                  "label":"Типы контрагентов"
-               }
-            ]
-         },
-         {
-            "label":"Продажи",
-            "items":[
-               {
-                  "label":"Состояния отгрузки"
-               }
-            ]
-         },
-         {
-            "label":"Пользовательские",
-            "items":[
-               {
-                  "label":"Для описания номенклатуры",
-                  "items":[
-                     {
-                        "label":"Добавить..."
-                     },
-                     {
-                        "label":"dct"
-                     },
-                     {
-                        "label":"Цвет"
-                     }
-                  ]
-               },
-               {
-                  "label":"Для характеристик оборудования",
-                  "items":[
-                     {
-                        "label":"Добавить..."
-                     }
-                  ]
-               },
-               {
-                  "label":"Для режимов обработки",
-                  "items":[
-                     {
-                        "label":"Добавить..."
-                     },
-                     {
-                        "label":"Вид резки"
-                     },
-                     {
-                        "label":"Вид сварки"
-                     },
-                     {
-                        "label":"Вид термообработки"
-                     },
-                     {
-                        "label":"Зона нагрева"
-                     },
-                     {
-                        "label":"метод маркировки"
-                     },
-                     {
-                        "label":"Метод правки (рихтовки)"
-                     },
-                     {
-                        "label":"Направление наклона"
-                     },
-                     {
-                        "label":"Направление сварки"
-                     },
-                     {
-                        "label":"Охлаждение"
-                     },
-                     {
-                        "label":"Полярность"
-                     },
-                     {
-                        "label":"Пространственное положение"
-                     },
-                     {
-                        "label":"Способ сварки"
-                     }
-                  ]
-               },
-               {
-                  "label":"Для документооборота",
-                  "items":[
-                     {
-                        "label":"Вид обработки"
-                     },
-                     {
-                        "label":"Вид оснастки"
-                     },
-                     {
-                        "label":"Причина заказа оснастки"
-                     },
-                     {
-                        "label":"Причина извещения (справочник)"
-                     },
-                     {
-                        "label":"Срочность (справочник)"
-                     }
-                  ]
-               },
-               {
-                  "label":"Для обьектов",
-                  "items":[
-                     {
-                        "label":"Добавить..."
-                     }
-                  ]
-               },
-               {
-                  "label":"Доп. поля для объектов"
-               },
-               {
-                  "label":"Настройка доп. полей для объектов"
-               }
-            ]
-         },
-         {
-            "label":"Финансы",
-            "items":[
-               {
-                  "label":"Статьи БДДС"
-               },
-               {
-                  "label":"Стили статей БДДС"
-               },
-               {
-                  "label":"Статьи БДДС (казначейство)"
-               },
-               {
-                  "label":"Проводки БУ"
-               },
-               {
-                  "label":"Проводки НУ"
-               },
-               {
-                  "label":"Валюты"
-               },
-               {
-                  "label":"Ставки НДС"
-               },
-               {
-                  "label":"Статьи затрат"
-               },
-               {
-                  "label":"Виды затрат, цены"
-               },
-               {
-                  "label":"Параметры контроля платежей"
-               },
-               {
-                  "label":"Условия платежа"
-               },
-               {
-                  "label":"Коды БК"
-               },
-               {
-                  "label":"Виды кредитов"
-               },
-               {
-                  "label":"Виды комиссий банка"
-               },
-               {
-                  "label":"Структура ЦФО"
-               },
-               {
-                  "label":"Ответственные за бюджет ЦФО"
-               },
-               {
-                  "label":"Соответствие платежей договоров к статьям БДДС"
-               },
-               {
-                  "label":"Типы платежных документов"
-               },
-               {
-                  "label":"Типы услуг"
-               }
-            ]
-         },
-         {
+            "id":"voc_buying",
             "label":"Закупки",
             "items":[
                {
-                  "label":"Условия поставки"
-               },
-               {
-                  "label":"Виды транспорта"
-               },
-               {
+                  "href":"/?type=voc_payment_types",
+                  "id":"b897ba09bdd76f2ac8036ccf60fe5f07",
                   "label":"Тип платежа"
                },
                {
+                  "href":"/?type=voc_payment_types_cfo_deps",
+                  "id":"b100f92e0d11482c3a80e2748eb96eec",
                   "label":"Доступ ЦФО к типам платежей"
                },
                {
+                  "href":"/?type=buying_reasons",
+                  "id":"6c04026a23609675b714cda0de0c153d",
                   "label":"Основание для закупки"
                },
                {
+                  "href":"/?type=voc_supplier_categories",
+                  "id":"6acf107ba71d8abd6942090087e7cc69",
                   "label":"Категории поставщика"
                },
                {
+                  "href":"/?type=voc_supply_categories",
+                  "id":"7e30ba68fe2f1066e648ed7139aa9a97",
                   "label":"Категории поставки"
                },
                {
-                  "label":"Документы основания"
+                  "href":"/?type=voc_delivery_terms",
+                  "id":"de84ebd23accce954dabcf46df6e6b54",
+                  "label":"Условия поставки"
                },
                {
-                  "label":"Цены РЖДС"
+                  "href":"/?type=voc_transport_types",
+                  "id":"6234cf751355b0fcde2d39f0171d7540",
+                  "label":"Виды транспорта"
                },
                {
+                  "href":"/?type=consignment_states",
+                  "id":"872a46e1caac2cbc1cc702b18b50fe0a",
                   "label":"Состояния партий поставки"
+               },
+               {
+                  "href":"/?type=voc_base_doc_types",
+                  "id":"fd69b67e8dd6efbcefc41b605c771f5f",
+                  "label":"Документы основания"
+               }
+            ]
+         },
+         {
+            "label":"Финансы, экономика",
+            "id":"voc_fin",
+            "items":[
+               {
+                  "href":"/?type=deps&fake_live=-16",
+                  "id":"2dec3523365de94da939ce19c5c1d0ff",
+                  "label":"Структура ЦФО"
+               },
+               {
+                  "href":"/?type=users_cfo_deps",
+                  "id":"9c28dd81c1b3a62d70f90f55309e495b",
+                  "label":"Ответственные за бюджет ЦФО"
+               },
+               {
+                  "href":"/?type=bdds_arts",
+                  "id":"153834326769d8faec9f20e006f90531",
+                  "label":"Статьи БДДС"
+               },
+               {
+                  "href":"/?type=bdds_treasury_arts",
+                  "id":"38e08e79bc06e723612ce4393c1a1106",
+                  "label":"Статьи БДДС (казначейство)"
+               },
+               {
+                  "href":"/?type=currencies_rates_of_exchange_daily",
+                  "id":"8febaf3d09ee1f305198f383ce904153",
+                  "label":"Валюты"
+               },
+               {
+                  "href":"/?type=voc_nds",
+                  "id":"555dd05683eccef331a2a49c3d5e22ee",
+                  "label":"Ставки НДС"
+               },
+               {
+                  "href":"/?type=doc_pay_terms",
+                  "id":"7b9ba141773ff362585eba45a5b1dfc6",
+                  "label":"Условия платежа"
+               },
+               {
+                  "href":"/?type=voc_credit_kinds",
+                  "id":"ce2d1f4170e9db3631753c7d9c2ab727",
+                  "label":"Виды кредитов"
+               },
+               {
+                  "href":"/?type=voc_commission_kinds",
+                  "id":"6fb3330d5acc90bd3b07725e4f382b6d",
+                  "label":"Виды комиссий банка"
+               },
+               {
+                  "href":"/?type=voc_kbks",
+                  "id":"ed45b5231a59686ee10469bfd072f10f",
+                  "label":"Коды БК"
+               },
+               {
+                  "href":"/?type=bdds_pays_order_types",
+                  "id":"df1eab9bec002912c3047599fc58e462",
+                  "label":"Типы платежных документов"
+               },
+               {
+                  "href":"/?type=voc_services_types",
+                  "id":"ee4bbd1a276e8ddd167d4066d6f30dc7",
+                  "label":"Типы услуг"
+               },
+               {
+                  "href":"/?type=bdds_arts_doc_pays",
+                  "id":"0c5af9a6290e7b31fd3b26e36f9d9916",
+                  "label":"Соответствие платежей договоров к статьям БДДС"
+               },
+               {
+                  "href":"/?type=voc_checking_parameters",
+                  "id":"21a343ecbd2d2bdfc6bc2d66627157d8",
+                  "label":"Параметры контроля платежей"
+               },
+               {
+                  "href":"/?type=voc_account_entries&is_tax=0",
+                  "id":"a7d1592129f70132a3a1fc247765b6c0",
+                  "label":"Проводки БУ"
+               },
+               {
+                  "id":"fa8b5304d0320ea1ee27baf18c282c85",
+                  "label":"Проводки НУ"
+               },
+               {
+                  "href":"/?type=voc_expense_items",
+                  "id":"7b577ee36f8193e4e2ee059d51823c59",
+                  "label":"Статьи затрат"
+               },
+               {
+                  "href":"/?type=voc_cost_kinds",
+                  "id":"0bcb9ec36570f516a20030fb6364e32b",
+                  "label":"Виды затрат, цены"
+               },
+               {
+                  "href":"/?type=doc_cost_kinds",
+                  "id":"d3ffa678608223005ec1520544d9b01a",
+                  "label":"Цены (документы)"
+               },
+               {
+                  "href":"/?type=doc_cost_kind_items",
+                  "id":"eddc2e832c8c72529625d577987a7d0b",
+                  "label":"Цены номенклатуры"
+               },
+               {
+                  "href":"/?type=voc_product_prices",
+                  "id":"6359f2c52e88f95fa564208ca3deb2d6",
+                  "label":"Цены и нормативные затраты"
+               },
+               {
+                  "href":"/?type=product_prices_rzds&to_dt=1",
+                  "id":"5550f74e9ea498a22af3a20adff843fd",
+                  "label":"Цены РЖДС"
                }
             ]
          },
          {
             "label":"Кадры",
+            "id":"voc_hr",
             "items":[
                {
+                  "href":"/?type=calculation_job_times",
+                  "id":"1f7e13299c64028002df3d9e422310d6",
                   "label":"Табель учета рабочего времени"
                },
                {
+                  "href":"/?type=voc_job_time_codes",
+                  "id":"c8184c9836a271f7f174bb5950bd9399",
                   "label":"Коды табельного учета"
                },
                {
+                  "href":"/?type=voc_shift_jobs",
+                  "id":"faf3e93037537eaa766ff7debf264620",
                   "label":"Рабочие смены"
                },
                {
+                  "href":"/?type=voc_posts",
+                  "id":"54f68fdcf3c6cb828e546dfbea59ae1c",
                   "label":"Должности"
                },
                {
+                  "href":"/?type=voc_teams",
+                  "id":"bfbd755e782cf4ef51ad599fa4410310",
                   "label":"Бригады"
                },
                {
+                  "href":"/?type=voc_bonuses",
+                  "id":"e7b01fc80bf9f7b8a2e8a599889d294e",
                   "label":"Надбавки"
                }
             ]
          },
          {
-            "label":"Планирование",
+            "label":"Регионы",
+            "id":"voc_regions",
             "items":[
                {
+                  "href":"/?type=voc_regions",
+                  "id":"a2e3540278a23126d4a1c58fd47d329e",
+                  "label":"Административно-территориальные единицы"
+               },
+               {
+                  "id":"2d4963084f3f17d6ff2bc08dfd7107b4",
+                  "label":"Виды органов власти"
+               }
+            ]
+         },
+         {
+            "id":"a3ff8a9f523e9ab981817a1b63f0db14",
+            "label":"Отрасли"
+         },
+         {
+            "label":"Планы",
+            "id":"voc_plans",
+            "items":[
+               {
+                  "id":"e467c010a1f1b8786702969700c5b945",
+                  "label":"Типы планов"
+               },
+               {
+                  "id":"fcabf4f8bfda108b50cd5e8fe5dae1f3",
                   "label":"Центры ответственности"
                },
                {
+                  "id":"9ea1d81b5ebc91cb066c5a7eabcbf893",
                   "label":"Продвигаемость/Страна"
                }
             ]
          },
          {
-            "label":"Документы",
+            "label":"Маркетинг",
+            "id":"voc_m",
             "items":[
                {
+                  "id":"eed2ce5b5fadd60605adbfd3668a77f2",
+                  "label":"Типы мероприятий"
+               },
+               {
+                  "id":"41085136b266f6c07ad590b8c5dc3dd1",
+                  "label":"Статусы мероприятий"
+               },
+               {
+                  "id":"ee561dd9af3ebeb488d27b4b24eac595",
+                  "label":"Цели мероприятий"
+               },
+               {
+                  "id":"9b63418e702be42d8228bc69b7e7f1d6",
+                  "label":"Целевая аудитория"
+               },
+               {
+                  "id":"077f24bdd41181a63be87bb189c09783",
+                  "label":"Виды участия в мероприятиях"
+               },
+               {
+                  "id":"ef542189b85e1b9d3b4e1d2e6107bbfc",
+                  "label":"Виды участия номенклатуры в мероприятиях"
+               },
+               {
+                  "id":"fceb6a9132ad889626450216b1b77264",
+                  "label":"Результаты участия в мероприятиях"
+               },
+               {
+                  "id":"661d6a8512e882646baa0182836ba290",
+                  "label":"Источники получения информации"
+               },
+               {
+                  "id":"963976ca0caf0d23df585ba19bfc9f60",
+                  "label":"Типы СМИ"
+               },
+               {
+                  "id":"441ecafb46ccd5b97b04657226bbc66c",
+                  "label":"Классификатор СМИ"
+               },
+               {
+                  "id":"76b1c03261ae979655263917d6edcbfd",
+                  "label":"Виды публикаций"
+               },
+               {
+                  "id":"56f0ced3a625582ece802e48e61de9b0",
+                  "label":"Темы публикаций"
+               },
+               {
+                  "id":"fff217f506b58e4deefdc7e06d1c9efc",
+                  "label":"Статусы публикаций"
+               }
+            ]
+         },
+         {
+            "label":"Программы",
+            "id":"voc_prog",
+            "items":[
+               {
+                  "id":"9b33f8ba6d916183dcce1821759e5ef6",
+                  "label":"Типы программ"
+               },
+               {
+                  "id":"de9e6e420d4d892d2040bf7712d76996",
+                  "label":"Статусы программ"
+               },
+               {
+                  "id":"7d5bd5d7ed5d076a519432df3e7860ac",
+                  "label":"Виды финансирования"
+               },
+               {
+                  "id":"d3a0281f101a8b7518191e98fdf91a6b",
+                  "label":"Виды участия в программах"
+               },
+               {
+                  "id":"cd463edf9a66f1f17ee163372163190d",
+                  "label":"Статусы участия в программах"
+               }
+            ]
+         },
+         {
+            "label":"Документооборот",
+            "id":"docflow_vocs",
+            "items":[
+               {
+                  "href":"/?type=news_subjects",
+                  "id":"aa4cafd55d7f3d6d13138b4e0b46641a",
                   "label":"Темы новостей"
                },
                {
+                  "href":"/?type=doc_type_groups",
+                  "id":"7af3a846efbeee3d9883303e5b84eeea",
                   "label":"Группы типов документов"
                },
                {
+                  "href":"/?type=doc_types&is_use_doc_type_type_filter=1&is_docs=1",
+                  "id":"e223f3290cf071cb046cf0452611c027",
                   "label":"Типы документов"
                },
                {
+                  "href":"/?type=doc_kinds",
+                  "id":"89625f75f6a65e22fb9904876d6ed91e",
                   "label":"Виды документов"
                },
                {
+                  "href":"/?type=doc_status",
+                  "id":"e5c087ebcf096b14e6604612d20fa828",
                   "label":"Статусы документов"
                },
                {
-                  "label":"Типы задач"
-               },
-               {
-                  "label":"Важность задач"
-               },
-               {
-                  "label":"Параметры для выбора процесса"
-               },
-               {
-                  "label":"Выбор процесса по параметрам"
-               },
-               {
+                  "href":"/?type=doc_folder_deps",
+                  "id":"4f370c287e1e503b409281eefb143d2e",
                   "label":"Глобальные каталоги"
                },
                {
-                  "label":"Дополнительные поля",
+                  "href":"/?type=task_types",
+                  "id":"b02c1f3b0898f88ff7738a4a4894b1fc",
+                  "label":"Типы задач"
+               },
+               {
+                  "href":"/?type=task_importances",
+                  "id":"c46e0b05266fab64db94d8113d3e2a37",
+                  "label":"Важность задач"
+               },
+               {
+                  "href":"/?type=tr_selection",
+                  "id":"3256f970b049b7407d5a154705af6d79",
+                  "label":"Выбор процесса по параметрам"
+               },
+               {
+                  "href":"/?type=tr_parameters",
+                  "id":"4f323b130407c0cd1bce4411cc13f488",
+                  "label":"Параметры для выбора процесса"
+               }
+            ]
+         },
+         {
+            "label":"Дополнительные поля",
+            "id":"doc_fields",
+            "items":[
+               {
+                  "id":"927d638c251e29ecf2f7c65bb1a1e9fe",
+                  "label":"Для документов"
+               },
+               {
+                  "id":"adf94d67f193a50476c06290ca060080",
+                  "label":"Для задач"
+               },
+               {
+                  "id":"d2c274752a6f81d2703d50d9901407b4",
+                  "label":"Для обьектов"
+               },
+               {
+                  "href":"/?type=objects_types",
+                  "id":"0ccb2636cd83b076a5dd305803d7c4b1",
+                  "label":"Настройка доп. полей для объектов"
+               },
+               {
+                  "id":"28227a17608b78bdc9b701c926f78575",
+                  "label":"Для номенклатуры"
+               },
+               {
+                  "href":"/?type=product_field_groups",
+                  "id":"dfb64c575aa6aa1d76f1ef8bcc2f8a35",
+                  "label":"Для номенклатуры (группы)"
+               }
+            ]
+         },
+         {
+            "label":"Пользовательские справочники",
+            "id":"user_vocs",
+            "items":[
+               {
+                  "id":"927d638c251e29ecf2f7c65bb1a1e9fe",
+                  "label":"Для документов",
                   "items":[
                      {
-                        "label":"Для документов"
+                        "href":"/?type=doc_types&id_doc_type_bind=10036",
+                        "id":"ebc81eb3ea647b6c0cc79a7d09c78b84",
+                        "label":"Добавить..."
                      },
                      {
-                        "label":"Для задач"
+                        "id":"065f4941e0586ba10828a888cec7e41c",
+                        "label":"CD привод"
+                     },
+                     {
+                        "id":"f69185586b398f100fae1c2dd82afa52",
+                        "label":"Архив каталогов"
+                     },
+                     {
+                        "id":"db5cadde9cb44a2636ec71edf33f8c37",
+                        "label":"Вид монитора"
+                     },
+                     {
+                        "href":"/?type=doc_vocs&id_doc_type=10031",
+                        "id":"1d721d636ef9d236f8525044f8d65093",
+                        "label":"Вид обработки"
+                     },
+                     {
+                        "href":"/?type=doc_vocs&id_doc_type=10032",
+                        "id":"7a4b3ba82e339c744c61b5d2f80c4918",
+                        "label":"Вид оснастки"
+                     },
+                     {
+                        "id":"5fe4e60143ddc2890b501ca5c478e494",
+                        "label":"Вид подключения"
+                     },
+                     {
+                        "id":"2071080a18c1011f71822232e0c90901",
+                        "label":"Дивизионы"
+                     },
+                     {
+                        "id":"dbf2fcc8d96e960a90917b8733fbd804",
+                        "label":"Доступ"
+                     },
+                     {
+                        "id":"ae461e9b61f68bd7a448e8d2e510227f",
+                        "label":"Используемое ПО"
+                     },
+                     {
+                        "href":"/?type=doc_vocs&id_doc_type=10027",
+                        "id":"b2533e6df9bac11de304da47322e9c79",
+                        "label":"Классификация предприятия (справочник)"
+                     },
+                     {
+                        "id":"5b4bb334bf63d71588d79664afeb618f",
+                        "label":"Код направления инвестиций"
+                     },
+                     {
+                        "href":"/?type=doc_vocs&id_doc_type=10026",
+                        "id":"e8795d777a69a93fe59318d3bbfda766",
+                        "label":"Предмет договора (справочник)"
+                     },
+                     {
+                        "href":"/?type=doc_vocs&id_doc_type=10030",
+                        "id":"3efb9f8df76c31bc6dd68dc87f97a561",
+                        "label":"Причина заказа оснастки"
+                     },
+                     {
+                        "href":"/?type=doc_vocs&id_doc_type=210",
+                        "id":"e95f18e20c413707cd748607c9a04e48",
+                        "label":"Причина извещения (справочник)"
+                     },
+                     {
+                        "href":"/?type=doc_vocs&id_doc_type=209",
+                        "id":"1b972c7e1ddcb03d20602bee170137e7",
+                        "label":"Срочность (справочник)"
+                     },
+                     {
+                        "id":"9e26d3c026ab4079d3967e7038b4d948",
+                        "label":"Тема"
+                     },
+                     {
+                        "href":"/?type=doc_vocs&id_doc_type=100067",
+                        "id":"a00de53b725909517f7c7f0fae353c87",
+                        "label":"Тип отчета"
+                     },
+                     {
+                        "href":"/?type=doc_vocs&id_doc_type=100069",
+                        "id":"3d057685ea4c53a8fd3c28c2928e68dc",
+                        "label":"Тип приказа"
+                     },
+                     {
+                        "id":"fe513526114eacdfa5daf3ed28f82057",
+                        "label":"Формат печати"
                      }
                   ]
                },
                {
-                  "label":"Пользовательские справочники",
+                  "id":"adf94d67f193a50476c06290ca060080",
+                  "label":"Для задач",
                   "items":[
                      {
-                        "label":"Для документооборота",
-                        "items":[
-                           {
-                              "label":"Добавить..."
-                           },
-                           {
-                              "label":"CD привод"
-                           },
-                           {
-                              "label":"Архив каталогов"
-                           },
-                           {
-                              "label":"Вид монитора"
-                           },
-                           {
-                              "label":"Вид обработки"
-                           },
-                           {
-                              "label":"Вид оснастки"
-                           },
-                           {
-                              "label":"Вид подключения"
-                           },
-                           {
-                              "label":"Дивизионы"
-                           },
-                           {
-                              "label":"Доступ"
-                           },
-                           {
-                              "label":"Используемое ПО"
-                           },
-                           {
-                              "label":"Классификация предприятия (справочник)"
-                           },
-                           {
-                              "label":"Код направления инвестиций"
-                           },
-                           {
-                              "label":"Предмет договора (справочник)"
-                           },
-                           {
-                              "label":"Причина заказа оснастки"
-                           },
-                           {
-                              "label":"Причина извещения (справочник)"
-                           },
-                           {
-                              "label":"Срочность (справочник)"
-                           },
-                           {
-                              "label":"Тема"
-                           },
-                           {
-                              "label":"Формат печати"
-                           }
-                        ]
+                        "href":"/?type=doc_types&id_doc_type_bind=10036",
+                        "id":"ebc81eb3ea647b6c0cc79a7d09c78b84",
+                        "label":"Добавить..."
                      },
                      {
-                        "label":"Для задач",
-                        "items":[
-                           {
-                              "label":"Добавить..."
-                           },
-                           {
-                              "label":"Автор резолюции"
-                           },
-                           {
-                              "label":"Вид неисправности"
-                           },
-                           {
-                              "label":"Вид работ"
-                           },
-                           {
-                              "label":"Причина запроса"
-                           },
-                           {
-                              "label":"Проект системы"
-                           },
-                           {
-                              "label":"Раздел системы"
-                           }
-                        ]
+                        "id":"bb23c4b447c9f5414a7c5edfbee8794a",
+                        "label":"Автор резолюции"
+                     },
+                     {
+                        "id":"f61d68f636a1da44e83b856ff9516d71",
+                        "label":"Вид неисправности"
+                     },
+                     {
+                        "id":"82c273bc8ab0db875c9d0a089e938655",
+                        "label":"Вид работ"
+                     },
+                     {
+                        "id":"c47ec32abb128c5bb419393ceb90ff08",
+                        "label":"Причина запроса"
+                     },
+                     {
+                        "id":"ed154ad706e78bf681b15983ba0d30fe",
+                        "label":"Проект системы"
+                     },
+                     {
+                        "id":"a7953cd6915ee1b042530c246ac09537",
+                        "label":"Раздел системы"
+                     }
+                  ]
+               },
+               {
+                  "id":"28227a17608b78bdc9b701c926f78575",
+                  "label":"Для номенклатуры",
+                  "items":[
+                     {
+                        "href":"/?type=doc_types&id_doc_type_bind=10036",
+                        "id":"ebc81eb3ea647b6c0cc79a7d09c78b84",
+                        "label":"Добавить..."
+                     },
+                     {
+                        "href":"/?type=doc_vocs&id_doc_type=100055",
+                        "id":"cf5abd4a5c5d7121b8e20ef4941faa27",
+                        "label":"Номер гофроящика"
+                     },
+                     {
+                        "href":"/?type=doc_vocs&id_doc_type=100056",
+                        "id":"748cd94775355806ae1336bc64fc1026",
+                        "label":"Страна-покупатель"
+                     },
+                     {
+                        "href":"/?type=doc_vocs&id_doc_type=100003",
+                        "id":"db092f09ceb7a1ee7ac4561e4d633ea7",
+                        "label":"Форма выпуска"
+                     }
+                  ]
+               },
+               {
+                  "href":"/?type=doc_field_folders&id_doc_type_bind=191",
+                  "id":"9f8c46de0f73e6ae00a3614f7a3998df",
+                  "label":"Характеристики оборудования",
+                  "items":[
+                     {
+                        "href":"/?type=doc_types&id_doc_type_bind=10036",
+                        "id":"ebc81eb3ea647b6c0cc79a7d09c78b84",
+                        "label":"Добавить..."
+                     },
+                     {
+                        "id":"5e25019651a86f597514b835875380bc",
+                        "label":"Вид резки"
+                     }
+                  ]
+               },
+               {
+                  "id":"53458cfbcca0cdd68b896465a52c4ad5",
+                  "label":"Для режимов обработки",
+                  "items":[
+                     {
+                        "href":"/?type=doc_types&id_doc_type_bind=10036",
+                        "id":"ebc81eb3ea647b6c0cc79a7d09c78b84",
+                        "label":"Добавить..."
+                     },
+                     {
+                        "id":"5e25019651a86f597514b835875380bc",
+                        "label":"Вид резки"
+                     },
+                     {
+                        "id":"62047d840731d65a4c9d04e10ba57c49",
+                        "label":"Вид сварки"
+                     },
+                     {
+                        "id":"fa3e088a5f8c36d59d66f38974f4b3d7",
+                        "label":"Вид термообработки"
+                     },
+                     {
+                        "id":"14b416415c1786a7c2780763e3c2c831",
+                        "label":"Зона нагрева"
+                     },
+                     {
+                        "id":"e957439b7f89e965ddb42a72c59666fa",
+                        "label":"метод маркировки"
+                     },
+                     {
+                        "id":"3f3f3302413818e3655c5dba503988f1",
+                        "label":"Метод правки (рихтовки)"
+                     },
+                     {
+                        "id":"c2421f26adccbab0e5a4939a826d013a",
+                        "label":"Направление наклона"
+                     },
+                     {
+                        "id":"436f230d86b82ed3bcd1d70c0ad79cb1",
+                        "label":"Направление сварки"
+                     },
+                     {
+                        "id":"f46a672c7c6d072db0a1fa6373551a21",
+                        "label":"Охлаждение"
+                     },
+                     {
+                        "id":"2cf023c2c4ba4584b4b8a0d12bf1e899",
+                        "label":"Полярность"
+                     },
+                     {
+                        "id":"fb015eb62f98f0f0b21bcb8e612436ac",
+                        "label":"Пространственное положение"
+                     },
+                     {
+                        "id":"260047e65a1e3ab4d770c2cf909645d6",
+                        "label":"Способ сварки"
+                     }
+                  ]
+               },
+               {
+                  "id":"d2c274752a6f81d2703d50d9901407b4",
+                  "label":"Для обьектов",
+                  "items":[
+                     {
+                        "href":"/?type=doc_types&id_doc_type_bind=10036",
+                        "id":"ebc81eb3ea647b6c0cc79a7d09c78b84",
+                        "label":"Добавить..."
+                     },
+                     {
+                        "href":"/?type=doc_vocs&id_doc_type=100063",
+                        "id":"0afb2bf62601dd3c2d4d8a2ca2f9d846",
+                        "label":"Плательщик"
+                     },
+                     {
+                        "href":"/?type=doc_vocs&id_doc_type=100064",
+                        "id":"67034c1de64a60ea718ec59a9696ea44",
+                        "label":"Приоритет оплаты (казначейство/Президент)"
                      }
                   ]
                }
             ]
          },
          {
+            "id":"admin",
             "label":"Администрирование",
             "items":[
                {
-                  "label":"Экспорт в XML"
+                  "href":"/?type=users",
+                  "id":"4b5a95bc7ce525c119fa656b2172156a",
+                  "label":"Сотрудники"
                },
                {
-                  "label":"Отложенные работы"
+                  "href":"/?type=user_access_print",
+                  "id":"9597815e43e02ac14a8f57f193950ea9",
+                  "label":"Отчет по доступу"
                },
                {
-                  "label":"Действия пользователей"
+                  "href":"/?type=voc_posts",
+                  "id":"54f68fdcf3c6cb828e546dfbea59ae1c",
+                  "label":"Должности"
                },
                {
+                  "id":"f84561fc73fc35767ca10c11f73cf946",
+                  "label":"Группы пользователей"
+               },
+               {
+                  "id":"1f6c564f59c3581d6ca950d020177fe5",
+                  "label":"Настройка импорта из внешних систем"
+               },
+               {
+                  "id":"f7f3398d87c8aa5b73254c59b4b7867d",
+                  "label":"Настройка импорта (XML)"
+               },
+               {
+                  "href":"/i/myCalendar/web-app/index.html?sid=1313253347954160600",
+                  "id":"35836cab785c307eaae16002e9c2e397",
                   "label":"Календарь"
                },
                {
+                  "href":"/?type=global_options",
+                  "id":"01d32f78aa6ce3f6c2f4d992558c4d42",
                   "label":"Общие настройки"
+               },
+               {
+                  "href":"/?type=i18n",
+                  "id":"b00b471c6773192ffb4b216a726c6b6b",
+                  "label":"Модификация экранов"
+               },
+               {
+                  "href":"/?type=report_folders",
+                  "id":"1884d1e33baaf37c5444c334163e40a8",
+                  "label":"Отчеты"
+               },
+               {
+                  "href":"/?type=tables_in_app",
+                  "id":"426f3946a0bf674ce86ddf31e496e9b8",
+                  "label":"Таблицы"
+               },
+               {
+                  "href":"/?type=_info",
+                  "id":"dd1b09eedcddd881173b2fc9e2b1cec2",
+                  "label":"Версии"
+               },
+               {
+                  "id":"4ba1eff3677a51ee23a677d74f48fdc1",
+                  "label":"Протоколы",
+                  "items":[
+                     {
+                        "href":"/?type=log",
+                        "id":"4df68ef1464c92d6432c825bc359ab48",
+                        "label":"Протокол действий пользователей"
+                     },
+                     {
+                        "id":"0adce998213f3fb908ab3915eadfe8a8",
+                        "label":"Протокол экспорта в XML"
+                     },
+                     {
+                        "id":"001bda7551225d1656489b2781401d80",
+                        "label":"Протокол импорта из внешних систем"
+                     },
+                     {
+                        "href":"/?type=synchronize",
+                        "id":"cec31dd7dd87ca40d6141185135321ef",
+                        "label":"Монитор синхронизации"
+                     },
+                     {
+                        "href":"/?type=log_users",
+                        "id":"log_users",
+                        "label":"Действия пользователей"
+                     },
+                     {
+                        "id":"2ef5e5100da4f231c2ebcf8111f6fb79",
+                        "label":"Отложенные работы"
+                     }
+                  ]
                }
             ]
          },
          {
+            "href":"/?type=deps",
+            "id":"88c4cd9d96638f244288e2c8b274612f",
             "label":"Структура Компании"
          },
          {
+            "href":"/?type=deps&objects_type=deps_hr_orders&hr_only=1&addressbook=1",
+            "id":"address_book",
             "label":"Адресная книга"
          },
          {
+            "id":"9011ceef103c3b99656a927b7641513a",
             "label":"Почтовые ящики"
          }
       ]
    },
    {
-      "label":"Администрирование",
+      "label":"Настройки",
+      "id":"options",
       "items":[
          {
-            "label":"Пользователи"
+            "href":"/?type=user_private_options&id=-1",
+            "id":"673c26dd3d0c7e56a0805b9afd33f20d",
+            "label":"Мои настройки"
          },
          {
-            "label":"Группы пользователей"
+            "href":"/?type=users_twins&id=96&twin=1&__last_query_string=-1",
+            "id":"37b65cf35ee668f6e12c8d3944152b44",
+            "label":"Совмещение"
          },
          {
-            "label":"Протокол"
+            "id":"dcc5119add4335f64af78cf9dc4e3a6c",
+            "label":"В холдинг"
          },
          {
-            "label":"Версии"
+            "id":"7a176a6a64c888d6496097dc0440cbc3",
+            "label":"Почта"
+         }
+      ]
+   },
+   {
+      "label":"Помощь",
+      "id":"help",
+      "items":[
+         {
+            "href":"/?type=about",
+            "id":"fb3158779088d4379b22c319c46e9fdd",
+            "label":"О программе"
          },
          {
-            "label":"Структура Компании"
+            "id":"c78e4844b33c51b9ae911c4d70e205ba",
+            "label":"Руководство пользователя системы (от 25.07.2013)"
          },
          {
-            "label":"Валюты"
-         },
-         {
-            "label":"Пользовательские",
+            "id":"6d83d9c93b22193aeb3c45d5c0b90111",
+            "label":"Руководство пользователя по модулям",
             "items":[
                {
-                  "label":"Для описания номенклатуры",
-                  "items":[
-                     {
-                        "label":"Добавить..."
-                     }
-                  ]
+                  "id":"b324a3a33b0c82eff042a0db9438210c",
+                  "label":"Управление производством (от 10.09.2012)"
                },
                {
-                  "label":"Для характеристик оборудования",
-                  "items":[
-                     {
-                        "label":"Добавить..."
-                     }
-                  ]
+                  "id":"b4cbf33682e234b9ecaa536631200817",
+                  "label":"Управление логистикой (от 30.07.2012)"
                },
                {
-                  "label":"Для режимов обработки",
-                  "items":[
-                     {
-                        "label":"Добавить..."
-                     }
-                  ]
+                  "id":"ed3e876b8a9f638f6792bd0958399803",
+                  "label":"Управление закупками (от 25.06.2012)"
                },
                {
-                  "label":"Для документооборота",
-                  "items":[
-
-                  ]
+                  "id":"7a52d231ea6b6444c16daf4d83e16aae",
+                  "label":"Подготовка производства (от 19.06.2012)"
+               },
+               {
+                  "id":"0a549ba7a4c8ba0b750de68dcfe7f591",
+                  "label":"Контрагенты (от 13.06.2012)"
+               },
+               {
+                  "id":"407a4edc79cfb530995ae53c6be61bf6",
+                  "label":"Управление отгрузкой (от 25.07.2012)"
+               },
+               {
+                  "id":"d55add27f0df6dd655c329560581a4e9",
+                  "label":"Управление платежами и БДДС (от 28.08.2012)"
+               },
+               {
+                  "id":"1b387bf16780c99449c60acc6e2f26c1",
+                  "label":"Настройка процессов (от 19.04.2012)"
                }
             ]
          },
          {
-            "label":"Структура Компании"
+            "id":"332276a51e68bcec7413ffdea33133be",
+            "label":"Руководство администратора",
+            "items":[
+               {
+                  "id":"6ebfa1625094437f23a38e9fd3bdb9b2",
+                  "label":"Руководство администратора документооборота (от 25.07.2013)"
+               },
+               {
+                  "id":"199ccbb55669400d5e8cc57c68ae2289",
+                  "label":"Руководство администратора системы"
+               },
+               {
+                  "id":"f13e6a1823a284d928f01c36e23c5a5d",
+                  "label":"Руководство администратора (управление почтой)"
+               },
+               {
+                  "id":"c5b21c7847859b4f11d098c496a72313",
+                  "label":"Руководство системного администратора"
+               },
+               {
+                  "id":"76f612cef599a60fb07e5b4b3a67b85a",
+                  "label":"Перечень справочников и права доступа к ним (от 30.03.2012)"
+               }
+            ]
          }
       ]
-   },
-   {
-      "label":"&Помощь",
-      "items":[
-         {
-            "label":"Руководство пользователя \"Управление производством\" (от 10.09.2012)"
-         },
-         {
-            "label":"Руководство пользователя \"Управление логистикой\" (от 30.07.2012)"
-         },
-         {
-            "label":"Руководство пользователя \"Управление закупками\" (от 25.06.2012)"
-         },
-         {
-            "label":"Руководство пользователя \"Подготовка производства\" (от 19.06.2012)"
-         },
-         {
-            "label":"Руководство пользователя \"Контрагенты\" (от 13.06.2012)"
-         },
-         {
-            "label":"Руководство пользователя \"Управление отгрузкой\" (от 25.07.2012)"
-         },
-         {
-            "label":"Руководство пользователя \"Управление платежами и БДДС\" (от 28.08.2012)"
-         },
-         {
-            "label":"Руководство администратора документооборота (от 25.07.2013)"
-         },
-         {
-            "label":"Руководство пользователя \"Настройка процесса\" (от 19.04.2012)"
-         },
-         {
-            "label":"Руководство администратора документооборота"
-         },
-         {
-            "label":"Руководство пользователя системы (от 25.07.2013)"
-         },
-         {
-            "label":"Руководство администратора системы"
-         },
-         {
-            "label":"Руководство администратора (управление почтой)"
-         },
-         {
-            "label":"Перечень справочников и права доступа к ним (от 30.03.2012)"
-         },
-         {
-            "label":"О программе"
-         }
-      ]
-   },
-   {
-      "label":"Совмещение"
-   },
-   {
-      "label":"В Холдинг"
-   },
-   {
-      "label":"Почта"
    }
 ]

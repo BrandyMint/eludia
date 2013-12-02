@@ -7,8 +7,7 @@
 #= require backbone.marionette/lib/backbone.marionette.min
 #= require jquery.role/lib/jquery.role.min
 #= require namespaces
-#= require_tree ./templates
-#= require_tree ./application
+#= require_tree ./app
 #= require core
 
 $ ->

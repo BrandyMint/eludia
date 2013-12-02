@@ -2,18 +2,18 @@
 
 App.addRegions
   navbars: '@navbars'
-  menu_level2: '@navbar-menu-level2'
-  menu_level3: '@navbar-menu-level3'
+  menu_region_level2: '@navbar-menu-level2'
+  menu_region_level3: '@navbar-menu-level3'
 
 App.addInitializer (settings) ->
   App.models =
-    menu: new Eludia.Models.MenuModel()
+    menu_state: new Eludia.Models.MenuStateModel()
 
   App.collections =
-    navbar: new Eludia.Collections.NavCollection([], level: 1)
+    menu_items: new Eludia.Collections.MenuCollection([], level: 1)
 
   new Eludia.Controllers.NavController region: App.navbars
-  new Eludia.Observers.NavObserver model: App.models.menu
+  new Eludia.Observers.NavObserver model: App.models.menu_state
 
   Backbone.history.start()
 
