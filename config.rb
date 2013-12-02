@@ -15,6 +15,8 @@ Dir[File.join(File.dirname(__FILE__), 'models', '*.rb')].each{ |file| require fi
 require 'config/routes'
 require 'config/helpers'
 require 'config/icon_helper'
+require 'haml_coffee_assets'
+require 'sprockets-helpers'
 require 'builder'
 
 helpers do
@@ -90,7 +92,7 @@ end
 configure :build do
 
   # Clean 'Build' folder clean
-  ignore "/javascripts/application/*"
+  ignore "/javascripts/app/*"
   ignore "/javascripts/vendor/lib/*"
   ignore "/stylesheets/vendor/*"
   ignore "/vendor/components/*"
@@ -132,9 +134,10 @@ after_configuration do
   sprockets.append_path 'source/vendor'
   sprockets.append_path @bower_assets_path
   sprockets.append_path 'vendor/javascripts'
+  sprockets.append_path 'source/javascripts/app/templates'
   sprockets.append_path 'vendor/stylesheets'
   sprockets.append_path 'source/stylesheets/fonts'
-  #sprockets.import_asset 'source/robots.txt'
+  sprockets.append_path File.dirname(HamlCoffeeAssets.helpers_path)
 end
 
 

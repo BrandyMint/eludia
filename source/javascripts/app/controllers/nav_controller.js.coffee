@@ -5,6 +5,6 @@ class Eludia.Controllers.NavController
 
     @layout = new Eludia.Views.NavLayout
     options.region.show @layout
-
+    
+    @layout.system.show new Eludia.Views.SystemView
     @layout.menu.show new Eludia.Views.MenuView collection: App.collections.menu_items
-

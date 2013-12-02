@@ -13,9 +13,10 @@ gem "middleman-livereload"
 gem "middleman-google-analytics"
 gem "middleman-navigation"
 gem 'eco'
+gem 'haml_coffee_assets', require: false
+
 
 group :assets do
-  gem 'haml_coffee_assets'
   gem 'execjs'
 end
 

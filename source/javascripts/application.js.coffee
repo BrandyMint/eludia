@@ -1,11 +1,14 @@
 #  require_tree ./vendor
 #  require_tree ./lib
 #= require jquery/jquery.min
+#= require jquery.role/lib/jquery.role.min
+#= require hamlcoffee
 #= require bootstrap
+#= require momentjs/moment
+
 #= require underscore/underscore-min
 #= require backbone/backbone-min
 #= require backbone.marionette/lib/backbone.marionette.min
-#= require jquery.role/lib/jquery.role.min
 #= require namespaces
 #= require_tree ./app
 #= require core

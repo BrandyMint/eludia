@@ -1,0 +1,14 @@
+.col-sm-2.navbar-menu-item.navbar-system-title
+  %a{ href: '#' }
+    %i.icon-size-14
+      != @ficon 'tasks'
+    eludia
+
+.col-sm-2.navbar-menu-item.dropdown.navbar-system-block
+  %a{ href: '#', data: {toggle: 'dropdown'} }
+    Портал
+    != @ficon 'down-open-1'
+  %ul.dropdown-menu
+    %li
+      %a{ href: '#' }
+        Админ
