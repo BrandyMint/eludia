@@ -1,1 +1,1 @@
-!function(){window.App=window.Eludia={Models:{},Collections:{},Controllers:{},Views:{},Routers:{},Services:{},Observers:{}}}.call(this);
+!function(){window.App=window.Eludia={Models:{},Collections:{},Controllers:{},Helpers:{},Views:{},Routers:{},Services:{},Observers:{}}}.call(this);

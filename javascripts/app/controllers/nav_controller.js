@@ -1,1 +1,0 @@
-!function(){Eludia.Controllers.NavController=function(){function e(e){App.collections.menu_items.fetch(),this.layout=new Eludia.Views.NavLayout,e.region.show(this.layout),this.layout.menu.show(new Eludia.Views.MenuView({collection:App.collections.menu_items}))}return e}()}.call(this);
