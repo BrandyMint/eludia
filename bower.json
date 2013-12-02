@@ -4,7 +4,8 @@
   "dependencies": {
     "jquery": "latest",
     "backbone.marionette": "latest",
-    "jquery.role": "git://github.com/kossnocorp/role"
+    "jquery.role": "git://github.com/kossnocorp/role",
+    "momentjs": "latest"
   },
   "ignore": [
     "**/.*",

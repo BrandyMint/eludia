@@ -1,4 +1,4 @@
-@mixin customNavbar($navbarStyle)
+=customNavbar($navbarStyle)
   $navbarBackground: nth($navbarStyle, 1)
   $navbarText: nth($navbarStyle, 2)
   $navbarTextShadowColor: nth($navbarStyle, 3)
@@ -14,8 +14,9 @@
   margin: 0
   color: $navbarText
   .nav.navbar-nav
-    & > li
-      &.active a
+    & > li,
+    & > .navbar-menu-item
+      &.active > a
         color: $navbarLinkColorActive
         background: $navbarLinkBackgroundActive
       & > a
@@ -23,7 +24,7 @@
         -webkit-font-smoothing: antialiased
         +transition(color 0.2s ease, background 0.2s ease)
         background: $navbarLinkBackground
-        &:hover
+        &:hover, &:focus
           color: $navbarLinkColorHover
           background: $navbarLinkBackgroundHover
         &.btn-hire-us
@@ -39,17 +40,67 @@
     &:hover
       color: $navbarLinkColorHover
 
+=customNavbarPosition($pos: absolute, $top: 0, $z: 1000)
+  position: $pos
+  top: $top
+  z-index: $z
+  width: 100%
+
+=customNavbarHeight($navbarHeight, $linkPadding: (15/50)*$navbarHeight)
+  min-height: $navbarHeight
+  height: $navbarHeight
+  .nav.navbar-nav
+    & > li,
+    & > .navbar-menu-item
+      & > a
+        padding:
+          top: $linkPadding
+          bottom: $linkPadding
+
 .navbar
   &.navbar-menu
     +customNavbar($navbarMenu)
+    +customNavbarPosition(absolute, $navbarSystemHeight, 1000)
+    +customNavbarHeight($navbarMenuHeight)
+    .nav.navbar-nav
+      display: block
+      width: 100%
+      overflow: auto
+      white-space: nowrap
+      & > li,
+      & > .navbar-menu-item
+        display: inline-block
+        float: none
+        @media screen and (min-width: $screen-sm)
+          float: none
+    .navbar-menu
+      display: inline-block
+
   &.navbar-system
     +customNavbar($navbarSystem)
+    +customNavbarPosition(absolute, 0, 1099)
+    +customNavbarHeight($navbarSystemHeight, 6px)
+    .nav.navbar-nav
+      float: none
+      @media screen and (min-width: $screen-sm)
+        float: none
+      & > li,
+      & > .navbar-menu-item
+        & > a
+          display: inline-block
 
-.navbar-brand-logo
-  max-width: 120px
-  margin-top: 12px
+.navbar-system-block
+  border-left: 1px solid $grayLighter
+  padding-left: $grid-gutter-width/2
 
-@import navbar-menu
+
+.navbar-system-title
+  text-transform: uppercase
+  font-size: 0.85em
+  letter-spacing: 1px
+  padding-right: $grid-gutter-width
+
+
 
 
 
