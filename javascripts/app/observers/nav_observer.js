@@ -1,0 +1,1 @@
+!function(){Eludia.Observers.NavObserver=function(){function e(e){this.options=e,this.options.model.on("change:items",function(e,n){var t;return t=e.get("level")+1,this.collection=new Eludia.Collections.MenuCollection(n,{level:t,parse:!0}),this.view=new Eludia.Views.MenuView({collection:this.collection}),App["menu_region_level"+t].show(this.view)})}return e}()}.call(this);

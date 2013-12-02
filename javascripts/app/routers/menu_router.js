@@ -1,0 +1,1 @@
+!function(){var e,t={}.hasOwnProperty,n=function(e,n){function o(){this.constructor=e}for(var r in n)t.call(n,r)&&(e[r]=n[r]);return o.prototype=n.prototype,e.prototype=new o,e.__super__=n.prototype,e};Eludia.Routers.MenuRouter=function(t){function o(){return e=o.__super__.constructor.apply(this,arguments)}return n(o,t),o}(Backbone.Router)}.call(this);
