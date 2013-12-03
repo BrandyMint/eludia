@@ -22,7 +22,7 @@
     <link href='/images/apple-touch-icon-76x76-precomposed.png' rel='apple-touch-icon-precomposed' sizes='76x76'>
     <link href='/images/apple-touch-icon-120x120-precomposed.png' rel='apple-touch-icon-precomposed' sizes='120x120'>
     <link href='/images/apple-touch-icon-152x152-precomposed.png' rel='apple-touch-icon-precomposed' sizes='152x152'>
-    <link href="/stylesheets/application.css?1386071013" media="screen" rel="stylesheet" type="text/css" />
+    <link href="/stylesheets/application.css?1386074206" media="screen" rel="stylesheet" type="text/css" />
   </head>
   <body class='page'>
     <div class='application-container'>
@@ -37,7 +37,6 @@
       </script>
       <div role='navbars'></div>
       <div class='navbar-menu-level2' role='navbar-menu-level2'></div>
-      <div class='navbar-menu-level3' role='navbar-menu-level3'></div>
       <?xml version="1.0" encoding="UTF-8"?>
       <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
         <url>
@@ -59,4 +58,4 @@
     </div>
   </body>
 </html>
-<script src="/javascripts/application.js?1386070992" type="text/javascript"></script>
+<script src="/javascripts/application.js?1386074184" type="text/javascript"></script>
