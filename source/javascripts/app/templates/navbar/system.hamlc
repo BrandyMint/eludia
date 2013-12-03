@@ -1,4 +1,4 @@
-.col-sm-2.navbar-menu-item.navbar-system-title
+.col-sm-1.navbar-menu-item.navbar-system-title
   %a{ href: '#' }
     %i.icon-size-14
       != @ficon 'tasks'
@@ -8,16 +8,13 @@
     != @ficon 'menu'
 
 
-.col-sm-10.navbar-menu-block
+.col-sm-11.navbar-menu-block
   .navbar-collapse.collapse#navbar-system-collapse
-    .col-sm-2.navbar-menu-item.dropdown.navbar-system-block
-      %a{ href: '#', data: {toggle: 'dropdown'} }
+    .col-sm-3.navbar-menu-item.dropdown.navbar-system-block.navbar-system-mode
+      %a.active{ href: '#', data: {toggle: 'dropdown'} }
         Портал
-        != @ficon 'down-open-1'
-      %ul.dropdown-menu
-        %li
-          %a{ href: '#' }
-            Админ
+      %a{ href: '#', data: {toggle: 'dropdown'} }
+        Админ
 
     .col-sm-2.navbar-menu-item.navbar-system-block
       .navbar-menu-item-block
@@ -26,7 +23,7 @@
         %small.text-muted
           != moment().format('D MMMM')
 
-    .col-sm-5.navbar-menu-item.navbar-system-block
+    .col-sm-4.navbar-menu-item.navbar-system-block
       %a{ href: '#' }
         Иванов В. И.
       &nbsp;
@@ -37,7 +34,7 @@
           Михайлов А. Л.
           %a.navbar-system-superpos-close{ href: '#', role: 'navbar-superpos-btn' }!= @ficon 'cancel-1'
 
-    .col-sm-3.navbar-menu-item.navbar-system-block
+    .col-sm-2.navbar-menu-item.navbar-system-block
       %a.pull-left{ href: '#' }
         настройки
       
