@@ -1,28 +1,30 @@
-.nav.navbar-nav.level2
-  +customNavbar($navbarMenuLevel2)
-  position: absolute
-  display: block
-  float: none
-  overflow: hidden
-  background: $navbarMenuLinkBackgroundActive
-  & > li
+=eludia-navbar-menu
+
+  .nav.navbar-nav.level2
+    +customNavbar($navbarMenuLevel2)
+    position: absolute
     display: block
     float: none
-    & > a
+    overflow: hidden
+    background: $navbarMenuLinkBackgroundActive
+    & > li
       display: block
-      padding: 10px 15px
+      float: none
+      & > a
+        display: block
+        padding: 10px 15px
 
-.nav.navbar-nav.level3
-  +customNavbar($navbarMenuLevel3)
-  position: absolute
-  display: block
-  float: none
-  top: 0
-  left: 15px
-  overflow: hidden
-  // background: $navbarMenuLinkBackgroundActive2
-  & > li
+  .nav.navbar-nav.level3
+    +customNavbar($navbarMenuLevel3)
+    position: absolute
+    display: block
     float: none
-    & > a
-      display: block
-      padding: 10px 15px
+    top: 0
+    left: 15px
+    overflow: hidden
+    // background: $navbarMenuLinkBackgroundActive2
+    & > li
+      float: none
+      & > a
+        display: block
+        padding: 10px 15px

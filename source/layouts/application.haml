@@ -10,11 +10,12 @@
   %head
     = partial 'layouts/head'
   %body{class: current_page.data.body_class || 'page'}
-    .application-container
-      %a{name: :top}
-      = partial 'layouts/navbars'
-      = yield
+    .eludia-application
+      .application-container
+        %a{name: :top}
+        = partial 'layouts/navbars'
+        = yield
 
-      = partial 'layouts/footer'
+        = partial 'layouts/footer'
 
 = partial 'layouts/javascripts'
