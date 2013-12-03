@@ -1,35 +1,28 @@
-.navbar-menu-level2
-  position: relative
+.nav.navbar-nav.level2
   +customNavbar($navbarMenuLevel2)
-  margin: 0 auto
-  .nav.navbar-nav
-    position: absolute
+  position: absolute
+  display: block
+  float: none
+  overflow: hidden
+  background: $navbarMenuLinkBackgroundActive
+  & > li
     display: block
     float: none
-    top: 0
-    left: 15px
-    overflow: hidden
-    background: $navbarMenuLinkBackgroundActive
-    & > li
-      float: none
-      & > a
-        display: block
-        padding: 6px 15px
+    & > a
+      display: block
+      padding: 10px 15px
 
-.navbar-menu-level3
-  position: relative
+.nav.navbar-nav.level3
   +customNavbar($navbarMenuLevel3)
-  margin: 0 auto
-  .nav.navbar-nav
-    position: absolute
-    display: block
+  position: absolute
+  display: block
+  float: none
+  top: 0
+  left: 15px
+  overflow: hidden
+  // background: $navbarMenuLinkBackgroundActive2
+  & > li
     float: none
-    top: 0
-    left: 15px
-    overflow: hidden
-    background: $navbarMenuLinkBackgroundActive2
-    & > li
-      float: none
-      & > a
-        display: block
-        padding: 6px 15px
+    & > a
+      display: block
+      padding: 10px 15px
