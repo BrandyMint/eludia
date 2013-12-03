@@ -5,6 +5,7 @@
 #= require hamlcoffee
 #= require bootstrap
 #= require momentjs/moment
+#= require momentjs/lang/ru
 
 #= require underscore/underscore-min
 #= require backbone/backbone-min
@@ -14,35 +15,11 @@
 #= require core
 
 $ ->
+  moment.lang('ru')
+
   #$(".collapse").collapse()
-  userAgent = navigator.userAgent
-  android = userAgent.match(/(Android)/g)
-  ios = userAgent.match(/(iPhone)/g) || userAgent.match(/(iPad)/g)
-  lastScrollTop = 0
-  unless (ios || android)
-    $(window).on 'scroll', (event) ->
-      st = $(this).scrollTop()
-      if st > 100
-        if st >= lastScrollTop || st == 0
-          @showNavbar()
-          # downscroll code
-        else
-          @hideNavbar()
-          # upscroll code
-      else
-        #@showNavbar()
-      lastScrollTop = st
-
-  $('.navbar-collapse a')
-    .on 'click', (e) ->
-      $(@).parents('.navbar-collapse').collapse('toggle')
-      @hideNavbar()
-
-
-@showNavbar = ->
-  $('.application-navbar.navbar-fixed-top').delay(200).addClass('transparent')
-
-@hideNavbar = ->
-  $('.application-navbar.navbar-fixed-top').removeClass('transparent')
-
+  #userAgent = navigator.userAgent
+  #android = userAgent.match(/(Android)/g)
+  #ios = userAgent.match(/(iPhone)/g) || userAgent.match(/(iPad)/g)
+  #unless (ios || android)
 
