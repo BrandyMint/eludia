@@ -14,8 +14,12 @@
   margin: 0
   color: $navbarText
   .nav.navbar-nav
+    margin:
+      top: 0
+      bottom: 0
     & > li,
-    & > .navbar-menu-item
+    & > .navbar-menu-item,
+    .navbar-menu-item
       &.active > a
         color: $navbarLinkColorActive
         background: $navbarLinkBackgroundActive
@@ -46,7 +50,8 @@
   height: $navbarHeight
   .nav.navbar-nav
     & > li,
-    & > .navbar-menu-item
+    .navbar-menu-item
+      height: $navbarHeight
       & > a,
       & > .navbar-menu-item-block
         //display: inline-block
@@ -77,19 +82,33 @@
     +customNavbar($navbarSystem)
     +customNavbarPosition(absolute, 0, 1099)
     +customNavbarHeight($navbarSystemHeight, 5px)
+    font-size: $navbarSystemFontSize
     .nav.navbar-nav
       float: none
       @media screen and (min-width: $screen-sm)
         float: none
+      @media screen and (max-width: $screen-sm)
+        background: $navbarSystemBackground
+        .navbar-collapse
+          border-top: none
       & > li,
-      & > .navbar-menu-item
+      & > .navbar-menu-item,
+      .navbar-menu-item
         & > a,
         & > .navbar-menu-item-block
           display: inline-block
+    .navbar-toggle
+      margin: 0
+      padding: 6px
+      border: 0
+      &, &:hover
+        background: none
 
 .navbar-system-block
   border-left: 1px solid $grayLighter
   padding-left: $grid-gutter-width/2
+  @media screen and (max-width: $screen-sm)
+    border-left: none
 
 
 .navbar-system-title
@@ -100,7 +119,7 @@
 
 
 .nav.navbar-nav
-  & > .navbar-menu-item
+  .navbar-menu-item
     .navbar-system-superpos
       padding:
         left: 10px

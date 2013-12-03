@@ -4,38 +4,45 @@
       != @ficon 'tasks'
     eludia
 
-.col-sm-2.navbar-menu-item.dropdown.navbar-system-block
-  %a{ href: '#', data: {toggle: 'dropdown'} }
-    Портал
-    != @ficon 'down-open-1'
-  %ul.dropdown-menu
-    %li
+  %span.navbar-toggle{"data-target" => "#navbar-system-collapse", "data-toggle" => "collapse", type: "button"}
+    != @ficon 'menu'
+
+
+.col-sm-10.navbar-menu-block
+  .navbar-collapse.collapse#navbar-system-collapse
+    .col-sm-2.navbar-menu-item.dropdown.navbar-system-block
+      %a{ href: '#', data: {toggle: 'dropdown'} }
+        Портал
+        != @ficon 'down-open-1'
+      %ul.dropdown-menu
+        %li
+          %a{ href: '#' }
+            Админ
+
+    .col-sm-2.navbar-menu-item.navbar-system-block
+      .navbar-menu-item-block
+        != moment().format('H:mm')
+        &nbsp;
+        %small.text-muted
+          != moment().format('D MMMM')
+
+    .col-sm-5.navbar-menu-item.navbar-system-block
       %a{ href: '#' }
-        Админ
+        Иванов В. И.
+      &nbsp;
+      .navbar-system-superpos.navbar-menu-item-block{ role: 'navbar-superpos', class: 'navbar-system-superpos' }
+        %a{ href: '#', title: 'перейти в режим совмещения', role: 'navbar-superpos-btn', class: 'navbar-system-superpos-btn'}
+          != @ficon 'shuffle-1'
+        %span{ role: 'navbar-superpos-block', class: 'navbar-system-superpos-block hide' }
+          Михайлов А. Л.
+          %a.navbar-system-superpos-close{ href: '#', role: 'navbar-superpos-btn' }!= @ficon 'cancel-1'
 
-.col-sm-2.navbar-menu-item.navbar-system-block
-  .navbar-menu-item-block
-    != moment().format('H:mm')
-    &nbsp;
-    %small.text-muted
-      != moment().format('D MMMM')
+    .col-sm-3.navbar-menu-item.navbar-system-block
+      %a.pull-left{ href: '#' }
+        настройки
+      
+      %a.pull-right{ href: '#' }
+        выйти
 
-.col-sm-4.navbar-menu-item.navbar-system-block
-  %a{ href: '#' }
-    Иванов В. И.
-  &nbsp;
-  .navbar-system-superpos.navbar-menu-item-block{ role: 'navbar-superpos', class: 'navbar-system-superpos' }
-    %a{ href: '#', title: 'перейти в режим совмещения', role: 'navbar-superpos-btn', class: 'navbar-system-superpos-btn'}
-      != @ficon 'shuffle-1'
-    %span{ role: 'navbar-superpos-block', class: 'navbar-system-superpos-block hide' }
-      Михайлов А. Л.
-      %a.navbar-system-superpos-close{ href: '#', role: 'navbar-superpos-btn' }!= @ficon 'cancel-1'
-
-.col-sm-1.navbar-menu-item.navbar-system-block
-  %a{ href: '#' }
-    настройки
-
-.col-sm-1.navbar-menu-item.navbar-system-block
-  %a{ href: '#' }
-    выйти
+      .clearfix
 
