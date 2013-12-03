@@ -20,7 +20,8 @@
     & > li,
     & > .navbar-menu-item,
     .navbar-menu-item
-      &.active > a
+      &.active > a,
+      a.active
         color: $navbarLinkColorActive
         background: $navbarLinkBackgroundActive
       & > a,
@@ -59,6 +60,9 @@
         padding:
           top: $linkPadding
           bottom: $linkPadding
+
+.navbar-menu-item
+  display: inline-block
 
 .navbar
   &.navbar-menu
@@ -106,16 +110,24 @@
 
 .navbar-system-block
   border-left: 1px solid $grayLighter
-  padding-left: $grid-gutter-width/2
   @media screen and (max-width: $screen-sm)
     border-left: none
 
 
-.navbar-system-title
+.navbar-system-title,
+.navbar-system-mode
   text-transform: uppercase
   font-size: 0.85em
   letter-spacing: 1px
-  padding-right: $grid-gutter-width
+
+.navbar-system-mode
+  margin-left: $grid-gutter-width
+  a
+    padding:
+      left: $grid-gutter-width/2
+      right: $grid-gutter-width/2
+    &.active
+      font-weight: bold
 
 
 .nav.navbar-nav
