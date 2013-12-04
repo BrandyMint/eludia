@@ -1,5 +1,5 @@
 class Eludia.Views.MenuViewLevel1 extends Eludia.Views.MenuViewFactory
-  className: 'nav navbar-nav level1'
+  className: 'nav navbar-nav navbar-menu-level1'
 
   onClose: ->
     App.menu_region_level2.reset()
