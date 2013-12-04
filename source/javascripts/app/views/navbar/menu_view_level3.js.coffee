@@ -1,5 +1,5 @@
 class Eludia.Views.MenuViewLevel3 extends Eludia.Views.MenuViewFactory
-  className: 'nav navbar-nav level3'
+  className: 'nav navbar-nav navbar-menu-level3'
   itemView: Eludia.Views.MenuItemLevel3
 
   collectionEvents:

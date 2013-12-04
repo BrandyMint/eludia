@@ -61,29 +61,43 @@
           top: $linkPadding
           bottom: $linkPadding
 
-=eludia-navbar
+=customNavbarNestedMenu
+  -webkit-font-smoothing: antialiased
+  //.nav.navbar-nav
+    display: block
+    width: 100%
+    overflow: auto
+    white-space: nowrap
+    & > li
+      display: block
+      float: none
+      @media screen and (min-width: $screen-sm)
+        float: none
+  //.navbar-menu
+    display: inline-block
+  position: absolute
+  top: $navbarSystemHeight + $navbarMenuHeight
+  display: block
+  float: none
+  //overflow: hidden
+  background: $navbarMenuLinkBackgroundActive
+  & > li
+    display: block
+    float: none
+    & > a
+      display: block
+      padding: 6px 15px
 
+
+
+=eludia-navbar
   .navbar-menu-item
     display: inline-block
-
+  .navbar-menu-level2,
+  .navbar-menu-level3
+    a
+      +link-colors(#fff)
   .navbar
-    &.navbar-menu
-      +customNavbar($navbarMenu)
-      +customNavbarPosition(absolute, $navbarSystemHeight, 1000)
-      +customNavbarHeight($navbarMenuHeight)
-      & > .nav.navbar-nav
-        display: block
-        width: 100%
-        overflow: auto
-        white-space: nowrap
-        & > li
-          display: inline-block
-          float: none
-          @media screen and (min-width: $screen-sm)
-            float: none
-      .navbar-menu
-        display: inline-block
-
     &.navbar-system
       +customNavbar($navbarSystem)
       +customNavbarPosition(absolute, 0, 1099)
@@ -109,6 +123,33 @@
         border: 0
         &, &:hover
           background: none
+    &.navbar-menu
+      +customNavbar($navbarMenu)
+      +customNavbarPosition(absolute, $navbarSystemHeight, 1000)
+      +customNavbarHeight($navbarMenuHeight)
+      .nav.navbar-nav.navbar-menu-level1
+        display: block
+        width: 100%
+        overflow: auto
+        white-space: nowrap
+        & > li
+          display: inline-block
+          float: none
+          @media screen and (min-width: $screen-sm)
+            float: none
+      .navbar-menu
+        display: inline-block
+  
+  .navbar-menu-level2
+    +customNavbar($navbarMenuLevel2)
+    +customNavbarNestedMenu
+    width: $navbarMenuLevel2Width
+
+  .navbar-menu-level3
+    +customNavbar($navbarMenuLevel3)
+    +customNavbarNestedMenu
+    margin-left: $navbarMenuLevel2Width
+    background: darken($navbarMenuLinkBackgroundHover2, 10%)
 
   .navbar-system-block
     border-left: 1px solid $grayLighter
