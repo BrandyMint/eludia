@@ -61,87 +61,89 @@
           top: $linkPadding
           bottom: $linkPadding
 
-.navbar-menu-item
-  display: inline-block
+=eludia-navbar
 
-.navbar
-  &.navbar-menu
-    +customNavbar($navbarMenu)
-    +customNavbarPosition(absolute, $navbarSystemHeight, 1000)
-    +customNavbarHeight($navbarMenuHeight)
-    >.nav.navbar-nav
-      display: block
-      width: 100%
-      overflow: auto
-      white-space: nowrap
-      & > li
+  .navbar-menu-item
+    display: inline-block
+
+  .navbar
+    &.navbar-menu
+      +customNavbar($navbarMenu)
+      +customNavbarPosition(absolute, $navbarSystemHeight, 1000)
+      +customNavbarHeight($navbarMenuHeight)
+      >.nav.navbar-nav
+        display: block
+        width: 100%
+        overflow: auto
+        white-space: nowrap
+        & > li
+          display: inline-block
+          float: none
+          @media screen and (min-width: $screen-sm)
+            float: none
+      .navbar-menu
         display: inline-block
+
+    &.navbar-system
+      +customNavbar($navbarSystem)
+      +customNavbarPosition(absolute, 0, 1099)
+      +customNavbarHeight($navbarSystemHeight, 5px)
+      font-size: $navbarSystemFontSize
+      .nav.navbar-nav
         float: none
         @media screen and (min-width: $screen-sm)
           float: none
-    .navbar-menu
-      display: inline-block
+        @media screen and (max-width: $screen-sm)
+          background: $navbarSystemBackground
+          .navbar-collapse
+            border-top: none
+        & > li,
+        & > .navbar-menu-item,
+        .navbar-menu-item
+          & > a,
+          & > .navbar-menu-item-block
+            display: inline-block
+      .navbar-toggle
+        margin: 0
+        padding: 6px
+        border: 0
+        &, &:hover
+          background: none
 
-  &.navbar-system
-    +customNavbar($navbarSystem)
-    +customNavbarPosition(absolute, 0, 1099)
-    +customNavbarHeight($navbarSystemHeight, 5px)
-    font-size: $navbarSystemFontSize
-    .nav.navbar-nav
-      float: none
-      @media screen and (min-width: $screen-sm)
-        float: none
-      @media screen and (max-width: $screen-sm)
-        background: $navbarSystemBackground
-        .navbar-collapse
-          border-top: none
-      & > li,
-      & > .navbar-menu-item,
-      .navbar-menu-item
-        & > a,
-        & > .navbar-menu-item-block
-          display: inline-block
-    .navbar-toggle
-      margin: 0
-      padding: 6px
-      border: 0
-      &, &:hover
-        background: none
-
-.navbar-system-block
-  border-left: 1px solid $grayLighter
-  @media screen and (max-width: $screen-sm)
-    border-left: none
+  .navbar-system-block
+    border-left: 1px solid $grayLighter
+    @media screen and (max-width: $screen-sm)
+      border-left: none
 
 
-.navbar-system-title,
-.navbar-system-mode
-  text-transform: uppercase
-  font-size: 0.85em
-  letter-spacing: 1px
+  .navbar-system-title,
+  .navbar-system-mode
+    text-transform: uppercase
+    font-size: 0.85em
+    letter-spacing: 1px
 
-.navbar-system-mode
-  margin-left: $grid-gutter-width
-  a
-    padding:
-      left: $grid-gutter-width/2
-      right: $grid-gutter-width/2
-    &.active
-      font-weight: bold
-
-
-.nav.navbar-nav
-  .navbar-menu-item
-    .navbar-system-superpos
+  .navbar-system-mode
+    margin-left: $grid-gutter-width
+    a
       padding:
-        left: 10px
-        right: 10px
+        left: $grid-gutter-width/2
+        right: $grid-gutter-width/2
       &.active
-        background: darken($navbarSystemBackground, 30%)
-        &, a
-          color: #fff
-          &:hover
-            color: #fff
+        font-weight: bold
 
-.navbar-system-superpos-close
-  margin-left: 10px
+
+  .nav.navbar-nav
+    .navbar-menu-item
+      .navbar-system-superpos
+        padding:
+          left: 10px
+          right: 10px
+        &.active
+          background: darken($navbarSystemBackground, 30%)
+          &, a
+            color: #fff
+            &:hover
+              color: #fff
+
+  .navbar-system-superpos-close
+    margin-left: 10px
