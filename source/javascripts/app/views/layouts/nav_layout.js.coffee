@@ -1,5 +1,5 @@
 class Eludia.Views.NavLayout extends Marionette.Layout
-  template: '@navbar-layout-template'
+  template: JST['app/templates/layout']
   regions:
     system: '@navbar-system'
     menu: '@navbar-menu'

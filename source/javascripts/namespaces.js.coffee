@@ -1,4 +1,4 @@
-window.App = window.Eludia =
+window.Eludia =
   Models:      {}
   Collections: {}
   Controllers: {}

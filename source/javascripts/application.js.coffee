@@ -1,5 +1,3 @@
-#  require_tree ./vendor
-#  require_tree ./lib
 #= require jquery/jquery.min
 #= require jquery.role/lib/jquery.role.min
 #= require hamlcoffee
@@ -13,13 +11,8 @@
 #= require namespaces
 #= require_tree ./app
 #= require core
+#= require_self
 
-$ ->
-  moment.lang('ru')
 
-  #$(".collapse").collapse()
-  #userAgent = navigator.userAgent
-  #android = userAgent.match(/(Android)/g)
-  #ios = userAgent.match(/(iPhone)/g) || userAgent.match(/(iPad)/g)
-  #unless (ios || android)
-
+# TODO перенести в index.html
+window.Eludia.App.start()
