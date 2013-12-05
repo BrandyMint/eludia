@@ -47,16 +47,24 @@
     </div>
   </body>
 </html>
-<script src="/javascripts/application.js?1386243594" type="text/javascript"></script>
+<script src="/javascripts/application.js?1386246951" type="text/javascript"></script>
 <script>
   $(function() {
     $.getJSON("menu.json", function(data) {
      window.Eludia.App.start({
          container: "#eludia-application-menu",
          menu: data,
+         urls: {
+           exit: '/exit',
+           settings: '/settings',
+           logo: '/',
+           name: '/user',
+           combination_cancel: '/cancel',
+           combination_setup: '/setup'
+         },
          user: {
             name: "Иванов В.И.",
-            state: "combinated",
+            state: "combinated", // denied, enabled
             combination_name: "Васильев А.Г."
           }
        });

@@ -1,0 +1,1 @@
+!function(){this.App.goto=function(e){return Backbone.history.navigate(Eludia.Helpers.ApplicationHelpers.url(e),{trigger:!0})}}.call(this);
