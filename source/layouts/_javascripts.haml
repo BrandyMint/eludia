@@ -1,25 +1,19 @@
 -# Javascripts
 = javascript_include_tag 'application'
-
 :javascript
-   $(function() {
-     $.getJSON("menu.json", function(data) {
-      window.Eludia.App.start({
-          container: "#eludia-application-menu",
-          menu: data,
-          urls: {
-            exit: '/exit',
-            settings: '/settings',
-            logo: '/',
-            name: '/user',
-            combination_cancel: '/cancel',
-            combination_setup: '/setup'
-          },
-          user: {
-             name: "Иванов В.И.",
-             state: "combinated", // denied, enabled
-             combination_name: "Васильев А.Г."
-           }
-        });
-     });
-   });
+  window.options = {
+      container: "#eludia-application-menu",
+      urls: {
+        exit: '/exit',
+        settings: '/settings',
+        logo: '/',
+        name: '/user',
+        combination_cancel: '/cancel',
+        combination_setup: '/setup'
+      },
+      user: {
+         name: "Иванов В.И.",
+         state: "enabled", // denied, combinated
+         // combination_name: "Васильев А.Г."
+       }
+    }

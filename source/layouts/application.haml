@@ -10,12 +10,24 @@
   %head
     = partial 'layouts/head'
   %body{class: current_page.data.body_class || 'page'}
+    = partial 'layouts/javascripts'
     .eludia-application
       .application-container
         %a{name: :top}
         = partial 'layouts/navbars'
         = yield
+        %p Paragraph tra-la-la
+        %p
+          %a{href: "/denied"} denied
+          %a{href: "/"} enabled
+          %a{href: "/combinated"} combinated
 
         = partial 'layouts/footer'
 
-= partial 'layouts/javascripts'
+:javascript
+  $(function() {
+    $.getJSON("menu.json", function(data) {
+      window.options.menu = data;
+      window.Eludia.App.start(window.options);
+    });
+  });
