@@ -1,16 +1,16 @@
 @App = @Eludia.App = new Marionette.Application()
 
-App.addRegions
-  navbars: '@navbars'
-  menu_region_level2: '@navbar-menu-level2'
-  menu_region_level3: '@navbar-menu-level3'
-
-
 # Параметры:
+# container: элемент, в который подгружаем меню
 # menu: структура меню
 # user: данные для модели юзера
 
 App.addInitializer (options) ->
+  App.addRegions
+    navbars: options.container
+    menu_region_level2: '@navbar-menu-level2'
+    menu_region_level3: '@navbar-menu-level3'
+
   moment.lang('ru')
   App.views = {}
 

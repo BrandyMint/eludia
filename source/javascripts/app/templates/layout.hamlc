@@ -3,5 +3,5 @@
 .navbar.navbar-menu.navbar-static-top
   .navbar-main-menu{role: 'navbar-menu'}
 
-.navbar-menu-level2{role: 'navbar-menu-level2'}
-.navbar-menu-level3{role: 'navbar-menu-level3'}
+.navbar-menu-level2-container{role: 'navbar-menu-level2'}
+.navbar-menu-level3-container{role: 'navbar-menu-level3'}
