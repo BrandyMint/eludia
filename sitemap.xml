@@ -61,9 +61,18 @@
     </div>
   </body>
 </html>
-<script src="/javascripts/application.js?1386225343" type="text/javascript"></script>
+<script src="/javascripts/application.js?1386231229" type="text/javascript"></script>
 <script>
   $(function() {
-    window.Eludia.App.start();
+    $.getJSON("menu.json", function(data) {
+     window.Eludia.App.start({
+         menu: data,
+         user: {
+            name: "Иванов В.И.",
+            state: "combinated",
+            combination_name: "Васильев А.Г."
+          }
+       });
+    });
   });
 </script>
