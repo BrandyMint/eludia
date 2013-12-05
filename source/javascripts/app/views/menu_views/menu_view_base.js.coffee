@@ -1,5 +1,8 @@
-class Eludia.Views.MenuViewBase extends Marionette.CollectionView
+class Eludia.Views.MenuViewBase extends Marionette.CompositeView
   tagName: 'ul'
+  template: JST['app/templates/navbar/menu_base']
+  
+  templateHelpers: -> Eludia.Helpers.ApplicationHelpers
 
   # Определяется в наследующих классах:
   #
