@@ -8,11 +8,11 @@
 App.addInitializer (options) ->
   App.addRegions
     navbars: options.container
+    # TODO переместить в lauyout, где они и создаются
     menu_region_level2: '@navbar-menu-level2'
     menu_region_level3: '@navbar-menu-level3'
 
   moment.lang('ru')
-  App.views = {}
 
   App.user = new Eludia.Models.User options.user
 
@@ -21,10 +21,10 @@ App.addInitializer (options) ->
 
   App.navbars.show App.nav_layout = new Eludia.Views.NavLayout
 
-  new Eludia.Controllers.NavController
-    nav_layout: App.nav_layout
-    user: App.user
+  App.nav_layout.system.show new Eludia.Views.SystemView model: App.user
+  App.nav_layout.menu.show App.main_menu_view = new Eludia.Views.MenuViewLevel1 collection: App.collections.menu_items
 
-  moment.lang('ru')
+  $(document).on "click", (e) =>
+    App.main_menu_view.hideSubmenu()
 
   Backbone.history.start()
