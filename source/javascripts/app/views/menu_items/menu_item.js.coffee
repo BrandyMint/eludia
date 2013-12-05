@@ -5,6 +5,12 @@ class Eludia.Views.MenuItem extends Marionette.ItemView
   events:
     'click' : '_click'
 
+  active: ->
+    @$el.addClass 'active'
+
+  deactive: ->
+    @$el.removeClass 'active'
+
   _click: (e) ->
     e.stopPropagation()
     e.preventDefault()

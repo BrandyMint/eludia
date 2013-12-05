@@ -12,24 +12,15 @@ class Eludia.Views.MenuViewBase extends Marionette.CollectionView
 
   initialize: ->
     @submenu_region = App[@submenuRegion]
-
-  #onRender: ->
-    #if @options.selected_item
-      #@selected_item = @options.selected_item
-      ## @onClose()
-      #@_toggleState()
+    @menu_state = new Eludia.Models.MenuState
 
   onSelect: (item_view) ->
     if item_view!=@submenu_item_view
+      @submenu_item_view.deactive() if @submenu_item_view
       @hideSubmenu()
       @showSubmenu item_view
 
-    #@_toggleState()
-
-    #if @selected_item.model.get('items') && @selected_item.$el.hasClass('active')
-      #@_renderSubmenu()
-    #else
-      ## route
+    item_view.active()
 
   hideSubmenu: ->
     console.log("not implemented")
@@ -46,11 +37,8 @@ class Eludia.Views.MenuViewBase extends Marionette.CollectionView
     @submenu_item_view = item_view
     @submenu_item = item_view.model
 
-    @submenu_view = new @submenuView collection: @_submenu_collection()
+    @submenu_view = new @submenuView collection: @_submenu_collection(), menu_state: @menu_state
     @submenu_region.show @submenu_view
-
-  #_toggleState: ->
-    #@selected_item.$el.toggleClass('active').siblings().removeClass('active')
 
   _submenu_collection: ->
     new Eludia.Collections.MenuCollection @submenu_item.get('items')
