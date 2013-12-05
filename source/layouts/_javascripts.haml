@@ -3,5 +3,14 @@
 
 :javascript
    $(function() {
-     window.Eludia.App.start();
+     $.getJSON("menu.json", function(data) {
+      window.Eludia.App.start({
+          menu: data,
+          user: {
+             name: "Иванов В.И.",
+             state: "combinated",
+             combination_name: "Васильев А.Г."
+           }
+        });
+     });
    });

@@ -3,6 +3,8 @@
   "version": "0.1",
   "dependencies": {
     "jquery": "latest",
+    "backbone-computedfields": "latest",
+    "backbone.stickit": "latest",
     "backbone.marionette": "latest",
     "jquery.role": "git://github.com/kossnocorp/role",
     "momentjs": "latest"

@@ -23,9 +23,10 @@
         %small.text-muted
           != moment().format('D MMMM')
 
-    .col-sm-4.navbar-menu-item.navbar-system-block
-      %a{ href: '#' }
-        Иванов В. И.
+    .col-sm-4.navbar-menu-item.navbar-system-block{role: 'user'}
+      %a{ href: '#', role: 'user_name' } name
+      %div{role: 'combination_state'} state
+      %div{role: 'combination_user_name'} combination_name
       &nbsp;
       .navbar-system-superpos.navbar-menu-item-block{ role: 'navbar-superpos', class: 'navbar-system-superpos' }
         %a{ href: '#', title: 'перейти в режим совмещения', role: 'navbar-superpos-btn', class: 'navbar-system-superpos-btn'}
