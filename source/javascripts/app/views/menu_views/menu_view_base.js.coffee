@@ -16,7 +16,6 @@ class Eludia.Views.MenuViewBase extends Marionette.CollectionView
 
   onSelect: (item_view) ->
     if item_view!=@submenu_item_view
-      @submenu_item_view.deactive() if @submenu_item_view
       @hideSubmenu()
       @showSubmenu item_view
 
@@ -29,8 +28,10 @@ class Eludia.Views.MenuViewBase extends Marionette.CollectionView
     @hideSubmenu()
 
   hideSubmenu: ->
+    @submenu_item_view?.deactive()
     @submenu_item = null
     @submenu_view = null
+    @submenu_item_view = null
     @submenu_region.close()
 
   showSubmenu: (item_view) ->
