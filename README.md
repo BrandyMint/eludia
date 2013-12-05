@@ -30,8 +30,6 @@ Access data in templates with `= data.yml_file.key...` objects, like `= data.pro
 * трелло https://trello.com/b/L2ipO6wF/eludia
 * [дизайн](https://docs.google.com/file/d/0B1A2sA77jfTZdEpUQ1hQbnFFNW8/edit)
 
-
-
 ## Автодеплой
 
 Работает авто-деплой ветки master из jenkins-а
