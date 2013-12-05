@@ -1,4 +1,4 @@
-.col-sm-1.navbar-menu-item.navbar-system-title
+.col-sm-3.navbar-menu-item.navbar-system-title
   %a{ href: "#{@url 'logo'}" }
     %i.icon-size-14
       != @ficon 'tasks'
@@ -8,15 +8,10 @@
     != @ficon 'menu'
 
 
-.col-sm-11.navbar-menu-block
+.col-sm-9.navbar-menu-block
   .navbar-collapse.collapse#navbar-system-collapse
-    .col-sm-3.navbar-menu-item.dropdown.navbar-system-block.navbar-system-mode
-      %a.active{ href: '#', data: {toggle: 'dropdown'} }
-        Портал
-      %a{ href: '#', data: {toggle: 'dropdown'} }
-        Админ
 
-    .col-sm-2.navbar-menu-item.navbar-system-block
+    .col-sm-4.navbar-menu-item.navbar-system-block
       .navbar-menu-item-block
         != moment().format('H:mm')
         &nbsp;
@@ -24,7 +19,22 @@
           != moment().format('D MMMM')
 
     .col-sm-4.navbar-menu-item.navbar-system-block{role: 'eludia-navbar-user'}
-    .col-sm-2.navbar-menu-item.navbar-system-block
+      //{role: 'user'}
+      //%a{ href: '#', role: 'user_name' } name
+      //%div{role: 'combination_state'} state
+      //%div{role: 'combination_user_name'} combination_name
+      &nbsp;
+      .navbar-system-superpos.navbar-menu-item-block.navbar-system-superpos
+        %a{ href: '#', title: 'перейти в режим совмещения', role: 'combination_state', class: 'navbar-system-superpos-btn'}
+          != @ficon 'shuffle-1'
+        %span{ role: 'combination_user_name', class: 'navbar-system-superpos-block hide' }
+          Михайлов А. Л.
+          %a.navbar-system-superpos-close{ href: '#', role: 'navbar-superpos-btn' }!= @ficon 'cancel-1'
+
+    .col-sm-4.navbar-menu-item.navbar-system-block.navbar-user-links
+      %a.icon-size-16.pull-left{ href: '#' }
+        != @ficon 'info-circled'
+
       %a.pull-left{ href: "#{@url 'settings'}" }
         настройки
 
