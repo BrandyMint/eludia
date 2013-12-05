@@ -1,0 +1,95 @@
+=navbarBackground($navbarStyle)
+  background: nth($navbarStyle, 1)
+
+=navbarText($navbarStyle)
+  color: nth($navbarStyle, 2)
+  text-shadow: nth($navbarStyle, 3)
+
+=navbarLink($navbarStyle)
+  color: nth($navbarStyle, 4)
+  background: nth($navbarStyle, 7)
+  -webkit-font-smoothing: antialiased
+  +transition(color 0.2s ease, background 0.2s ease)
+
+=navbarLinkHover($navbarStyle)
+  color: nth($navbarStyle, 5)
+  background: nth($navbarStyle, 8)
+
+=navbarLinkActive($navbarStyle)
+  color: nth($navbarStyle, 6)
+  background: nth($navbarStyle, 9)
+
+=navbarLinkColors($navbarStyle)
+  & > li
+    &.active > a,
+    & > a.active
+      +navbarLinkActive($navbarStyle)
+    & > a
+      +navbarLink($navbarStyle)
+      &:hover, &:focus
+        +navbarLinkHover($navbarStyle)
+
+=customNavbarLinks($navbarStyle)
+  & > li,
+  & > .navbar-menu-item,
+  .navbar-menu-item
+    &.active > a,
+    & > a.active
+      +navbarLinkActive($navbarStyle)
+    & > a,
+    a
+      +navbarLink($navbarStyle)
+      &:hover, &:focus
+        +navbarLinkHover($navbarStyle)
+
+=customNavbar($navbarStyle)
+  @extend .navbar-inverse
+  +navbarBackground($navbarStyle)
+  border-bottom: 0
+  margin: 0
+  +navbarText($navbarStyle)
+  .nav.navbar-nav
+    +customNavbarLinks($navbarStyle)
+  .navbar-brand
+    +navbarLink($navbarStyle)
+    &:hover
+      +navbarLinkHover($navbarStyle)
+
+=customNavbarPosition($pos: absolute, $top: 0, $z: 1000)
+  position: $pos
+  top: $top
+  z-index: $z
+  width: 100%
+
+=customNavbarHeight($navbarHeight, $linkPadding: (15/50)*$navbarHeight)
+  min-height: $navbarHeight
+  height: $navbarHeight
+  .nav.navbar-nav
+    & > li,
+    .navbar-menu-item
+      height: $navbarHeight
+      & > a,
+      & > .navbar-menu-item-block
+        //display: inline-block
+        height: $navbarHeight
+        padding:
+          top: $linkPadding
+          bottom: $linkPadding
+
+=customNavbarNestedMenu
+  -webkit-font-smoothing: antialiased
+  display: block
+  float: none
+  position: absolute
+  top: $navbarSystemHeight + $navbarMenuHeight
+  padding-left: 0
+  //overflow: hidden
+  background: $navbarMenuLinkBackgroundActive
+  & > li
+    display: block
+    float: none
+    & > a
+      display: block
+      padding: 6px 15px
+
+

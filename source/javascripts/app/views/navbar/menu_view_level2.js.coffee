@@ -1,5 +1,5 @@
 class Eludia.Views.MenuViewLevel2 extends Eludia.Views.MenuViewFactory
-  className: 'nav navbar-nav navbar-menu-level2'
+  className: 'navbar-menu-level2'
   itemView: Eludia.Views.MenuItemLevel2
 
   onClose: ->
