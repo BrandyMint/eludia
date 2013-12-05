@@ -7,9 +7,17 @@
       window.Eludia.App.start({
           container: "#eludia-application-menu",
           menu: data,
+          urls: {
+            exit: '/exit',
+            settings: '/settings',
+            logo: '/',
+            name: '/user',
+            combination_cancel: '/cancel',
+            combination_setup: '/setup'
+          },
           user: {
              name: "Иванов В.И.",
-             state: "combinated",
+             state: "combinated", // denied, enabled
              combination_name: "Васильев А.Г."
            }
         });

@@ -12,6 +12,5 @@
 #= require namespaces
 #= require_tree ./app
 #= require core
+#= require urls
 #= require_self
-
-

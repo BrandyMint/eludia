@@ -15,13 +15,14 @@ App.addInitializer (options) ->
   moment.lang('ru')
 
   App.user = new Eludia.Models.User options.user
+  App.urls = options.urls
 
   App.collections =
     menu_items: new Eludia.Collections.MenuCollection(options.menu, level: 1)
 
   App.navbars.show App.nav_layout = new Eludia.Views.NavLayout
 
-  App.nav_layout.system.show new Eludia.Views.SystemView model: App.user
+  App.nav_layout.system.show new Eludia.Views.SystemView
   App.nav_layout.menu.show App.main_menu_view = new Eludia.Views.MenuViewLevel1 collection: App.collections.menu_items
 
   $(document).on "click", (e) =>

@@ -12,14 +12,14 @@ class Eludia.Views.SystemView extends Marionette.ItemView
     superpos: '@navbar-superpos'
     superpos_btn: '@navbar-superpos-btn'
     superpos_block: '@navbar-superpos-block'
-
-  bindings: 
-    '@user_name': 'name'
-    '@combination_state': 'state'
-    '@combination_user_name': 'combination_name'
+    user: '@eludia-navbar-user'
 
   onRender: ->
-    @stickit()
+    @user_view = new Eludia.Views.UserView el: @ui.user, model: App.user
+    @user_view.render()
+
+  onClose: ->
+    @user_view.close()
 
   toggleSuperpos: ->
     @.ui.superpos.toggleClass('active')
