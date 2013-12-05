@@ -25,12 +25,37 @@
     <link href="/stylesheets/application.css?1386234800" media="screen" rel="stylesheet" type="text/css" />
   </head>
   <body class='page'>
+    <script src="/javascripts/application.js?1386247111" type="text/javascript"></script>
+    <script>
+      window.options = {
+          container: "#eludia-application-menu",
+          urls: {
+            exit: '/exit',
+            settings: '/settings',
+            logo: '/',
+            name: '/user',
+            combination_cancel: '/cancel',
+            combination_setup: '/setup'
+          },
+          user: {
+             name: "Иванов В.И.",
+             state: "enabled", // denied, combinated
+             // combination_name: "Васильев А.Г."
+           }
+        }
+    </script>
     <div class='eludia-application'>
       <div class='application-container'>
         <a name='top'></a>
         <div id='eludia-application-menu'></div>
         <?xml version="1.0" encoding="UTF-8"?>
         <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+          <url>
+            <loc>http://www.brandymint.com/denied.html</loc>
+            <lastmod>2013-12-05T00:00:00+04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+          </url>
           <url>
             <loc>http://www.brandymint.com/index.html</loc>
             <lastmod>2013-12-05T00:00:00+04:00</lastmod>
@@ -43,7 +68,19 @@
             <changefreq>monthly</changefreq>
             <priority>0.5</priority>
           </url>
+          <url>
+            <loc>http://www.brandymint.com/combinated.html</loc>
+            <lastmod>2013-12-05T00:00:00+04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+          </url>
         </urlset>
+        <p>Paragraph tra-la-la</p>
+        <p>
+          <a href='/denied'>denied</a>
+          <a href='/'>enabled</a>
+          <a href='/combinated'>combinated</a>
+        </p>
         <footer class='application-footer'>
           <a name='contacts'></a>
         </footer>
@@ -51,27 +88,11 @@
     </div>
   </body>
 </html>
-<script src="/javascripts/application.js?1386247111" type="text/javascript"></script>
 <script>
   $(function() {
     $.getJSON("menu.json", function(data) {
-     window.Eludia.App.start({
-         container: "#eludia-application-menu",
-         menu: data,
-         urls: {
-           exit: '/exit',
-           settings: '/settings',
-           logo: '/',
-           name: '/user',
-           combination_cancel: '/cancel',
-           combination_setup: '/setup'
-         },
-         user: {
-            name: "Иванов В.И.",
-            state: "combinated", // denied, enabled
-            combination_name: "Васильев А.Г."
-          }
-       });
+      window.options.menu = data;
+      window.Eludia.App.start(window.options);
     });
   });
 </script>
