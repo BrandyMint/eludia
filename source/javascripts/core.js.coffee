@@ -25,4 +25,6 @@ App.addInitializer (options) ->
     nav_layout: App.nav_layout
     user: App.user
 
+  moment.lang('ru')
+
   Backbone.history.start()

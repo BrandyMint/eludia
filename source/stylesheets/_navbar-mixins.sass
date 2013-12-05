@@ -20,6 +20,7 @@
   background: nth($navbarStyle, 9)
 
 =navbarLinkColors($navbarStyle)
+  +navbarBackground($navbarStyle)
   & > li
     &.active > a,
     & > a.active
@@ -30,6 +31,7 @@
         +navbarLinkHover($navbarStyle)
 
 =customNavbarLinks($navbarStyle)
+  +navbarBackground($navbarStyle)
   & > li,
   & > .navbar-menu-item,
   .navbar-menu-item
