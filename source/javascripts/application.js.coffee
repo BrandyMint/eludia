@@ -12,7 +12,3 @@
 #= require_tree ./app
 #= require core
 #= require_self
-
-
-# TODO перенести в index.html
-window.Eludia.App.start()
