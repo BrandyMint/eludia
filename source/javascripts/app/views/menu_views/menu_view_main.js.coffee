@@ -31,6 +31,9 @@ class Eludia.Views.MainMenuView extends Marionette.ItemView
     @level1MenuView.close()
     @level1MenuView = null
 
+  hideSubmenu: ->
+    @level1MenuView?.hideSubmenu()
+
   _checkScrollable: ->
     fPos = @level1MenuView.$el.children().first().position()
     lPos = @level1MenuView.$el.children().last().position()
