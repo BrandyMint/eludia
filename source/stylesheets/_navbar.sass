@@ -38,8 +38,9 @@
       .nav.navbar-nav.navbar-menu-level1
         display: block
         width: 100%
-        overflow: auto
+        overflow: hidden
         white-space: nowrap
+          
         & > li
           display: inline-block
           float: none
@@ -48,10 +49,40 @@
       .navbar-menu
         display: inline-block
 
+  .level1-scrollable
+    .level1-arrow
+      display: block
+    padding:
+      left: $navbarMenuArrowWidth
+      right: $navbarMenuArrowWidth
+
+  .level1-arrow
+    display: none
+    position: absolute
+    top: 0
+    height: $navbarMenuHeight
+    width: $navbarMenuArrowWidth
+    background: $navbarMenuBackground
+    line-height: $navbarMenuHeight
+    text-align: center
+    z-index: 100
+    cursor: pointer
+    +link-colors(lighten($navbarMenuBackground, 30%), #fff)
+    +transition(color 0.2s ease, background 0.2s ease)
+    &:hover
+      background: $navbarMenuBackground
+  .level1-arrow-left
+    left: 0
+    border-right: 1px solid lighten($navbarMenuBackground, 10%)
+  .level1-arrow-right
+    right: 0
+    border-left: 1px solid lighten($navbarMenuBackground, 10%)
+
   .navbar-menu-level2
     +customNavbarLinks($navbarMenuLevel2)
     +customNavbarNestedMenu
     width: $navbarMenuLevel2Width
+    //+transition(transform 0.4s ease)
 
   .navbar-menu-level3
     +customNavbarLinks($navbarMenuLevel3)

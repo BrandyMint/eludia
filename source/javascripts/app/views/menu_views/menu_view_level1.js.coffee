@@ -3,7 +3,10 @@
 #= require_self
 
 class Eludia.Views.MenuViewLevel1 extends Eludia.Views.MenuViewBase
+  tagName: 'ul'
   className: 'nav navbar-nav navbar-menu-level1'
   itemView: Eludia.Views.MenuItemLevel2
   submenuView: Eludia.Views.MenuViewLevel2
   submenuRegion: 'menu_region_level2'
+
+

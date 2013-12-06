@@ -1,0 +1,7 @@
+%a.level1-arrow.level1-arrow-left{ role: 'level1-arrow-left'}
+  != @ficon 'left-open-big'
+
+%a.level1-arrow.level1-arrow-right{ role: 'level1-arrow-right'}
+  != @ficon 'right-open-big'
+
+%div{role: 'level1-items'}
