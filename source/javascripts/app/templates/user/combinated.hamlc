@@ -3,6 +3,6 @@
 .navbar-system-superpos.navbar-menu-item-block{ role: 'navbar-superpos', class: 'navbar-system-superpos' }
   %a{ href: '#', title: 'перейти в режим совмещения', role: 'navbar-superpos-btn', class: 'navbar-system-superpos-btn'}
     != @ficon 'shuffle-1'
-  %span{ role: 'navbar-superpos-block', class: 'navbar-system-superpos-block hide' }
+  %span{ role: 'navbar-superpos-block', class: 'navbar-system-superpos-block' }
     %div{role: 'combination_user_name'} combination_name
     %a.navbar-system-superpos-close{ href: '#', role: 'navbar-superpos-btn' }!= @ficon 'cancel-1'
