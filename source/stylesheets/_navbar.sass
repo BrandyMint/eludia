@@ -56,6 +56,13 @@
       left: $navbarMenuArrowWidth
       right: $navbarMenuArrowWidth
 
+  .menu-item-arrow
+    display: none
+  .navbar-menu-level2
+    .menu-item-parent
+      .menu-item-arrow
+        display: block
+
   .level1-arrow
     display: none
     position: absolute
@@ -93,16 +100,20 @@
     right: 0
     +content-columns(3)
     & > li
-      & > a
-        text-transform: uppercase
-        font-size: 0.8em
-        padding-bottom: 0.3em
-        cursor: text
-        +transition(letter-spacing 0.3s ease)
-      &:hover
+      &.menu-item-parent
         & > a
-          color: #fff
-          letter-spacing: 1px
+          text-transform: uppercase
+          font-size: 0.8em
+          padding-bottom: 0.3em
+          cursor: text
+          +transition(letter-spacing 0.3s ease)
+          &, &:hover
+            background: none
+      &:hover
+        &.menu-item-parent
+          & > a
+            color: #fff
+            letter-spacing: 1px
         .navbar-menu-level4
           background: $navbarMenuLevel4border
 

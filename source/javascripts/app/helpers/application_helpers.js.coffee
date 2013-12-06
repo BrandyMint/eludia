@@ -2,9 +2,6 @@ Eludia.Helpers.ApplicationHelpers =
   ficon: (name, attrs) ->
     "<i class='fontello-icon-#{name}'></i>"
 
-  label: (text, type) ->
-    "<span class=\"label label-#{if type then type else "default"}\">#{text}</span>"
-
   badge: (text, type) ->
     "<span class=\"badge badge-#{if type then type else "default"}\">#{text}</span>"
 
