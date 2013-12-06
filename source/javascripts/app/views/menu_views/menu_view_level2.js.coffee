@@ -8,26 +8,27 @@ class Eludia.Views.MenuViewLevel2 extends Eludia.Views.MenuViewBase
   submenuView: Eludia.Views.MenuViewLevel3
   submenuRegion: 'menu_region_level3'
 
+  initialize: ->
+    _.extend @, Eludia.Helpers.ApplicationHelpers
+    # using helper @windowWidth
+    super
+
   onShow: ->
     $parentEl = @options.parent_item_view.$el
     parentPos = $parentEl.position()
     parentLeft = parentPos.left
-
-    maxLeftPos = $(window).width() - @$el.width()
+    maxLeftPos = @windowWidth() - @$el.width()
 
     if parentLeft < maxLeftPos
-      @_setPositionLeft(parentLeft)
+      @setPositionLeft(@$el, parentLeft)
     else
-      @_setPositionLeft(maxLeftPos)
+      @setPositionLeft(@$el, maxLeftPos)
 
   onSelect: ->
-    @_setPositionLeft(0)
-
+    position = @$el.position()
+    @initPosition = position.left
+    @setPositionLeft(@$el, 0, @transitionDuration())
+    @shifted = true
     super
-
-  _setPositionLeft: (left) ->
-    @$el.css('transform', 'translateX(' + left + 'px)' )
-    #TODO add a fallback for IE<9
-
 
 
