@@ -25,7 +25,7 @@
     <link href="/stylesheets/application.css?1386317574" media="screen" rel="stylesheet" type="text/css" />
   </head>
   <body class='page'>
-    <script src="/javascripts/application.js?1386327013" type="text/javascript"></script>
+    <script src="/javascripts/application.js?1386327734" type="text/javascript"></script>
     <script>
       window.options = {
           container: "#eludia-application-menu",
