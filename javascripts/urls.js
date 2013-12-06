@@ -1,1 +1,1 @@
-!function(){this.App.goto=function(e){return Backbone.history.navigate(Eludia.Helpers.ApplicationHelpers.url(e),{trigger:!0})}}.call(this);
+!function(){this.App.goto=function(e){return window.location.href=e},this.App.goto_key=function(){return this.App.goto(Eludia.Helpers.ApplicationHelpers.url(url_name))}}.call(this);
