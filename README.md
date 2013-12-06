@@ -1,11 +1,15 @@
 # Brandymint static site
 ------
 
-## Development
+## Установка
+
 
 `bundle install`
 
 `bower install`
+
+
+## Запуск
 
 `bundle exec middleman` starts a server on `0.0.0.0:4567` (liveupdate included).
 
