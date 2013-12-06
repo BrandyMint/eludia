@@ -11,4 +11,3 @@ class Eludia.Views.MenuItemLevel3 extends Eludia.Views.MenuItem
   _renderSubmenu: ->
     @menu_view4 = new Eludia.Views.MenuViewLevel4 collection: new Eludia.Collections.MenuCollection @model.get('items')
     @$el.append @menu_view4.render().$el
-

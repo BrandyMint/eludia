@@ -20,12 +20,17 @@ class Eludia.Views.MenuViewBase extends Marionette.CollectionView
       @gotoCurrentItem()
     else
       if @submenu_view
+        @deactivateCurrentItem()
         @hideSubmenu()
       else
         @gotoCurrentItem()
 
-  activateItem: (item_view) ->
+  deactivateCurrentItem: ->
     @menu_item_view?.deactive()
+    @menu_item_view = null
+
+  activateItem: (item_view) ->
+    @deactivateCurrentItem()
     @menu_item_view = item_view
     @menu_item_view.active()
     @submenu_item = @menu_item_view.model
