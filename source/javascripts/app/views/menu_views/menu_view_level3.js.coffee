@@ -5,8 +5,22 @@ class Eludia.Views.MenuViewLevel3 extends Eludia.Views.MenuViewBase
   className: 'navbar-menu-level3'
   itemView: Eludia.Views.MenuItemLevel3
 
-  #collectionEvents:
-    #'itemview:click' : '_itemview_click'
+  initialize: ->
+    _.extend @, Eludia.Helpers.ApplicationHelpers
+    # using helper @windowWidth
+    super
+
+  onRender: ->
+    @setPositionLeft(@$el, @parentPosLeft())
+
+  onShow: ->
+    duration = @transitionDuration()
+    console.log duration
+    @setPositionLeft(@$el, 0, duration)
+
+  parentPosLeft: ->
+    level2Menu = @options.parent_collection_view
+    level2Menu.initPosition
 
   #_itemview_click: (item) ->
     #@selected_item = item

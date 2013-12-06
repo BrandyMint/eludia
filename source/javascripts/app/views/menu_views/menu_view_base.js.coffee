@@ -46,9 +46,18 @@ class Eludia.Views.MenuViewBase extends Marionette.CollectionView
     else
       @showSubmenu @menu_item_view
 
-  showSubmenu: (item_view)->
-    @submenu_view = new @submenuView collection: @_submenu_collection(item_view), parent_item_view: item_view
+  showSubmenu: (item_view) ->
+    @submenu_item = item_view.model
+    @submenu_view = new @submenuView collection: @_submenu_collection(item_view), parent_item_view: item_view, parent_collection_view: @
     @submenu_region.show @submenu_view
+
+  setPositionLeft: (el, left, duration = 0) ->
+    el.transition
+      x: left
+      duration: duration
+
+  transitionDuration: ->
+    500
 
   _submenu_collection: (item_view)->
     new Eludia.Collections.MenuCollection item_view.model.get('items')

@@ -4,6 +4,7 @@
 #= require bootstrap
 #= require momentjs/moment
 #= require momentjs/lang/ru
+#= require jquery.transit/jquery.transit
 #= require underscore/underscore
 #= require backbone/backbone
 #= require backbone.marionette/lib/backbone.marionette

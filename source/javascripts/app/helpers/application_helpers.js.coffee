@@ -16,3 +16,8 @@ Eludia.Helpers.ApplicationHelpers =
 
   url: (url_name) ->
     App.urls[url_name] || "Неизвестный url_name #{url_name}"
+
+  windowWidth: ->
+    $(window).width()
+
+
