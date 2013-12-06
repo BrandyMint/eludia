@@ -41,10 +41,10 @@ class Eludia.Views.MenuViewBase extends Marionette.CollectionView
     @submenu_region.close()
 
   gotoCurrentItem: ->
-    if url = @submenu_item.get('href')
-      window.App.goto url
-    else
+    if  @submenu_item.get('items')
       @showSubmenu @menu_item_view
+    else
+      window.App.goto @submenu_item.get('href')
 
   showSubmenu: (item_view) ->
     @submenu_item = item_view.model
