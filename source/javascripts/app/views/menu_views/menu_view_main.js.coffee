@@ -18,6 +18,7 @@ class Eludia.Views.MainMenuView extends Marionette.ItemView
     level1_items: '@level1-items'
 
   onRender: ->
+    @level1DefaultShift = Eludia.Helpers.ApplicationHelpers.windowWidth() / 3
     @level1MenuView = new @level1View collection: @collection
     @$el.append @level1MenuView.render().$el
 
@@ -44,14 +45,13 @@ class Eludia.Views.MainMenuView extends Marionette.ItemView
 
 
   _level1ScrollLeft: ->
-    @_level1Scroll(-300)
+    @_level1Scroll( -1 * @level1DefaultShift)
 
   _level1ScrollRight: ->
-    @_level1Scroll(300)
+    @_level1Scroll(@level1DefaultShift)
 
   _level1Scroll: (shift) ->
     currentScroll = @level1MenuView.$el.scrollLeft()
-
     @level1MenuView.$el.animate
       scrollLeft: currentScroll + shift
       500
