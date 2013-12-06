@@ -37,9 +37,12 @@ class Eludia.Views.MenuViewBase extends Marionette.CollectionView
     @menu_item_view = item_view
     @submenu_item = item_view.model
 
-    @submenu_view = new @submenuView collection: @_submenu_collection(), parent_item_view: @menu_item_view
-
-    @submenu_region.show @submenu_view
+    if @_submenu_collection().length > 0
+      @submenu_view = new @submenuView collection: @_submenu_collection(), parent_item_view: @menu_item_view
+      @submenu_region.show @submenu_view
+    else
+      console.log 'no submenu'
+      #TODO add links support here
 
   _submenu_collection: ->
     new Eludia.Collections.MenuCollection @submenu_item.get('items')
