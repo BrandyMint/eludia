@@ -1,2 +1,6 @@
-@App.goto= (url_name) ->
-  Backbone.history.navigate Eludia.Helpers.ApplicationHelpers.url(url_name), trigger: true
+@App.goto= (url) ->
+  window.location.href = url
+  #Backbone.history.navigate url, trigger: true
+
+@App.goto_key= (url) ->
+  @App.goto(Eludia.Helpers.ApplicationHelpers.url(url_name))

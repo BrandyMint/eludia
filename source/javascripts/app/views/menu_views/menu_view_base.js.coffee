@@ -16,7 +16,8 @@ class Eludia.Views.MenuViewBase extends Marionette.CollectionView
   onSelect: (item_view) ->
     if item_view!=@menu_item_view
       @hideSubmenu()
-      @showSubmenu item_view
+
+      @gotoItem item_view
 
     item_view.active()
 
@@ -33,12 +34,16 @@ class Eludia.Views.MenuViewBase extends Marionette.CollectionView
     @menu_item_view = null
     @submenu_region.close()
 
-  showSubmenu: (item_view) ->
+  gotoItem: (item_view)->
     @menu_item_view = item_view
     @submenu_item = item_view.model
+    if url = @submenu_item.get('href')
+      window.App.goto url
+    else
+      @showSubmenu item_view
 
+  showSubmenu: ->
     @submenu_view = new @submenuView collection: @_submenu_collection(), parent_item_view: @menu_item_view
-
     @submenu_region.show @submenu_view
 
   _submenu_collection: ->
