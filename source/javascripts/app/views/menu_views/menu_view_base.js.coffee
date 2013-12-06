@@ -16,10 +16,19 @@ class Eludia.Views.MenuViewBase extends Marionette.CollectionView
   onSelect: (item_view) ->
     if item_view!=@menu_item_view
       @hideSubmenu()
+      @activateItem item_view
+      @gotoCurrentItem()
+    else
+      if @submenu_view
+        @hideSubmenu()
+      else
+        @gotoCurrentItem()
 
-      @gotoItem item_view
-
-    item_view.active()
+  activateItem: (item_view) ->
+    @menu_item_view?.deactive()
+    @menu_item_view = item_view
+    @menu_item_view.active()
+    @submenu_item = @menu_item_view.model
 
   hideSubmenu: ->
     console.log("not implemented")
@@ -28,23 +37,18 @@ class Eludia.Views.MenuViewBase extends Marionette.CollectionView
     @hideSubmenu()
 
   hideSubmenu: ->
-    @menu_item_view?.deactive()
-    @submenu_item = null
     @submenu_view = null
-    @menu_item_view = null
     @submenu_region.close()
 
-  gotoItem: (item_view)->
-    @menu_item_view = item_view
-    @submenu_item = item_view.model
+  gotoCurrentItem: ->
     if url = @submenu_item.get('href')
       window.App.goto url
     else
-      @showSubmenu item_view
+      @showSubmenu @menu_item_view
 
-  showSubmenu: ->
-    @submenu_view = new @submenuView collection: @_submenu_collection(), parent_item_view: @menu_item_view
+  showSubmenu: (item_view)->
+    @submenu_view = new @submenuView collection: @_submenu_collection(item_view), parent_item_view: item_view
     @submenu_region.show @submenu_view
 
-  _submenu_collection: ->
-    new Eludia.Collections.MenuCollection @submenu_item.get('items')
+  _submenu_collection: (item_view)->
+    new Eludia.Collections.MenuCollection item_view.model.get('items')
