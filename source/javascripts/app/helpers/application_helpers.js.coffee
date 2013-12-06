@@ -20,4 +20,5 @@ Eludia.Helpers.ApplicationHelpers =
   windowWidth: ->
     $(window).width()
 
-
+  windowHeight: ->
+    $(window).height()

@@ -84,11 +84,15 @@
   float: none
   position: fixed
   top: $navbarSystemHeight + $navbarMenuHeight
-  bottom: 0
   padding-left: 0
   //overflow: hidden
   overflow-y: auto
   background: $navbarMenuLinkBackgroundActive
+  bottom: 0
+  @media screen and (min-height: 800px)
+    bottom: auto
+    min-height: 800px
+    max-height: 900px
   & > li
     display: block
     float: none
