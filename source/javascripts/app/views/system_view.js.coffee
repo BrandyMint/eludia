@@ -21,6 +21,6 @@ class Eludia.Views.SystemView extends Marionette.ItemView
   onClose: ->
     @user_view.close()
 
-  toggleSuperpos: ->
-    @.ui.superpos.toggleClass('active')
-    @.ui.superpos_block.toggleClass('hide')
+  #toggleSuperpos: ->
+  #  @.ui.superpos.toggleClass('active')
+  #  @.ui.superpos_block.toggleClass('hide')
