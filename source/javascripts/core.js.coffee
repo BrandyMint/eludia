@@ -23,7 +23,7 @@ App.addInitializer (options) ->
   App.navbars.show App.nav_layout = new Eludia.Views.NavLayout
 
   App.nav_layout.system.show new Eludia.Views.SystemView
-  App.nav_layout.menu.show App.main_menu_view = new Eludia.Views.MenuViewLevel1 collection: App.collections.menu_items
+  App.nav_layout.menu.show App.main_menu_view = new Eludia.Views.MainMenuView collection: App.collections.menu_items
 
   $(document).on "click", (e) =>
     App.main_menu_view.hideSubmenu()

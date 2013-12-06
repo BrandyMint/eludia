@@ -4,4 +4,4 @@
 %a.level1-arrow.level1-arrow-right{ role: 'level1-arrow-right'}
   != @ficon 'right-open-big'
 
-%ul{ class: 'nav navbar-nav navbar-menu-level1', role: 'level1-items'}
+%div{role: 'level1-items'}
