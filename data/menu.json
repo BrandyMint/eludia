@@ -72,7 +72,6 @@
             ]
          },
          {
-            "href":"/?type=report_folders",
             "label":"Отчеты",
             "id":"task_reports",
             "items":[
@@ -157,7 +156,6 @@
             "label":"Реестр договоров"
          },
          {
-            "href":"/?type=report_folders",
             "label":"Отчеты",
             "id":"docs_reports",
             "items":[
@@ -226,7 +224,6 @@
             "label":"Печать документов"
          },
          {
-            "href":"/?type=report_folders",
             "id":"1884d1e33baaf37c5444c334163e40a8",
             "label":"Отчеты",
             "items":[
@@ -342,10 +339,14 @@
       ]
    },
    {
-      "href":"/?type=voc_warehouses",
       "id":"voc_warehouses",
       "label":"Склады",
       "items":[
+          {
+            "href":"/?type=movement_inventories",
+            "id":"70et89a4722c7fyd92a8d200bdddd55a",
+            "label":"Склады"
+         },
          {
             "href":"/?type=movement_inventories",
             "id":"70e389a4722c7f3d92a8d200bdddd55a",
@@ -453,7 +454,6 @@
             ]
          },
          {
-            "href":"/?type=report_folders",
             "id":"1884d1e33baaf37c5444c334163e40a8",
             "label":"Отчеты",
             "items":[
@@ -593,7 +593,6 @@
             "label":"Обслуживаемая техника"
          },
          {
-            "href":"/?type=report_folders",
             "id":"1884d1e33baaf37c5444c334163e40a8",
             "label":"Отчеты",
             "items":[
@@ -701,7 +700,6 @@
             "label":"Потребности"
          },
          {
-            "href":"/?type=report_folders",
             "id":"1884d1e33baaf37c5444c334163e40a8",
             "label":"Отчеты",
             "items":[
@@ -972,7 +970,6 @@
             "label":"Остатки на счетах"
          },
          {
-            "href":"/?type=voc_credit_docs",
             "id":"af0f7babbe684a8af60c11e206d9c6cc",
             "label":"Кредитные договоры",
             "items":[
@@ -999,7 +996,6 @@
             "label":"Согласование списка платежей"
          },
          {
-            "href":"/?type=report_folders",
             "id":"1884d1e33baaf37c5444c334163e40a8",
             "label":"Отчеты",
             "items":[
@@ -1240,7 +1236,6 @@
             "label":"Реестр поставщиков"
          },
          {
-            "href":"/?type=report_folders",
             "id":"1884d1e33baaf37c5444c334163e40a8",
             "label":"Отчеты",
             "items":[
@@ -1368,7 +1363,6 @@
             "label":"Региональные программы"
          },
          {
-            "href":"/?type=report_folders",
             "id":"1884d1e33baaf37c5444c334163e40a8",
             "label":"Отчеты",
             "items":[
@@ -1461,7 +1455,6 @@
             ]
          },
          {
-            "href":"/?type=report_folders",
             "id":"1884d1e33baaf37c5444c334163e40a8",
             "label":"Отчеты",
             "items":[
@@ -1506,7 +1499,6 @@
       ]
    },
    {
-      "href":"/?type=report_folders",
       "label":"Отчеты",
       "id":"reports",
       "items":[
@@ -1765,7 +1757,6 @@
             ]
          },
          {
-            "href":"/?type=voc_warehouses",
             "label":"Склады",
             "id":"voc_stores",
             "items":[
@@ -2388,7 +2379,6 @@
                   ]
                },
                {
-                  "href":"/?type=doc_field_folders&id_doc_type_bind=191",
                   "id":"9f8c46de0f73e6ae00a3614f7a3998df",
                   "label":"Характеристики оборудования",
                   "items":[

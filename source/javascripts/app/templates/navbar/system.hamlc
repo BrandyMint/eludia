@@ -32,7 +32,7 @@
           %a.navbar-system-superpos-close{ href: '#', role: 'navbar-superpos-btn' }!= @ficon 'cancel-1'
 
     .col-sm-4.navbar-menu-item.navbar-system-block.navbar-user-links
-      %a.icon-size-16.pull-left{ href: '#' }
+      %a.icon-size-16.pull-left{ href: "#{@url 'help'}" }
         != @ficon 'info-circled'
 
       %a.pull-left{ href: "#{@url 'settings'}" }
