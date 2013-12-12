@@ -24,12 +24,16 @@ class Eludia.Views.MenuViewLevel2 extends Eludia.Views.MenuViewBase
     else
       @setPositionLeft(@$el, maxLeftPos)
 
-  onSelect: (item_view) ->
+  showSubmenu: (item_view) ->
     if item_view.model.get('items')
       position = @$el.position()
       @initPosition = position.left
       @setPositionLeft(@$el, 0, @transitionDuration())
       @shifted = true
+    else
+      return false
+
     super
+
 
 
