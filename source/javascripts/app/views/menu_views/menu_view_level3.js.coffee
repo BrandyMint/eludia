@@ -15,7 +15,6 @@ class Eludia.Views.MenuViewLevel3 extends Eludia.Views.MenuViewBase
 
   onShow: ->
     duration = @transitionDuration()
-    console.log duration
     @setPositionLeft(@$el, 0, duration)
 
   parentPosLeft: ->
