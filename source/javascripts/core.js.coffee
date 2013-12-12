@@ -24,6 +24,7 @@ App.addInitializer (options) ->
 
   App.nav_layout.system.show new Eludia.Views.SystemView
   App.nav_layout.menu.show App.main_menu_view = new Eludia.Views.MainMenuView collection: App.collections.menu_items
+  App.nav_layout.iframe.show App.iframe_view = new Eludia.Views.IframeView
 
   $(document).on "click", (e) =>
     App.main_menu_view.hideSubmenu()

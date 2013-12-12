@@ -17,8 +17,23 @@ Eludia.Helpers.ApplicationHelpers =
   url: (url_name) ->
     App.urls[url_name] || "Неизвестный url_name #{url_name}"
 
+  iframe_show: (url) ->
+    App.iframe_view.$el.attr 'src', url
+
   windowWidth: ->
     $(window).width()
 
   windowHeight: ->
     $(window).height()
+
+  setFullHeight: (view) ->
+    @setElFullHeight(view.$el)
+    $(window).on 'resize', () =>
+      @setElFullHeight(view.$el)
+
+  setElFullHeight: ($el) ->
+    pos = $el.position()
+    top = pos.top
+    $el.css('height', @windowHeight() - top + 'px')
+    $el.css('top', top + 'px')
+
