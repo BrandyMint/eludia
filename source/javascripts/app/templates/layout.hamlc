@@ -5,3 +5,5 @@
 
 .navbar-menu-level2-container{role: 'navbar-menu-level2'}
 .navbar-menu-level3-container{role: 'navbar-menu-level3'}
+
+.eludia-application-iframe-container{role: 'eludia-application-iframe-container'}

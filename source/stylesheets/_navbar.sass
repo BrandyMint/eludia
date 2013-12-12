@@ -89,6 +89,7 @@
     +customNavbarLinks($navbarMenuLevel2)
     +customNavbarNestedMenu
     width: $navbarMenuLevel2Width
+    z-index: 1100
     & > li
       & > a
         .menu-item-title
@@ -106,6 +107,7 @@
     left: 0
     right: 0
     +content-columns(3)
+    z-index: 1000
     & > li
       &.menu-item-parent
         & > a
