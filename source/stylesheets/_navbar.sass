@@ -89,7 +89,14 @@
     +customNavbarLinks($navbarMenuLevel2)
     +customNavbarNestedMenu
     width: $navbarMenuLevel2Width
-    //+transition(transform 0.4s ease)
+    & > li
+      & > a
+        .menu-item-title
+          max-width: $navbarMenuLevel2Width - 50px
+          display: inline-block
+          white-space: nowrap
+          overflow: hidden
+          text-overflow: ellipsis
 
   .navbar-menu-level3
     +customNavbarLinks($navbarMenuLevel3)
