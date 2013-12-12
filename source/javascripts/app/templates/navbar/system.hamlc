@@ -32,10 +32,10 @@
           %a.navbar-system-superpos-close{ href: '#', role: 'navbar-superpos-btn' }!= @ficon 'cancel-1'
 
     .col-sm-4.navbar-menu-item.navbar-system-block.navbar-user-links
-      %a.icon-size-16.pull-left{ href: "#{@url 'help'}" }
+      %a.icon-size-16.pull-left{ href: "#{@url 'help'}", data: {target: 'iframe'} }
         != @ficon 'info-circled'
 
-      %a.pull-left{ href: "#{@url 'settings'}" }
+      %a.pull-left{ href: "#{@url 'settings'}", data: {target: 'iframe'} }
         настройки
 
       %a.pull-right{ href: "#{@url 'exit'}"}

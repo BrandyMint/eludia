@@ -9,8 +9,8 @@ class Eludia.Views.NavLayout extends Marionette.Layout
     _.extend @, Eludia.Helpers.ApplicationHelpers
 
   events:
-    #'click a[data-target="iframe"]' : 'iframeLocation'
-    'click a' : 'iframeLocation'
+    'click a[data-target="iframe"]' : 'iframeLocation'
+    #'click a' : 'iframeLocation'
 
   iframeLocation: (e) ->
     link = e.currentTarget
