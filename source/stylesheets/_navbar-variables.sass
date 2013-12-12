@@ -17,15 +17,17 @@ $navbarSystemFontSize: 13px
 
 /* navbar menu */
 
-$navbarMenuBackground: $blueBrandColor
+//$navbarMenuBackground: #33A0FF
+$navbarMenuBackground: desaturate(#33A0FF,20%)
 $navbarMenuText: lighten($textColor,20%)
 $navbarMenuTextShadowColor: rgba(0,0,0,0.3)
 $navbarMenuLinkColor: #fff
 $navbarMenuLinkColorHover: #fff
 $navbarMenuLinkColorActive: #fff
 $navbarMenuLinkBackground: transparent
-$navbarMenuLinkBackgroundHover: darken($blueBrandColor, 15%)
-$navbarMenuLinkBackgroundActive: $navbarMenuLinkBackgroundHover
+$navbarMenuLinkBackgroundHover: darken($navbarMenuBackground, 15%)
+$navbarMenuLinkBackgroundActive: #3D89CC
+//$navbarMenuLinkBackgroundHover
 $navbarMenuHeight: 50px
 $navbarMenuArrowWidth: 30px
 
@@ -41,7 +43,8 @@ $navbarMenuLevel2LinkColorHover: #fff
 $navbarMenuLevel2LinkColorActive: #fff
 $navbarMenuLevel2LinkBackground: $navbarMenuLinkBackgroundActive
 $navbarMenuLevel2LinkBackgroundHover: darken($navbarMenuLevel2LinkBackground, 10%)
-$navbarMenuLevel2LinkBackgroundActive: $navbarMenuLevel2LinkBackgroundHover
+$navbarMenuLevel2LinkBackgroundActive: #2470B3
+//$navbarMenuLevel2LinkBackgroundHover
 $navbarMenuLevel2Height: 50px
 $navbarMenuLevel2Width: 300px
 
@@ -62,6 +65,7 @@ $navbarMenuLevel3LinkBackgroundHover: darken($navbarMenuLevel3Background, 10%)
 $navbarMenuLevel3LinkBackgroundActive: darken($navbarMenuLevel3Background, 10%)
 //$navbarMenuLevel3LinkBackgroundHover
 //$navbarMenuLevel3Height: 50px
+$navbarMenuLevel3ParentColor: lighten(#91BDE6, 10%)
 
 $navbarMenuLevel3: $navbarMenuLevel3Background $navbarMenuLevel3Text $navbarMenuLevel3TextShadowColor $navbarMenuLevel3LinkColor $navbarMenuLevel3LinkColorHover $navbarMenuLevel3LinkColorActive $navbarMenuLevel3LinkBackground $navbarMenuLevel3LinkBackgroundHover $navbarMenuLevel3LinkBackgroundActive
 
@@ -73,13 +77,13 @@ $navbarMenuLevel4TextShadowColor: rgba(0,0,0,0)
 $navbarMenuLevel4LinkColor: #fff
 $navbarMenuLevel4LinkColorHover: #fff
 $navbarMenuLevel4LinkColorActive: #fff
-$navbarMenuLevel4LinkBackground: transparent
-$navbarMenuLevel4LinkBackgroundHover: darken($navbarMenuLevel3Background, 10%)
+$navbarMenuLevel4LinkBackground: darken($navbarMenuLevel3Background, 5%)
+$navbarMenuLevel4LinkBackgroundHover: darken($navbarMenuLevel4LinkBackground, 10%)
 $navbarMenuLevel4LinkBackgroundActive: transparent
 
 //$navbarMenuLevel4Height: 50px
 $navbarMenuLevel4FontSize: 13px
-$navbarMenuLevel4border: desaturate(darken($navbarMenuLevel4Background, 5%), 20%)
+$navbarMenuLevel4border: desaturate(darken($navbarMenuLevel3ParentColor, 30%), 10%)
 
 $navbarMenuLevel4: $navbarMenuLevel4Background $navbarMenuLevel4Text $navbarMenuLevel4TextShadowColor $navbarMenuLevel4LinkColor $navbarMenuLevel4LinkColorHover $navbarMenuLevel4LinkColorActive $navbarMenuLevel4LinkBackground $navbarMenuLevel4LinkBackgroundHover $navbarMenuLevel4LinkBackgroundActive
 
