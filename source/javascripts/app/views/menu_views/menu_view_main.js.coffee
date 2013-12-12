@@ -19,8 +19,8 @@ class Eludia.Views.MainMenuView extends Marionette.ItemView
 
   onRender: ->
     @level1DefaultShift = Eludia.Helpers.ApplicationHelpers.windowWidth() / 3
-    @level1MenuView = new @level1View collection: @collection
-    @$el.append @level1MenuView.render().$el
+    App.menu_view_level1 = new @level1View collection: @collection
+    @$el.append App.menu_view_level1.render().$el
 
   onShow: ->
     @_checkScrollable()
@@ -29,15 +29,15 @@ class Eludia.Views.MainMenuView extends Marionette.ItemView
 
   onBeforeClose: ->
     $(window).off 'resize.level1'
-    @level1MenuView.close()
-    @level1MenuView = null
+    App.menu_view_level1.close()
+    App.menu_view_level1 = null
 
   hideSubmenu: ->
-    @level1MenuView?.hideSubmenu()
+    App.menu_view_level1?.hideSubmenu()
 
   _checkScrollable: ->
-    fPos = @level1MenuView.$el.children().first().position()
-    lPos = @level1MenuView.$el.children().last().position()
+    fPos = App.menu_view_level1.$el.children().first().position()
+    lPos = App.menu_view_level1.$el.children().last().position()
     if (lPos.left - fPos.left) > $(window).width()
       @$el.addClass('level1-scrollable')
     else
@@ -51,8 +51,8 @@ class Eludia.Views.MainMenuView extends Marionette.ItemView
     @_level1Scroll(@level1DefaultShift)
 
   _level1Scroll: (shift) ->
-    currentScroll = @level1MenuView.$el.scrollLeft()
-    @level1MenuView.$el.animate
+    currentScroll = App.menu_view_level1.$el.scrollLeft()
+    App.menu_view_level1.$el.animate
       scrollLeft: currentScroll + shift
       500
 
