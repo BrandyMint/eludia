@@ -14,6 +14,8 @@ class Eludia.Views.MenuViewLevel3 extends Eludia.Views.MenuViewBase
     @setPositionLeft(@$el, @parentPosLeft())
 
   onShow: ->
+    @gridSort()
+
     duration = @transitionDuration()
     @setPositionLeft(@$el, 0, duration)
 
@@ -28,3 +30,21 @@ class Eludia.Views.MenuViewLevel3 extends Eludia.Views.MenuViewBase
       ## route
   hideSubmenu: ->
     # do nothing
+
+  gridSort: ->
+    @level3items = @.children._views
+    for item of @level3items
+      item = @level3items[item]
+      if item.model.get('items')
+        allowGridSort = true
+    if allowGridSort == true
+      @$el.isotope()
+      @$el.css('height', 'auto').css('position', 'absolute')
+    else
+      if @.children.length > 14
+        #TODO check for height, not quantity
+        @$el.addClass 'content-columns'
+      else
+        @$el.addClass 'single-column'
+
+
