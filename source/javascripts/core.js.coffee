@@ -18,7 +18,7 @@ App.addInitializer (options) ->
   App.urls = options.urls
 
   App.collections =
-    menu_items: new Eludia.Collections.MenuCollection(options.menu, level: 1)
+    menu_items: new Eludia.Collections.MenuCollection(options.menu)
 
   App.navbars.show App.nav_layout = new Eludia.Views.NavLayout
 
@@ -27,6 +27,9 @@ App.addInitializer (options) ->
   App.nav_layout.iframe.show App.iframe_view = new Eludia.Views.IframeView
 
   $(document).on "click", (e) =>
-    App.main_menu_view.hideSubmenu()
+    App.main_menu_view.resetMenu()
+
+  $(window).on "blur", (e) ->
+    App.main_menu_view.resetMenu()
 
   Backbone.history.start()

@@ -50,6 +50,7 @@ class Eludia.Views.MenuViewBase extends Marionette.CollectionView
       @showSubmenu @menu_item_view
     else
       #window.App.goto @submenu_item.get('href')
+      App.main_menu_view.resetMenu()
       @iframe_show @submenu_item.get('href')
 
   showSubmenu: (item_view) ->
