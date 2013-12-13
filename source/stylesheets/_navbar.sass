@@ -123,11 +123,14 @@
         margin-left: $nestedMenuPaddingHorizontal
         padding-left: 0
         +transition(padding-left 0.3s ease)
-        white-space: nowrap
-        //width: 100%
-        text-overflow: ellipsis
+        .menu-item-title
+          display: inline-block
+          white-space: nowrap
+          width: $navbarMenuLevel3Width - $nestedMenuPaddingHorizontal * 1.5
+          text-overflow: ellipsis
+          overflow: hidden
         &:hover
-          padding-left: $nestedMenuPaddingHorizontal/2
+          padding-left: $nestedMenuPaddingHorizontal / 2
       &.menu-item-parent
         & > a
           text-transform: uppercase
