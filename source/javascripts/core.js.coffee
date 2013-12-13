@@ -27,7 +27,9 @@ App.addInitializer (options) ->
   App.nav_layout.iframe.show App.iframe_view = new Eludia.Views.IframeView
 
   $(document).on "click", (e) =>
-    App.main_menu_view.hideSubmenu()
-    App.menu_view_level1.deactivateCurrentItem()
+    App.main_menu_view.resetMenu()
+
+  $(window).on "blur", (e) ->
+    App.main_menu_view.resetMenu()
 
   Backbone.history.start()
