@@ -18,7 +18,7 @@ Eludia.Helpers.ApplicationHelpers =
     App.urls[url_name] || "Неизвестный url_name #{url_name}"
 
   iframe_show: (url) ->
-    App.iframe_view.$el.attr 'src', url
+    App.nav_layout.iframe.show App.iframe_view = new Eludia.Views.IframeView src: url
 
   windowWidth: ->
     $(window).width()

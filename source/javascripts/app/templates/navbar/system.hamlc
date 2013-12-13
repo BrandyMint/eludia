@@ -1,5 +1,5 @@
 .col-sm-3.navbar-menu-item.navbar-system-title
-  %a{ href: "#{@url 'logo'}" }
+  %a{ href: "#{@url 'logo'}", data: {target: 'iframe'} }
     %i.icon-size-14
       != @ficon 'tasks'
     eludia
