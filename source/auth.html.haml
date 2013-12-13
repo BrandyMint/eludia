@@ -1,0 +1,24 @@
+---
+title: Авторизация
+layout: plain
+body_class: 'auth'
+---
+.container
+  .row
+    .col-sm-4.col-sm-offset-4
+      .auth-block
+        %h3.auth-block-title
+          %span.auth-title-icon
+            %i.fontello-icon-tasks
+          %span.auth-title-caption
+            eludia
+
+        %form.form-vertical.auth-form
+          .form-group
+            %input.form-control{ type: 'text', placeholder: 'логин'}
+          .form-group
+            %input.form-control{ type: 'text', placeholder: 'пароль'}
+          .form-group
+            %input.btn.btn-block.btn-lg.btn-primary.btn-submit{ type: 'submit', value: 'Войти в систему' }
+
+

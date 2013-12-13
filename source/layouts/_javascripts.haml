@@ -1,13 +1,14 @@
 -# Javascripts
 = javascript_include_tag 'application'
+
 :javascript
   window.options = {
       container: "#eludia-application-menu",
       urls: {
-        exit: '/exit',
+        logout: '/auth',
         settings: '/settings',
         help: 'http://hixie.ch/tests/adhoc/compat/mozilla/001.cgi?DOCTYPE=&MODE=full&EXPECT=quirks%20mode',
-        logo: '/sample.html',
+        logo: '/sample',
         name: '/user',
         combination_cancel: '/cancel',
         combination_setup: '/setup'
@@ -18,3 +19,11 @@
          // combination_name: "Васильев А.Г."
        }
     }
+
+:javascript
+  $(function() {
+    $.getJSON("menu.json", function(data) {
+      window.options.menu = data;
+      window.Eludia.App.start(window.options);
+    });
+  });
