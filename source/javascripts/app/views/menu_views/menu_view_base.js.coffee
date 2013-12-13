@@ -14,6 +14,8 @@ class Eludia.Views.MenuViewBase extends Marionette.CollectionView
     @submenu_region = App[@submenuRegion]
 
   onSelect: (item_view) ->
+    @scrollToClickedItem item_view
+
     if item_view!=@menu_item_view
       @hideSubmenu()
       @activateItem item_view
@@ -68,3 +70,13 @@ class Eludia.Views.MenuViewBase extends Marionette.CollectionView
 
   _submenu_collection: (item_view)->
     new Eludia.Collections.MenuCollection item_view.model.get('items')
+
+  scrollToClickedItem: (item_view) ->
+    main_menu = @options.main_menu
+    itemLeft = item_view.$el.position().left
+    itemWidth = item_view.$el.width()
+    if (itemLeft + itemWidth) > main_menu.$el.width()
+      main_menu.level1Scroll(itemLeft + itemWidth)
+    else if (itemLeft - itemWidth) < main_menu.$el.width()
+      main_menu.level1Scroll(itemLeft - itemWidth)
+
