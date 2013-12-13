@@ -118,6 +118,16 @@
       width: $navbarMenuLevel2Width
       @extend .isotope-item
       @extend .no-transition
+      & > a
+        border-bottom: 1px solid $navbarMenuLevel4border
+        margin-left: $nestedMenuPaddingHorizontal
+        padding-left: 0
+        +transition(padding-left 0.3s ease)
+        white-space: nowrap
+        //width: 100%
+        text-overflow: ellipsis
+        &:hover
+          padding-left: $nestedMenuPaddingHorizontal/2
       &.menu-item-parent
         & > a
           text-transform: uppercase
@@ -127,8 +137,10 @@
           padding-bottom: 0.3em
           cursor: text
           +link-colors($navbarMenuLevel3ParentColor)
+          border-bottom: none
           &, &:hover
             background: none
+            padding-left: 0
       &:hover
         &.menu-item-parent
           & > a
