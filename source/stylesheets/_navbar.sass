@@ -106,9 +106,18 @@
     margin-left: $navbarMenuLevel2Width
     left: 0
     right: 0
-    +content-columns(3)
     z-index: 1000
+    &.content-columns
+      +content-columns(3)
+    &.single-column
+      right: auto
+      //bottom: auto
+    @extend .isotope
+    @extend .no-transition
     & > li
+      width: $navbarMenuLevel2Width
+      @extend .isotope-item
+      @extend .no-transition
       &.menu-item-parent
         & > a
           text-transform: uppercase
