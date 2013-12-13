@@ -1,0 +1,36 @@
+body.auth
+  background: $grayLightest
+
+=eludia-auth
+  .auth-block
+    background: #fff
+    padding: $grid-gutter-width
+    padding-top: $grid-gutter-width/2
+    margin-top: 2em
+
+  .auth-block-title
+    font:
+      weight: normal
+      size: 24px
+    text-transform: uppercase
+    text-align: center
+    color: $gray
+    margin-bottom: 2em
+
+  .auth-form
+    input
+      +border-radius(0)
+      +transition(border-color 0.2s ease, background 0.2s ease)
+      padding: 20px
+      &, &:focus, &:hover
+        +box-shadow(none)
+      border-color: $gray
+      &:focus
+        border-color: $blueBrandColorLight
+      &[type="submit"]
+        border: none
+        padding: 15px
+    .btn-submit
+      -webkit-font-smoothing: antialiased
+      font-size: 1.1em
+

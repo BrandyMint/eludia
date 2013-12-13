@@ -38,7 +38,7 @@
       %a.pull-left{ href: "#{@url 'settings'}", data: {target: 'iframe'} }
         настройки
 
-      %a.pull-right{ href: "#{@url 'exit'}"}
+      %a.pull-right{ href: "#{@url 'logout'}"}
         выйти
 
       .clearfix
