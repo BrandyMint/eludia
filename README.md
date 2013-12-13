@@ -1,4 +1,4 @@
-# Brandymint static site
+# Eludia static site
 ------
 
 ## Установка
@@ -17,14 +17,6 @@
 
 ---
 
-## Data and content
-
-`models` folder contains models.
-
-Data is stored in `data` folder in .yml files — *in process*
-
-Access data in templates with `= data.yml_file.key...` objects, like `= data.projects.first.title`
-
 ## Развёртывание на eludia.icfdev.ru
 
   middleman deploy
@@ -38,8 +30,35 @@ Access data in templates with `= data.yml_file.key...` objects, like `= data.pro
 
 Работает авто-деплой ветки master из jenkins-а
 
-## What to do?
-- Migrate all data to yml
-- Large texts in markdown (use redcarpet)
-- Locale switch
-- Russian content
+## Запуск js-приложения
+
+```
+// параметры
+  window.options = {
+      container: "#eludia-application-menu",  // dom-элемент, в который рендерится приложение
+      urls: { // url'ы для меню
+        logout: '/auth',  // выйти, страница логина
+        settings: '/settings',  // настройки
+        help: 'http://hixie.ch/tests/adhoc/compat/mozilla/001.cgi?DOCTYPE=&MODE=full&EXPECT=quirks%20mode', // страница "помощь"
+        logo: '/sample', // ссылка с логотипа в верхем меню, она же — стартовая страница
+        combination_cancel: '/combination_cancel', // url для выключения режима совмещения
+        combination_setup: '/combination_setup' // url для включения режима совмещения (выбора пользователя)
+      },
+      user: {
+         name: "Иванов В.И.", // текущий пользователь
+         state: "enabled",  // denied, combinated
+            // состояние режима совмещения:
+            // enabled — доступен, denied — недоступен, combinated — в режиме совмещения
+         // combination_name: "Васильев А.Г." // пользователь режима совмещения
+       }
+    }
+```
+```
+// запуск
+  $(function() {
+    $.getJSON("menu.json", function(data) { // menu.json — файл со структурой основного меню
+      window.options.menu = data;
+      window.Eludia.App.start(window.options);
+    });
+  });
+```
