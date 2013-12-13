@@ -8,7 +8,7 @@
 <html class='no-js' lang='en'>
   <!-- <![endif] -->
   <head>
-    <title>eludia</title>
+    <title>Авторизация</title>
     <meta charset='utf-8' content='text/html' http-equiv='content-type'>
     <meta content='ie=edge,chrome=1' http-equiv='x-ua-compatible'>
     <meta content='web and mobile application development company' name='description'>
@@ -24,54 +24,36 @@
     <link href='/images/apple-touch-icon-152x152-precomposed.png' rel='apple-touch-icon-precomposed' sizes='152x152'>
     <link href="/stylesheets/application.css?1386926527" media="screen" rel="stylesheet" type="text/css" />
   </head>
-  <body class='index'>
-    <script src="/javascripts/application.js?1386926511" type="text/javascript"></script>
-    <script>
-      window.options = {
-          container: "#eludia-application-menu",
-          urls: {
-            logout: '/auth',
-            settings: '/settings',
-            help: 'http://hixie.ch/tests/adhoc/compat/mozilla/001.cgi?DOCTYPE=&MODE=full&EXPECT=quirks%20mode',
-            logo: '/sample',
-            name: '/user',
-            combination_cancel: '/cancel',
-            combination_setup: '/setup'
-          },
-          user: {
-             name: "Иванов В.И.",
-             state: "enabled", // denied, combinated
-             // combination_name: "Васильев А.Г."
-           }
-        }
-    </script>
-    <script>
-      $(function() {
-        $.getJSON("menu.json", function(data) {
-          window.options.menu = data;
-          window.Eludia.App.start(window.options);
-        });
-      });
-    </script>
+  <body class='auth'>
     <div class='eludia-application'>
       <div class='application-container'>
-        <a name='top'></a>
-        <div id='eludia-application-menu'></div>
         <div class='container'>
-          <script>
-            window.options.user.state='denied'
-          </script>
-          <h1>User denied</h1>
+          <div class='row'>
+            <div class='col-sm-4 col-sm-offset-4'>
+              <div class='auth-block'>
+                <h3 class='auth-block-title'>
+                  <span class='auth-title-icon'>
+                    <i class='fontello-icon-tasks'></i>
+                  </span>
+                  <span class='auth-title-caption'>
+                    eludia
+                  </span>
+                </h3>
+                <form class='form-vertical auth-form'>
+                  <div class='form-group'>
+                    <input class='form-control' placeholder='логин' type='text'>
+                  </div>
+                  <div class='form-group'>
+                    <input class='form-control' placeholder='пароль' type='text'>
+                  </div>
+                  <div class='form-group'>
+                    <input class='btn btn-block btn-lg btn-primary btn-submit' type='submit' value='Войти в систему'>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
-        <p>Paragraph tra-la-la</p>
-        <p>
-          <a href='/denied'>denied</a>
-          <a href='/'>enabled</a>
-          <a href='/combinated'>combinated</a>
-        </p>
-        <footer class='application-footer'>
-          <a name='contacts'></a>
-        </footer>
       </div>
     </div>
   </body>
