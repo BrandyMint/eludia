@@ -8,7 +8,7 @@
   .navbar
     &.navbar-system
       +customNavbar($navbarSystem)
-      +customNavbarPosition(absolute, 0, 1099)
+      +customNavbarPosition(absolute, 0, $navbarSystemZindex)
       +customNavbarHeight($navbarSystemHeight, 5px)
       font-size: $navbarSystemFontSize
       .nav.navbar-nav
@@ -33,7 +33,7 @@
           background: none
     &.navbar-menu
       +customNavbar($navbarMenu)
-      +customNavbarPosition(absolute, $navbarSystemHeight, 1000)
+      +customNavbarPosition(absolute, $navbarSystemHeight, $navbarMenuZindex)
       +customNavbarHeight($navbarMenuHeight)
       .nav.navbar-nav.navbar-menu-level1
         display: block
@@ -72,7 +72,7 @@
     background: $navbarMenuBackground
     line-height: $navbarMenuHeight
     text-align: center
-    z-index: 100
+    z-index: $level1ArrowZindex
     cursor: pointer
     +link-colors(lighten($navbarMenuBackground, 30%), #fff)
     +transition(color 0.2s ease, background 0.2s ease)
@@ -89,7 +89,7 @@
     +customNavbarLinks($navbarMenuLevel2)
     +customNavbarNestedMenu
     width: $navbarMenuLevel2Width
-    z-index: 1100
+    z-index: $navbarMenuLevel2Zindex
     & > li
       & > a
         .menu-item-title
@@ -106,7 +106,7 @@
     margin-left: $navbarMenuLevel2Width
     left: 0
     right: 0
-    z-index: 1000
+    z-index: $navbarMenuLevel3Zindex
     overflow-y: auto
     &.content-columns
       +content-columns(3)
