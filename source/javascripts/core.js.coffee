@@ -14,8 +14,16 @@ App.addInitializer (options) ->
 
   moment.lang('ru')
   $(document).hammer()
-  #$(document).on 'click', 'a[href]', (e) -> e.preventDefault(); false
-  #$(document).on 'tap', 'a[href]', (e) -> window.location.href = e.currentTarget.href
+
+  Modernizr.Detectizr.detect()
+  App.browser = {
+    name: Modernizr.Detectizr.device.browser,
+    version: Modernizr.Detectizr.device.browserVersion
+  }
+
+  if (!$.support.transition)
+    $.fn.transition = $.fn.animate
+
 
   App.user = new Eludia.Models.User options.user
   App.urls = options.urls
@@ -30,8 +38,10 @@ App.addInitializer (options) ->
   
   Eludia.Helpers.ApplicationHelpers.iframe_show options.urls.logo
 
+  #$(document).on "click", (e) =>
   $(document).on "tap", (e) =>
     App.main_menu_view.resetMenu()
+
 
   $(window).on "blur", (e) ->
     App.main_menu_view.resetMenu()

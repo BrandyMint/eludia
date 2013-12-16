@@ -59,9 +59,12 @@ class Eludia.Views.MenuViewBase extends Marionette.CollectionView
     @submenu_region.show @submenu_view
 
   setPositionLeft: (el, left, duration = 0) ->
-    el.transition
-      x: left
-      duration: duration
+    if (!$.support.transition)
+      el.css('left', left + 'px')
+    else
+      el.transition
+        x: left
+        duration: duration
 
   transitionDuration: ->
     500
