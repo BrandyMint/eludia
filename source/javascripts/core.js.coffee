@@ -13,6 +13,9 @@ App.addInitializer (options) ->
     menu_region_level3: '@navbar-menu-level3'
 
   moment.lang('ru')
+  $(document).hammer()
+  #$(document).on 'click', 'a[href]', (e) -> e.preventDefault(); false
+  #$(document).on 'tap', 'a[href]', (e) -> window.location.href = e.currentTarget.href
 
   App.user = new Eludia.Models.User options.user
   App.urls = options.urls
@@ -27,7 +30,7 @@ App.addInitializer (options) ->
   
   Eludia.Helpers.ApplicationHelpers.iframe_show options.urls.logo
 
-  $(document).on "click", (e) =>
+  $(document).on "tap", (e) =>
     App.main_menu_view.resetMenu()
 
   $(window).on "blur", (e) ->

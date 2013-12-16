@@ -14,6 +14,8 @@
 =navbarLinkHover($navbarStyle)
   color: nth($navbarStyle, 5)
   background: nth($navbarStyle, 8)
+  @media only screen and (min-device-width : 768px) and (max-device-width : 1024px)
+    background: nth($navbarStyle, 7)
 
 =navbarLinkActive($navbarStyle)
   color: nth($navbarStyle, 6)
