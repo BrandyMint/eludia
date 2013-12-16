@@ -6,6 +6,8 @@
 #= require momentjs/lang/ru
 #= require isotope/jquery.isotope
 #= require jquery.transit/jquery.transit
+#= require hammerjs/dist/hammer.min
+#= require jquery.hammer/jquery.hammer.min
 #= require underscore/underscore
 #= require backbone/backbone
 #= require backbone.marionette/lib/backbone.marionette
