@@ -41,7 +41,6 @@ class Eludia.Views.MenuViewLevel3 extends Eludia.Views.MenuViewBase
       @$el.isotope()
       @$el.css('height', 'auto').css('position', 'absolute').css('overflow', 'auto')
     else
-      console.log @.children._views.first().$el
 
       if @.children.length > 14
         #TODO check for height, not quantity
