@@ -11,8 +11,9 @@ class Eludia.Views.MainMenuView extends Marionette.ItemView
   templateHelpers: -> Eludia.Helpers.ApplicationHelpers
 
   events:
-    'click @level1-arrow-left' : '_level1ScrollLeft'
-    'click @level1-arrow-right' : '_level1ScrollRight'
+    'tap @level1-arrow-left' : '_level1ScrollLeft'
+    'tap @level1-arrow-right' : '_level1ScrollRight'
+    'click @level1-arrow-left, click @level1-arrow-right' : '_stopClick'
 
   ui:
     level1_items: '@level1-items'
@@ -60,4 +61,7 @@ class Eludia.Views.MainMenuView extends Marionette.ItemView
       scrollLeft: currentScroll + shift
       500
 
+  _stopClick: (e) ->
+    e.preventDefault(e)
+    false
 

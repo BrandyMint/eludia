@@ -9,7 +9,9 @@
     "jquery.role": "git://github.com/kossnocorp/role",
     "momentjs": "latest",
     "jquery.transit": "latest",
-    "isotope": "latest"
+    "isotope": "latest",
+    "hammerjs": "latest",
+    "jquery.hammer": "git://github.com/EightMedia/jquery.hammer.js"
   },
   "ignore": [
     "**/.*",

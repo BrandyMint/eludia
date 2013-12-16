@@ -4,7 +4,8 @@ class Eludia.Views.MenuItem extends Marionette.ItemView
   templateHelpers: -> Eludia.Helpers.ApplicationHelpers
 
   events:
-    'click' : '_click'
+    'tap' : '_clickItem'
+    'click': '_stopClick'
 
   onRender: ->
     if @model.get('items')
@@ -16,7 +17,12 @@ class Eludia.Views.MenuItem extends Marionette.ItemView
   deactive: ->
     @$el.removeClass 'active'
 
-  _click: (e) ->
-    e.stopPropagation()
+  _clickItem: (e) ->
     e.preventDefault()
+    e.stopPropagation()
     @model.trigger 'itemview:click', @
+
+  _stopClick: (e) ->
+    e.preventDefault(e)
+    false
+
