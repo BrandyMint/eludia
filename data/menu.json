@@ -2616,6 +2616,11 @@
       "id":"help",
       "items":[
          {
+            "href":"http://hixie.ch/tests/adhoc/compat/mozilla/001.cgi?DOCTYPE=&MODE=full&EXPECT=quirks%20mode",
+            "id":"quirks_mode_test_link",
+            "label":"Compatibility mode test"
+         },
+         {
             "href":"/?type=about",
             "id":"fb3158779088d4379b22c319c46e9fdd",
             "label":"О программе"
