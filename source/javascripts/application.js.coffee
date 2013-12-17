@@ -7,7 +7,7 @@
 #= require isotope/jquery.isotope
 #= require jquery.transit/jquery.transit
 #= require hammerjs/dist/hammer.min
-#= require jquery.hammer/jquery.hammer.min
+#= require jquery-hammerjs/jquery.hammer
 #= require modernizr/modernizr
 #= require detectizr/detectizr
 #= require respond/dest/respond.min.js

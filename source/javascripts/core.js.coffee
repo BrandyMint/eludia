@@ -15,15 +15,20 @@ App.addInitializer (options) ->
   moment.lang('ru')
   $(document).hammer()
 
-  Modernizr.Detectizr.detect()
-  App.browser = {
-    name: Modernizr.Detectizr.device.browser,
-    version: Modernizr.Detectizr.device.browserVersion
-  }
+  #Modernizr.Detectizr.detect()
+  #App.browser = {
+  #  name: Modernizr.Detectizr.device.browser,
+  #  version: Modernizr.Detectizr.device.browserVersion
+  #}
 
   if (!$.support.transition)
     $.fn.transition = $.fn.animate
 
+  $(document).on "tap", (e) =>
+    App.main_menu_view.resetMenu()
+
+  $(window).on "blur", (e) ->
+    App.main_menu_view.resetMenu()
 
   App.user = new Eludia.Models.User options.user
   App.urls = options.urls
@@ -35,15 +40,7 @@ App.addInitializer (options) ->
 
   App.nav_layout.system.show new Eludia.Views.SystemView
   App.nav_layout.menu.show App.main_menu_view = new Eludia.Views.MainMenuView collection: App.collections.menu_items
-  
+
   Eludia.Helpers.ApplicationHelpers.iframe_show options.urls.logo
-
-  #$(document).on "click", (e) =>
-  $(document).on "tap", (e) =>
-    App.main_menu_view.resetMenu()
-
-
-  $(window).on "blur", (e) ->
-    App.main_menu_view.resetMenu()
 
   Backbone.history.start()

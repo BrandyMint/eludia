@@ -11,7 +11,7 @@
     "jquery.transit": "latest",
     "isotope": "latest",
     "hammerjs": "latest",
-    "jquery.hammer": "git://github.com/EightMedia/jquery.hammer.js",
+    "jquery-hammerjs": "latest",
     "modernizr": "latest",
     "detectizr": "latest",
     "respond": "latest"
