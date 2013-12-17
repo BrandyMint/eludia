@@ -55,6 +55,12 @@
     padding:
       left: $navbarMenuArrowWidth
       right: $navbarMenuArrowWidth
+  @each $s in left, right
+    .level1-scrollable-#{$s}
+      .level1-arrow-#{$s}
+        display: block
+      padding:
+        #{$s}: $navbarMenuArrowWidth
 
   .menu-item-arrow
     display: none
@@ -116,6 +122,9 @@
     @extend .isotope
     @extend .no-transition
     & > li
+      -webkit-column-break-inside: avoid
+      column-break-inside: avoid
+      break-inside: avoid
       width: $navbarMenuLevel2Width
       @extend .isotope-item
       @extend .no-transition

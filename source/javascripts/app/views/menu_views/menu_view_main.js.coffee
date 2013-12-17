@@ -10,6 +10,9 @@ class Eludia.Views.MainMenuView extends Marionette.ItemView
 
   templateHelpers: -> Eludia.Helpers.ApplicationHelpers
 
+  initialize: ->
+    _.extend @, Eludia.Helpers.ApplicationHelpers
+
   events:
     'tap @level1-arrow-left' : '_level1ScrollLeft'
     'tap @level1-arrow-right' : '_level1ScrollRight'
@@ -19,8 +22,8 @@ class Eludia.Views.MainMenuView extends Marionette.ItemView
     level1_items: '@level1-items'
 
   onRender: ->
-    @level1DefaultShift = Eludia.Helpers.ApplicationHelpers.windowWidth() / 3
-    App.menu_view_level1 = new @level1View collection: @collection
+    @level1DefaultShift = @windowWidth() / 3
+    App.menu_view_level1 = new @level1View collection: @collection, main_menu_view: @
     @$el.append App.menu_view_level1.render().$el
 
   onShow: ->
@@ -50,16 +53,16 @@ class Eludia.Views.MainMenuView extends Marionette.ItemView
 
 
   _level1ScrollLeft: ->
-    @_level1Scroll( -1 * @level1DefaultShift)
+    @level1Scroll( -1 * @level1DefaultShift)
 
   _level1ScrollRight: ->
-    @_level1Scroll(@level1DefaultShift)
+    @level1Scroll(@level1DefaultShift)
 
-  _level1Scroll: (shift) ->
+  level1Scroll: (shift) ->
     currentScroll = App.menu_view_level1.$el.scrollLeft()
     App.menu_view_level1.$el.animate
       scrollLeft: currentScroll + shift
-      500
+      @level1ScrollDuration()
 
   _stopClick: (e) ->
     e.preventDefault(e)

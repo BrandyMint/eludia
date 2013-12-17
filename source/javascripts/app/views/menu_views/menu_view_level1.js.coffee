@@ -9,4 +9,21 @@ class Eludia.Views.MenuViewLevel1 extends Eludia.Views.MenuViewBase
   submenuView: Eludia.Views.MenuViewLevel2
   submenuRegion: 'menu_region_level2'
 
+  onSelect: (item_view) ->
+    @main_menu_view = @options.main_menu_view
+
+    itemViewLeft = item_view.$el.position().left
+    itemViewWidth = item_view.$el.width()
+
+    if @main_menu_view.$el.width() < itemViewLeft + itemViewWidth - 30
+      @main_menu_view.level1Scroll(itemViewLeft + itemViewWidth + 30)
+      @level1Scrolled = true
+    else if itemViewLeft < 0
+      @main_menu_view.level1Scroll(itemViewLeft - itemViewWidth - 30)
+      @level1Scrolled = true
+    else
+      @level1Scrolled = false
+
+    super
+
 

@@ -14,6 +14,16 @@ class Eludia.Views.MenuViewLevel2 extends Eludia.Views.MenuViewBase
     super
 
   onShow: ->
+    if @options.parent_collection_view.level1Scrolled == true
+      @$el.hide()
+      setTimeout((=>
+        @$el.show()
+        @_setMenuViewPosition()
+        ), @level1ScrollDuration())
+    else
+      @_setMenuViewPosition()
+
+  _setMenuViewPosition: ->
     $parentEl = @options.parent_item_view.$el
     parentPos = $parentEl.position()
     parentLeft = parentPos.left

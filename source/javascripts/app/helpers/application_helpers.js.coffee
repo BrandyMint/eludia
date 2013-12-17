@@ -37,3 +37,5 @@ Eludia.Helpers.ApplicationHelpers =
     $el.css('height', @windowHeight() - top + 'px')
     $el.css('top', top + 'px')
 
+  level1ScrollDuration: ->
+    500
