@@ -2,7 +2,7 @@
   "name": "brandymint2014",
   "version": "0.1",
   "dependencies": {
-    "jquery": "latest",
+    "jquery": "1.10.2",
     "backbone-computedfields": "latest",
     "backbone.stickit": "latest",
     "backbone.marionette": "latest",
@@ -11,7 +11,10 @@
     "jquery.transit": "latest",
     "isotope": "latest",
     "hammerjs": "latest",
-    "jquery.hammer": "git://github.com/EightMedia/jquery.hammer.js"
+    "jquery-hammerjs": "latest",
+    "modernizr": "latest",
+    "detectizr": "latest",
+    "respond": "latest"
   },
   "ignore": [
     "**/.*",
