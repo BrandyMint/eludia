@@ -23,7 +23,8 @@
 
 :javascript
   $(function() {
-    $.getJSON("menu.json", function(data) {
+    now = new Date().getTime();
+    $.getJSON("menu.json?" + now, function(data) {
       window.options.menu = data;
       window.Eludia.App.start(window.options);
     });
