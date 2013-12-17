@@ -43,7 +43,7 @@ end
 activate :navigation
 
 # Livereload
-activate :livereload
+#activate :livereload
 
 # Automatic image dimensions on image_tag helper
 activate :automatic_image_sizes
