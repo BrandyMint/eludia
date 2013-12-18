@@ -27,8 +27,9 @@ App.addInitializer (options) ->
   $(document).on "tap", (e) =>
     App.main_menu_view.resetMenu()
 
-  $(window).on "blur", (e) ->
-    App.main_menu_view.resetMenu()
+  unless window.location.href.search("no_blur") > 0
+    $(window).on "blur", (e) ->
+      App.main_menu_view.resetMenu()
 
   App.user = new Eludia.Models.User options.user
   App.urls = options.urls
