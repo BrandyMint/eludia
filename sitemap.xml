@@ -22,10 +22,10 @@
     <link href='/images/apple-touch-icon-76x76-precomposed.png' rel='apple-touch-icon-precomposed' sizes='76x76'>
     <link href='/images/apple-touch-icon-120x120-precomposed.png' rel='apple-touch-icon-precomposed' sizes='120x120'>
     <link href='/images/apple-touch-icon-152x152-precomposed.png' rel='apple-touch-icon-precomposed' sizes='152x152'>
-    <link href="/stylesheets/application.css?1387286307" media="screen" rel="stylesheet" type="text/css" />
+    <link href="/stylesheets/application.css?1387352300" media="screen" rel="stylesheet" type="text/css" />
   </head>
   <body class='page'>
-    <script src="/javascripts/application.js?1387286290" type="text/javascript"></script>
+    <script src="/javascripts/application.js?1387352283" type="text/javascript"></script>
     <script>
       window.options = {
           container: "#eludia-application-menu",
@@ -63,37 +63,37 @@
         <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
           <url>
             <loc>http://www.brandymint.com/denied.html</loc>
-            <lastmod>2013-12-17T00:00:00+04:00</lastmod>
+            <lastmod>2013-12-18T00:00:00+04:00</lastmod>
             <changefreq>monthly</changefreq>
             <priority>0.5</priority>
           </url>
           <url>
             <loc>http://www.brandymint.com/index.html</loc>
-            <lastmod>2013-12-17T00:00:00+04:00</lastmod>
+            <lastmod>2013-12-18T00:00:00+04:00</lastmod>
             <changefreq>monthly</changefreq>
             <priority>0.5</priority>
           </url>
           <url>
             <loc>http://www.brandymint.com/error.html</loc>
-            <lastmod>2013-12-17T00:00:00+04:00</lastmod>
+            <lastmod>2013-12-18T00:00:00+04:00</lastmod>
             <changefreq>monthly</changefreq>
             <priority>0.5</priority>
           </url>
           <url>
             <loc>http://www.brandymint.com/combinated.html</loc>
-            <lastmod>2013-12-17T00:00:00+04:00</lastmod>
+            <lastmod>2013-12-18T00:00:00+04:00</lastmod>
             <changefreq>monthly</changefreq>
             <priority>0.5</priority>
           </url>
           <url>
             <loc>http://www.brandymint.com/sample.html</loc>
-            <lastmod>2013-12-17T00:00:00+04:00</lastmod>
+            <lastmod>2013-12-18T00:00:00+04:00</lastmod>
             <changefreq>monthly</changefreq>
             <priority>0.5</priority>
           </url>
           <url>
             <loc>http://www.brandymint.com/auth.html</loc>
-            <lastmod>2013-12-17T00:00:00+04:00</lastmod>
+            <lastmod>2013-12-18T00:00:00+04:00</lastmod>
             <changefreq>monthly</changefreq>
             <priority>0.5</priority>
           </url>
