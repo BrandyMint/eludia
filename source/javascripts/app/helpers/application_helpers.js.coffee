@@ -9,10 +9,14 @@ Eludia.Helpers.ApplicationHelpers =
     return string if string.length < size
     words_array = $.trim(string).substring(0, size).split(' ')
     new_string = words_array.join(" ") + "&hellip;"
-    if new_string.length > size
-      words_array.slice(0, -1).join(" ") + "&hellip;"
-    else
-      new_string
+    #if new_string.length > size
+      #words_array.slice(0, -1).join(" ") + "&hellip;" # for words trucating
+    #else
+    #  new_string
+    new_string
+
+  truncate_tooltip: (string, size=100, position = 'top') ->
+    "<span data-toggle='tooltip' data-original-title='#{string}' data-placement='#{position}'>#{@truncate(string, size)}</span>"
 
   url: (url_name) ->
     App.urls[url_name] || "Неизвестный url_name #{url_name}"

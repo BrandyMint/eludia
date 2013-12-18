@@ -1,4 +1,5 @@
 %a{ href: '' }
-  %span.menu-item-title!= @title
+  %span.menu-item-title
+    != @title
   %span.pull-right.menu-item-arrow
     != @ficon 'right-open-mini'
