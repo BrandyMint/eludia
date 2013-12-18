@@ -115,7 +115,8 @@
       //bottom: auto
     @extend .isotope
     @extend .no-transition
-    & > li
+    & > li,
+    & > .level3-plain-elements > li
       +column-break-avoid
       width: $navbarMenuLevel2Width
       @extend .isotope-item
@@ -152,6 +153,13 @@
             color: #fff
         //.navbar-menu-level4
           background: lighten($navbarMenuLevel4LinkBackgroundHover, 20%)
+    & > .level3-plain-elements
+      +customNavbarLinks($navbarMenuLevel3)
+      +customNavbarNestedMenu
+      +navbarBackground($navbarMenuLevel3)
+
+      & > li
+        list-style-type: none
 
   .navbar-menu-level4
     +navbarLinkColors($navbarMenuLevel4)

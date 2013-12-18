@@ -28,7 +28,7 @@ App.addInitializer (options) ->
     App.main_menu_view.resetMenu()
 
   $(window).on "blur", (e) ->
-    App.main_menu_view.resetMenu()
+    #  App.main_menu_view.resetMenu()
 
   App.user = new Eludia.Models.User options.user
   App.urls = options.urls

@@ -33,10 +33,13 @@ class Eludia.Views.MenuViewLevel3 extends Eludia.Views.MenuViewBase
 
   gridSort: ->
     @level3items = @.children._views
+    #@$el.append "<li class='isotope-item level3-plain-elements' role='level3-plain-elements'></li>"
     for item of @level3items
       item = @level3items[item]
       if item.model.get('items')
         allowGridSort = true
+      #else
+      #  item.$el.appendTo @$el.find '@level3-plain-elements'
     if allowGridSort == true
       @$el.isotope()
       @$el.css('height', 'auto').css('position', 'absolute').css('overflow', 'auto')
