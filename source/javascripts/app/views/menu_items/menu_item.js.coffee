@@ -31,11 +31,10 @@ class Eludia.Views.MenuItem extends Marionette.ItemView
     @$el.removeClass 'active'
 
   _clickItem: (e) ->
-    tag = switch
-      when @$el.position().left < 30 then -1
-      when $(window).width()-@$el.position().left in [31..180] then 1
-      else 0
-    @_navbarScroll(tag * @navbarDefaultShift)
+    if @$el.position().left < 30
+      @_navbarScroll( -1 * @navbarDefaultShift)
+    else if $(window).width()-@$el.position().left < (@$el.width() + 60)
+      @_navbarScroll( 1 * @navbarDefaultShift)
     e.preventDefault()
     e.stopPropagation()
     @model.trigger 'itemview:click', @
@@ -56,4 +55,5 @@ class Eludia.Views.MenuItem extends Marionette.ItemView
       scrollLeft: currentScroll + shift
       500
 
+  #TODO change to variable
 
