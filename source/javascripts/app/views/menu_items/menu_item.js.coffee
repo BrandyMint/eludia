@@ -18,6 +18,7 @@ class Eludia.Views.MenuItem extends Marionette.ItemView
     data
 
   onRender: ->
+    @navbarDefaultShift = Eludia.Helpers.ApplicationHelpers.windowWidth() / 3
     if @model.get('items')
       @$el.addClass('menu-item-parent')
     if @model.get('title').length >= @titleLength
@@ -30,6 +31,11 @@ class Eludia.Views.MenuItem extends Marionette.ItemView
     @$el.removeClass 'active'
 
   _clickItem: (e) ->
+    tag = switch
+      when @$el.position().left < 30 then -1
+      when $(window).width()-@$el.position().left in [31..180] then 1
+      else 0
+    @_navbarScroll(tag * @navbarDefaultShift)
     e.preventDefault()
     e.stopPropagation()
     @model.trigger 'itemview:click', @
@@ -43,5 +49,11 @@ class Eludia.Views.MenuItem extends Marionette.ItemView
     @$el.attr 'data-original-title', @model.get 'title'
     @$el.attr 'data-placement', @tooltipPosition
     @$el.tooltip()
+
+  _navbarScroll: (shift) ->
+    currentScroll = App.menu_view_level1.$el.scrollLeft()
+    App.menu_view_level1.$el.animate
+      scrollLeft: currentScroll + shift
+      500
 
 
