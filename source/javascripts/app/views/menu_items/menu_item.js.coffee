@@ -4,6 +4,7 @@ class Eludia.Views.MenuItem extends Marionette.ItemView
   templateHelpers: -> Eludia.Helpers.ApplicationHelpers
   titleLength: 32
   tooltipPosition: 'bottom'
+  borderLine: 30
 
   initialize: ->
     _.extend @, Eludia.Helpers.ApplicationHelpers
@@ -18,6 +19,7 @@ class Eludia.Views.MenuItem extends Marionette.ItemView
     data
 
   onRender: ->
+    @navbarDefaultShift = @windowWidth() / 3
     if @model.get('items')
       @$el.addClass('menu-item-parent')
     if @model.get('title').length >= @titleLength
@@ -32,6 +34,11 @@ class Eludia.Views.MenuItem extends Marionette.ItemView
   _clickItem: (e) ->
     e.preventDefault()
     e.stopPropagation()
+
+    if @$el.position().left < @borderLine
+      App.menu_view_level1.scrollMenu( -1 * @navbarDefaultShift)
+    else if $(window).width()-@$el.position().left < @$el.width() + @borderLine*2
+      App.menu_view_level1.scrollMenu( 1 * @navbarDefaultShift)
     @model.trigger 'itemview:click', @
 
   _stopClick: (e) ->
@@ -43,5 +50,4 @@ class Eludia.Views.MenuItem extends Marionette.ItemView
     @$el.attr 'data-original-title', @model.get 'title'
     @$el.attr 'data-placement', @tooltipPosition
     @$el.tooltip()
-
 
