@@ -56,10 +56,7 @@ class Eludia.Views.MainMenuView extends Marionette.ItemView
     @_level1Scroll(@level1DefaultShift)
 
   _level1Scroll: (shift) ->
-    currentScroll = App.menu_view_level1.$el.scrollLeft()
-    App.menu_view_level1.$el.animate
-      scrollLeft: currentScroll + shift
-      500
+    App.menu_view_level1.scrollMenu(shift)
 
   _stopClick: (e) ->
     e.preventDefault(e)

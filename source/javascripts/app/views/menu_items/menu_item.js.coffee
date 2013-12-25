@@ -18,6 +18,7 @@ class Eludia.Views.MenuItem extends Marionette.ItemView
     data
 
   onRender: ->
+    @navbarDefaultShift = 200
     if @model.get('items')
       @$el.addClass('menu-item-parent')
     if @model.get('title').length >= @titleLength
@@ -43,5 +44,4 @@ class Eludia.Views.MenuItem extends Marionette.ItemView
     @$el.attr 'data-original-title', @model.get 'title'
     @$el.attr 'data-placement', @tooltipPosition
     @$el.tooltip()
-
 

@@ -5,8 +5,13 @@
 class Eludia.Views.MenuViewLevel1 extends Eludia.Views.MenuViewBase
   tagName: 'ul'
   className: 'nav navbar-nav navbar-menu-level1'
-  itemView: Eludia.Views.MenuItemLevel2
+  itemView: Eludia.Views.MenuItemLevel1
   submenuView: Eludia.Views.MenuViewLevel2
   submenuRegion: 'menu_region_level2'
 
-
+  scrollMenu: (shift) ->
+  	currentScroll = @$el.scrollLeft()
+  	@$el.animate
+  		scrollLeft: currentScroll + shift
+  		500
+  #TODO change to variable
