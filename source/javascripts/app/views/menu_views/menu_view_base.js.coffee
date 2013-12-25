@@ -53,10 +53,12 @@ class Eludia.Views.MenuViewBase extends Marionette.CollectionView
       App.main_menu_view.resetMenu()
       @iframe_show @submenu_item.get('href')
 
+
   showSubmenu: (item_view) ->
     @submenu_item = item_view.model
     @submenu_view = new @submenuView collection: @_submenu_collection(item_view), parent_item_view: item_view, parent_collection_view: @
     @submenu_region.show @submenu_view
+
 
   setPositionLeft: (el, left, duration = 0) ->
     if (!$.support.transition)
