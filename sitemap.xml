@@ -25,7 +25,7 @@
     <link href="/stylesheets/application.css?1387358610" media="screen" rel="stylesheet" type="text/css" />
   </head>
   <body class='page'>
-    <script src="/javascripts/application.js?1387963306" type="text/javascript"></script>
+    <script src="/javascripts/application.js?1388044194" type="text/javascript"></script>
     <script>
       window.options = {
           container: "#eludia-application-menu",
@@ -63,37 +63,37 @@
         <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
           <url>
             <loc>http://www.brandymint.com/denied.html</loc>
-            <lastmod>2013-12-25T00:00:00+04:00</lastmod>
+            <lastmod>2013-12-26T00:00:00+04:00</lastmod>
             <changefreq>monthly</changefreq>
             <priority>0.5</priority>
           </url>
           <url>
             <loc>http://www.brandymint.com/index.html</loc>
-            <lastmod>2013-12-25T00:00:00+04:00</lastmod>
+            <lastmod>2013-12-26T00:00:00+04:00</lastmod>
             <changefreq>monthly</changefreq>
             <priority>0.5</priority>
           </url>
           <url>
             <loc>http://www.brandymint.com/error.html</loc>
-            <lastmod>2013-12-25T00:00:00+04:00</lastmod>
+            <lastmod>2013-12-26T00:00:00+04:00</lastmod>
             <changefreq>monthly</changefreq>
             <priority>0.5</priority>
           </url>
           <url>
             <loc>http://www.brandymint.com/combinated.html</loc>
-            <lastmod>2013-12-25T00:00:00+04:00</lastmod>
+            <lastmod>2013-12-26T00:00:00+04:00</lastmod>
             <changefreq>monthly</changefreq>
             <priority>0.5</priority>
           </url>
           <url>
             <loc>http://www.brandymint.com/sample.html</loc>
-            <lastmod>2013-12-25T00:00:00+04:00</lastmod>
+            <lastmod>2013-12-26T00:00:00+04:00</lastmod>
             <changefreq>monthly</changefreq>
             <priority>0.5</priority>
           </url>
           <url>
             <loc>http://www.brandymint.com/auth.html</loc>
-            <lastmod>2013-12-25T00:00:00+04:00</lastmod>
+            <lastmod>2013-12-26T00:00:00+04:00</lastmod>
             <changefreq>monthly</changefreq>
             <priority>0.5</priority>
           </url>
