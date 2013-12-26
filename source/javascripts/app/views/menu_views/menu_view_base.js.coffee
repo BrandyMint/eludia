@@ -60,7 +60,7 @@ class Eludia.Views.MenuViewBase extends Marionette.CollectionView
     @showSubmenuRegion(item_view)
 
   showSubmenuRegion: ->
-    @submenu_region.show @submenu_view
+    @submenu_region.show @submenu_view 
   
   prepareSubmenu: (item_view) ->
     @submenu_item = item_view.model
