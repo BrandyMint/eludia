@@ -39,9 +39,10 @@ class Eludia.Views.MenuViewLevel3 extends Eludia.Views.MenuViewBase
         allowGridSort = true
     if allowGridSort == true
       @$el.isotope()
-      @$el.css('height', 'auto').css('position', 'absolute').css('overflow', 'auto')
+      @$el.addClass 'menu-level3-large'
+      @$el.css('height', 'auto').css('position', 'absolute').css('overflow', 'auto').css('bottom', '0')
     else
-      if @.children.length > 14
+      if @.children.last().$el.offset().top - @.children.first().$el.offset().top > @windowHeight() - 100
         #TODO check for height, not quantity
         @$el.addClass 'content-columns'
       else
