@@ -11,7 +11,9 @@ class Eludia.Views.MenuItemLevel3 extends Eludia.Views.MenuItem
     @menu_view4 = new Eludia.Views.MenuViewLevel4 collection: new Eludia.Collections.MenuCollection @model.get('items')
     @$el.append @menu_view4.render().$el
 
-  _prepareTooltip: ->
+  _prepareTooltipPlacement: ->
     if @model.get('items')
-      return
-    super
+      @$el.attr 'data-placement', 'top'
+    else
+      @$el.attr 'data-placement', @tooltipPosition
+
