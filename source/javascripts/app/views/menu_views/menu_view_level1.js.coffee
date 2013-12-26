@@ -10,17 +10,14 @@ class Eludia.Views.MenuViewLevel1 extends Eludia.Views.MenuViewBase
   submenuRegion: 'menu_region_level2'
 
   scrollAndActivateMenu: (shift) ->
-    currentScroll = @$el.scrollLeft()
-    @$el.animate
-      scrollLeft: currentScroll + shift
-      500
-      => 
-        @showSubmenuRegion()
+    @scrollMenu shift, @showSubmenuRegion
 
-  scrollMenu: (shift) ->
+  scrollMenu: (shift, callback) ->
   	currentScroll = @$el.scrollLeft()
   	@$el.animate
   		scrollLeft: currentScroll + shift
   		500
+      =>
+        callback
         
   #TODO change to variable
