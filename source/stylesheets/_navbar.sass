@@ -106,10 +106,14 @@
     margin-left: $navbarMenuLevel2Width
     left: 0
     right: 0
+    bottom: auto
     z-index: $navbarMenuLevel3Zindex
     overflow-y: auto
+    &.menu-level3-large
+      padding-bottom: 2em
     &.content-columns
       +content-columns(3)
+      bottom: 0
     &.single-column
       right: auto
       //bottom: auto
@@ -125,11 +129,11 @@
         margin-left: $nestedMenuPaddingHorizontal
         padding-left: 0
         +transition(padding-left 0.3s ease)
-        //.menu-item-title
+        .menu-item-title
           display: inline-block
           white-space: nowrap
-          width: $navbarMenuLevel3Width - $nestedMenuPaddingHorizontal * 1.5
-          text-overflow: ellipsis
+          //width: $navbarMenuLevel3Width - $nestedMenuPaddingHorizontal * 1.5
+          //text-overflow: ellipsis
           overflow: hidden
         &:hover
           padding-left: $nestedMenuPaddingHorizontal / 2
