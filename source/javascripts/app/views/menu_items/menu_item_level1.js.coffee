@@ -1,5 +1,10 @@
 class Eludia.Views.MenuItemLevel1 extends Eludia.Views.MenuItem
   borderLine: 30
+  submenuLength: 200
+
+  onRender: ->
+    @navbarDefaultShift = @submenuLength
+    super
 
   _clickItem: ->
     if @$el.position().left < @borderLine

@@ -7,7 +7,7 @@ class Eludia.Views.MenuItem extends Marionette.ItemView
 
   initialize: ->
     _.extend @, Eludia.Helpers.ApplicationHelpers
-
+    
   events:
     'tap' : '_clickItem'
     'click': '_stopClick'
@@ -18,7 +18,6 @@ class Eludia.Views.MenuItem extends Marionette.ItemView
     data
 
   onRender: ->
-    @navbarDefaultShift = 200
     if @model.get('items')
       @$el.addClass('menu-item-parent')
     if @model.get('title').length >= @titleLength

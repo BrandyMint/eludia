@@ -9,9 +9,13 @@ class Eludia.Views.MenuViewLevel1 extends Eludia.Views.MenuViewBase
   submenuView: Eludia.Views.MenuViewLevel2
   submenuRegion: 'menu_region_level2'
 
+
   scrollMenu: (shift) ->
   	currentScroll = @$el.scrollLeft()
   	@$el.animate
   		scrollLeft: currentScroll + shift
   		500
+      => 
+        @showSubmenuRegion()
+        
   #TODO change to variable
