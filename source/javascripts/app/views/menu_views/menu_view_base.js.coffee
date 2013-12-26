@@ -36,9 +36,6 @@ class Eludia.Views.MenuViewBase extends Marionette.CollectionView
     @menu_item_view.active()
     @submenu_item = @menu_item_view.model
 
-  hideSubmenu: ->
-    console.log("not implemented")
-
   onClose: ->
     @hideSubmenu()
 
