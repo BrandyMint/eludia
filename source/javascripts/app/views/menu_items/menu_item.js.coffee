@@ -41,6 +41,9 @@ class Eludia.Views.MenuItem extends Marionette.ItemView
   _prepareTooltip: ->
     @$el.attr 'data-toggle', 'tooltip'
     @$el.attr 'data-original-title', @model.get 'title'
-    @$el.attr 'data-placement', @tooltipPosition
+    @_prepareTooltipPlacement()
     @$el.tooltip()
+
+  _prepareTooltipPlacement: (placement = @tooltipPosition) ->
+      @$el.attr 'data-placement', placement
 
