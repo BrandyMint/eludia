@@ -13,6 +13,7 @@ class Eludia.Views.MenuViewBase extends Marionette.CollectionView
   initialize: ->
     @submenu_region = App[@submenuRegion]
 
+
   onSelect: (item_view) ->
     if item_view!=@menu_item_view
       @hideSubmenu()
@@ -55,10 +56,15 @@ class Eludia.Views.MenuViewBase extends Marionette.CollectionView
 
 
   showSubmenu: (item_view) ->
+    @prepareSubmenu(item_view)
+    @showSubmenuRegion(item_view)
+
+  showSubmenuRegion: ->
+    @submenu_region.show @submenu_view
+  
+  prepareSubmenu: (item_view) ->
     @submenu_item = item_view.model
     @submenu_view = new @submenuView collection: @_submenu_collection(item_view), parent_item_view: item_view, parent_collection_view: @
-    @submenu_region.show @submenu_view
-
 
   setPositionLeft: (el, left, duration = 0) ->
     if (!$.support.transition)
