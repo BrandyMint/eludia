@@ -17,12 +17,6 @@ class Eludia.Views.MenuViewLevel3 extends Eludia.Views.MenuViewBase
     @gridSort()
     duration = @transitionDuration()
     @setPositionLeft(@$el, 0, duration)
-    @$el.on 'tap.transition', (e) ->
-      e.preventDefault()
-      e.stopPropagation()
-    setTimeout((=>
-        @$el.off 'tap.transition'
-      ), @transitionDuration())
 
   parentPosLeft: ->
     level2Menu = @options.parent_collection_view
