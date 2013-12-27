@@ -3,7 +3,7 @@
 #= require_self
 
 class Eludia.Views.MenuViewLevel2 extends Eludia.Views.MenuViewBase
-  className: 'navbar-menu-level2'
+  className: 'navbar-menu-level2 hide'
   itemView: Eludia.Views.MenuItemLevel2
   submenuView: Eludia.Views.MenuViewLevel3
   submenuRegion: 'menu_region_level3'
@@ -23,6 +23,7 @@ class Eludia.Views.MenuViewLevel2 extends Eludia.Views.MenuViewBase
       @setPositionLeft(@$el, parentLeft)
     else
       @setPositionLeft(@$el, maxLeftPos)
+    @$el.removeClass('hide')
 
   showSubmenu: (item_view) ->
     if item_view.model.get('items')
