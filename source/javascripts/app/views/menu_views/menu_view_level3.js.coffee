@@ -15,7 +15,6 @@ class Eludia.Views.MenuViewLevel3 extends Eludia.Views.MenuViewBase
 
   onShow: ->
     @gridSort()
-
     duration = @transitionDuration()
     @setPositionLeft(@$el, 0, duration)
 
@@ -33,7 +32,9 @@ class Eludia.Views.MenuViewLevel3 extends Eludia.Views.MenuViewBase
 
   gridSort: ->
     @level3items = @.children._views
-    if @.children.last().$el.offset().top - @.children.first().$el.offset().top > @windowHeight() - 100
+    lastChildBottom = @.children.last().$el.offset().top + (@.children.last().$el.height() * 2)
+    childrenHeight = lastChildBottom - @.children.first().$el.offset().top
+    if childrenHeight > @windowHeight() - @$el.offset().top 
       childrenOverflow = true
     for item of @level3items
       item = @level3items[item]
@@ -49,5 +50,6 @@ class Eludia.Views.MenuViewLevel3 extends Eludia.Views.MenuViewBase
         @$el.addClass 'content-columns'
       else
         @$el.addClass 'single-column'
+        @.trigger 'level3menu:single_column'
 
 

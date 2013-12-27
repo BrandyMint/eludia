@@ -32,8 +32,14 @@ class Eludia.Views.MenuViewLevel2 extends Eludia.Views.MenuViewBase
       @shifted = true
     else
       return false
-
     super
 
+  showSubmenuRegion: (item_view) ->
+    @submenu_region.show @submenu_view
+    if item_view.model.get('items')
+      @listenTo @submenu_view, 'level3menu:single_column', @_setSubmenuHeight()
 
+  _setSubmenuHeight: ->
+    level2Height = @$el.height()
+    @submenu_view.$el.css('min-height', level2Height + 'px')
 

@@ -23,6 +23,9 @@ class Eludia.Views.MenuItem extends Marionette.ItemView
     if @model.get('title').length >= @titleLength
       @_prepareTooltip()
 
+  onShow: ->
+    @$el.tooltip()
+
   active: ->
     @$el.addClass 'active'
 
@@ -42,7 +45,6 @@ class Eludia.Views.MenuItem extends Marionette.ItemView
     @$el.attr 'data-toggle', 'tooltip'
     @$el.attr 'data-original-title', @model.get 'title'
     @_prepareTooltipPlacement()
-    @$el.tooltip()
 
   _prepareTooltipPlacement: (placement = @tooltipPosition) ->
       @$el.attr 'data-placement', placement
