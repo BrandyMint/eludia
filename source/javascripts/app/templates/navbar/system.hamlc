@@ -13,10 +13,9 @@
 
     .col-sm-4.navbar-menu-item.navbar-system-block
       .navbar-menu-item-block
-        != moment().format('H:mm')
+        %span{role: 'current-time'}
         &nbsp;
-        %small.text-muted
-          != moment().format('D MMMM')
+        %small.text-muted{role: 'current-date'}
 
     .col-sm-4.navbar-menu-item.navbar-system-block{role: 'eludia-navbar-user'}
       //{role: 'user'}

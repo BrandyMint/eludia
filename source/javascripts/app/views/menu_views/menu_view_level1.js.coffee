@@ -9,18 +9,27 @@ class Eludia.Views.MenuViewLevel1 extends Eludia.Views.MenuViewBase
   submenuView: Eludia.Views.MenuViewLevel2
   submenuRegion: 'menu_region_level2'
 
+  events:
+    'dragstart': 'hideSubmenu'
+    'dragleft': 'dragMenu'
+    'dragright': 'dragMenu'
+    'dragstart': 'dragStartMenu'
+
+  dragStartMenu: (e)->
+    @current_scroll = @$el.scrollLeft()
+  
+  dragMenu: (e)->
+    e.gesture.preventDefault()
+    @$el.scrollLeft(@current_scroll + -e.gesture.deltaX)
+
   scrollAndActivateMenu: (shift) ->
+    @scrollMenu shift, @showSubmenuRegion
+
+  scrollMenu: (shift, callback) ->
     currentScroll = @$el.scrollLeft()
     @$el.animate
       scrollLeft: currentScroll + shift
-      500
-      => 
-        @showSubmenuRegion()
-
-  scrollMenu: (shift) ->
-  	currentScroll = @$el.scrollLeft()
-  	@$el.animate
-  		scrollLeft: currentScroll + shift
-  		500
-        
-  #TODO change to variable
+      duration: 500
+      queue: true
+      complete: callback
+    return true
