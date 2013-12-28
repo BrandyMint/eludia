@@ -14,16 +14,14 @@ class Eludia.Views.MenuViewLevel2 extends Eludia.Views.MenuViewBase
     super
 
   onShow: ->
-    $parentEl = @options.parent_item_view.$el
-    parentPos = $parentEl.position()
-    parentLeft = parentPos.left
-    maxLeftPos = @windowWidth() - @$el.width()
-
-    if parentLeft < maxLeftPos
-      @setPositionLeft(@$el, parentLeft)
-    else
-      @setPositionLeft(@$el, maxLeftPos)
+    @_setPosition()
     @$el.removeClass('hide')
+    @_overflowCheck()
+
+  _overflowCheck: ->
+    if @childrenOverflow() == true
+      @$el.addClass 'single-column-scrollable'
+
 
   showSubmenu: (item_view) ->
     if item_view.model.get('items')
@@ -42,5 +40,17 @@ class Eludia.Views.MenuViewLevel2 extends Eludia.Views.MenuViewBase
 
   _setSubmenuHeight: ->
     level2Height = @$el.height()
-    @submenu_view.$el.css('min-height', level2Height + 'px')
+    console.log @submenu_view.singleColumn
+    if @submenu_view.singleColumn == true
+      @submenu_view.$el.css('min-height', level2Height + 'px')
+
+  _setPosition: ->
+    $parentEl = @options.parent_item_view.$el
+    parentPos = $parentEl.position()
+    parentLeft = parentPos.left
+    maxLeftPos = @windowWidth() - @$el.width()
+    if parentLeft < maxLeftPos
+      @setPositionLeft(@$el, parentLeft)
+    else
+      @setPositionLeft(@$el, maxLeftPos)
 
