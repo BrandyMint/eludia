@@ -40,7 +40,7 @@
         width: 100%
         overflow: hidden
         white-space: nowrap
-          
+        +user-select(none)
         & > li
           display: inline-block
           float: none
@@ -50,6 +50,7 @@
         display: inline-block
 
   .level1-scrollable
+    +user-select(none)
     .level1-arrow
       display: block
     padding:
