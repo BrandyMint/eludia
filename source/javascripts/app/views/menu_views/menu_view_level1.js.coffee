@@ -10,12 +10,12 @@ class Eludia.Views.MenuViewLevel1 extends Eludia.Views.MenuViewBase
   submenuRegion: 'menu_region_level2'
 
   events:
-    'dragstart': 'hideSubmenu'
     'dragleft': 'dragMenu'
     'dragright': 'dragMenu'
     'dragstart': 'dragStartMenu'
 
   dragStartMenu: (e)->
+    @hideSubmenu()
     @current_scroll = @$el.scrollLeft()
   
   dragMenu: (e)->
