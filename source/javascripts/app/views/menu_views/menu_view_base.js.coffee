@@ -76,3 +76,16 @@ class Eludia.Views.MenuViewBase extends Marionette.CollectionView
 
   _submenu_collection: (item_view)->
     new Eludia.Collections.MenuCollection item_view.model.get('items')
+
+  childrenHeight: ->
+    if @.children.length > 0
+      lastChildBottom = @.children.last().$el.offset().top + (@.children.last().$el.height() * 2)
+      childrenHeight = lastChildBottom - @.children.first().$el.offset().top
+      childrenHeight
+    else
+      0
+
+  childrenOverflow: ->
+    if (@childrenHeight() > @windowHeight() - @$el.offset().top)
+      true
+

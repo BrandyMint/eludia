@@ -1,3 +1,4 @@
+#= require app/views/menu_views/menu_view_base
 #= require app/views/menu_items/menu_item_level3
 #= require_self
 
@@ -32,21 +33,16 @@ class Eludia.Views.MenuViewLevel3 extends Eludia.Views.MenuViewBase
 
   gridSort: ->
     @level3items = @.children._views
-    lastChildBottom = @.children.last().$el.offset().top + (@.children.last().$el.height() * 2)
-    childrenHeight = lastChildBottom - @.children.first().$el.offset().top
-    if childrenHeight > @windowHeight() - @$el.offset().top 
-      childrenOverflow = true
     for item of @level3items
       item = @level3items[item]
-      if item.model.get('items') && childrenOverflow == true
+      if item.model.get('items') && @childrenOverflow() == true
         allowGridSort = true
     if allowGridSort == true
       @$el.isotope()
       @$el.addClass 'menu-level3-large'
       @$el.css('height', 'auto').css('position', 'absolute').css('overflow', 'auto').css('bottom', '0')
     else
-      if childrenOverflow == true
-        #TODO check for height, not quantity
+      if @childrenOverflow() == true
         @$el.addClass 'content-columns'
       else
         @$el.addClass 'single-column'
