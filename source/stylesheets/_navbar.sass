@@ -90,14 +90,9 @@
     +customNavbarNestedMenu
     width: $navbarMenuLevel2Width
     z-index: $navbarMenuLevel2Zindex
-    & > li
-      & > a
-        //.menu-item-title
-          max-width: $navbarMenuLevel2Width - 50px
-          display: inline-block
-          white-space: nowrap
-          overflow: hidden
-          text-overflow: ellipsis
+    &.single-column-scrollable
+      bottom: 0
+      overflow-y: auto
 
   .navbar-menu-level3
     +customNavbarLinks($navbarMenuLevel3)
