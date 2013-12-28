@@ -108,8 +108,14 @@
     &.menu-level3-large
       padding-bottom: 2em
     &.content-columns
-      +content-columns(3)
+      .csscolumns &
+        +content-columns(3)
+      .no-csscolumns &
+        & > li
+          float: left
+          width: 30%
       bottom: 0
+
     &.single-column
       right: auto
       //bottom: auto
