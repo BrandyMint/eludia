@@ -1,9 +1,13 @@
+#= require core
+
 class Eludia.Views.MenuItem extends Marionette.ItemView
   template: JST["app/templates/navbar/menu_item"]
   tagName: 'li'
   templateHelpers: -> Eludia.Helpers.ApplicationHelpers
   titleLength: 32
-  tooltipPosition: 'bottom'
+  tooltipPosition: 'auto'
+  tooltipContainer: ->
+    App.navbars.el
 
   initialize: ->
     _.extend @, Eludia.Helpers.ApplicationHelpers
@@ -22,7 +26,7 @@ class Eludia.Views.MenuItem extends Marionette.ItemView
   onRender: ->
     if @model.get('items')
       @$el.addClass('menu-item-parent')
-    @$el.find("[data-toggle='tooltip']:first").tooltip() if @model.get('title').length >= @titleLength
+    @$el.find("[data-toggle='tooltip']:first").tooltip({container: "#{@tooltipContainer()}"}) if @model.get('title').length >= @titleLength
 
   active: ->
     @$el.addClass 'active'
