@@ -41,7 +41,7 @@ class Eludia.Views.MenuViewLevel3 extends Eludia.Views.MenuViewBase
       @$el.css('height', '500px')
       @$el.isotope({layoutMode: 'masonryHorizontal'})
       @$el.addClass 'menu-level3-large'
-      @$el.css('height', 'auto').css('position', 'absolute').css('overflow', 'auto').css('bottom', '0')
+      @$el.css('width', '100%').css('height', 'auto').css('position', 'absolute').css('overflow', 'auto').css('bottom', '0')
     else
       if @childrenOverflow() == true
         @$el.addClass 'content-columns'
