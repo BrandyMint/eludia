@@ -1,4 +1,4 @@
-%a{ href: '' }
+%a{ href: '', data-toggle: 'tooltip', data-original-title: '#{@original_title}', data-placement: '#{@placement}' }
   %span.menu-item-title
     != @title
   %span.pull-right.menu-item-arrow

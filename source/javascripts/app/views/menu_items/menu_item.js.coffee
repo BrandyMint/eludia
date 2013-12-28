@@ -14,17 +14,15 @@ class Eludia.Views.MenuItem extends Marionette.ItemView
 
   serializeData: ->
     data = super
+    data.original_title = @model.get('title')
     data.title = @truncate data.title, @titleLength
+    data.placement = @tooltipPosition 
     data
 
   onRender: ->
     if @model.get('items')
       @$el.addClass('menu-item-parent')
-    if @model.get('title').length >= @titleLength
-      @_prepareTooltip()
-
-  onShow: ->
-    @$el.tooltip()
+    @$el.find("[data-toggle='tooltip']:first").tooltip() if @model.get('title').length >= @titleLength
 
   active: ->
     @$el.addClass 'active'
@@ -40,12 +38,4 @@ class Eludia.Views.MenuItem extends Marionette.ItemView
   _stopClick: (e) ->
     e.preventDefault(e)
     false
-
-  _prepareTooltip: ->
-    @$el.attr 'data-toggle', 'tooltip'
-    @$el.attr 'data-original-title', @model.get 'title'
-    @_prepareTooltipPlacement()
-
-  _prepareTooltipPlacement: (placement = @tooltipPosition) ->
-      @$el.attr 'data-placement', placement
 
