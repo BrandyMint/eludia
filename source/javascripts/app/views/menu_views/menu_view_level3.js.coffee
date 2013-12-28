@@ -38,7 +38,9 @@ class Eludia.Views.MenuViewLevel3 extends Eludia.Views.MenuViewBase
       if item.model.get('items') && @childrenOverflow() == true
         allowGridSort = true
     if allowGridSort == true
-      @$el.isotope()
+      #TODO перенеси в  css
+      @$el.css('height', '500px')
+      @$el.isotope({layoutMode: 'masonryHorizontal'})
       @$el.addClass 'menu-level3-large'
       @$el.css('height', 'auto').css('position', 'absolute').css('overflow', 'auto').css('bottom', '0')
     else
