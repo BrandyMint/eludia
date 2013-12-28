@@ -101,6 +101,9 @@
   & > li
     display: block
     float: none
+    &.isotope-item
+      &:hover
+        z-index: $nestedMenuItemZIndex
     & > a
       display: block
       padding: $nestedMenuPaddingVertical $nestedMenuPaddingHorizontal
