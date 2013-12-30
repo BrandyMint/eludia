@@ -26,7 +26,10 @@ class Eludia.Views.MenuItem extends Marionette.ItemView
   onRender: ->
     if @model.get('items')
       @$el.addClass('menu-item-parent')
-    @$el.find("[data-toggle='tooltip']:first").tooltip({container: "#{@tooltipContainer()}"}) if @model.get('title').length >= @titleLength
+    @addTooltip()
+
+  onClose: ->
+    @_closeTooltip()
 
   active: ->
     @$el.addClass 'active'
@@ -42,4 +45,14 @@ class Eludia.Views.MenuItem extends Marionette.ItemView
   _stopClick: (e) ->
     e.preventDefault(e)
     false
+
+  addTooltip: ->
+    @_prepareTooltip()
+
+  _prepareTooltip: ->
+    @$el.find("[data-toggle='tooltip']:first").tooltip({container: "#{@tooltipContainer()}"}) if @model.get('title').length >= @titleLength
+
+  _closeTooltip: ->
+    @$el.find("[data-toggle='tooltip']:first").tooltip('hide')
+
 

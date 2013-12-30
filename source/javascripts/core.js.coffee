@@ -44,4 +44,5 @@ App.addInitializer (options) ->
 
   Eludia.Helpers.ApplicationHelpers.iframe_show options.urls.logo
 
+
   Backbone.history.start()

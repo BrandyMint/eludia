@@ -5,6 +5,8 @@
 class Eludia.Views.MenuViewLevel3 extends Eludia.Views.MenuViewBase
   className: 'navbar-menu-level3'
   itemView: Eludia.Views.MenuItemLevel3
+  itemViewOptions: ->
+    collectionView: @
 
   initialize: ->
     _.extend @, Eludia.Helpers.ApplicationHelpers
@@ -18,6 +20,8 @@ class Eludia.Views.MenuViewLevel3 extends Eludia.Views.MenuViewBase
     @gridSort()
     duration = @transitionDuration()
     @setPositionLeft(@$el, 0, duration)
+    @$el.bind 'transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', _.once =>
+      @.trigger 'transitions:end'
 
   parentPosLeft: ->
     level2Menu = @options.parent_collection_view
@@ -38,7 +42,8 @@ class Eludia.Views.MenuViewLevel3 extends Eludia.Views.MenuViewBase
       if item.model.get('items') && @childrenOverflow() == true
         @allowGridSort = true
     if @allowGridSort == true
-      @$el.css('height', '500px')
+      #@$el.css('width', '100%').css('position', 'absolute').css('overflow', 'auto').css('bottom', '0').css('height', @$el.height() + 'px')
+      @$el.height '500px'
       @$el.isotope({layoutMode: 'masonryHorizontal'})
       @$el.addClass 'menu-level3-large'
       @$el.css('width', '100%').css('height', 'auto').css('position', 'absolute').css('overflow', 'auto').css('bottom', '0')

@@ -40,7 +40,6 @@ class Eludia.Views.MenuViewLevel2 extends Eludia.Views.MenuViewBase
 
   _setSubmenuHeight: ->
     level2Height = @$el.height()
-    console.log @submenu_view.singleColumn
     if @submenu_view.singleColumn == true
       @submenu_view.$el.css('min-height', level2Height + 'px')
 
