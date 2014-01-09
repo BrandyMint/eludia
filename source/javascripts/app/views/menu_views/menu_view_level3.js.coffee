@@ -20,7 +20,7 @@ class Eludia.Views.MenuViewLevel3 extends Eludia.Views.MenuViewBase
     @gridSort()
     duration = @transitionDuration()
     @setPositionLeft(@$el, 0, duration)
-    @$el.bind 'transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', _.once =>
+    @$el.bind 'transitionend, webkitTransitionEnd, oTransitionEnd, MSTransitionEnd', _.once =>
       @.trigger 'transitions:end'
 
   parentPosLeft: ->
