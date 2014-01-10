@@ -42,11 +42,17 @@ class Eludia.Views.MenuViewLevel3 extends Eludia.Views.MenuViewBase
       if item.model.get('items') && @childrenOverflow() == true
         @allowGridSort = true
     if @allowGridSort == true
-      #@$el.css('width', '100%').css('position', 'absolute').css('overflow', 'auto').css('bottom', '0').css('height', @$el.height() + 'px')
-      @$el.height '500px'
-      @$el.isotope({layoutMode: 'masonryHorizontal'})
+      @level3MenuHeight = @windowHeight() - @$el.position().top
       @$el.addClass 'menu-level3-large'
-      @$el.css('width', '100%').css('height', 'auto').css('position', 'absolute').css('overflow', 'auto').css('bottom', '0')
+      @$el.css 'height', @level3MenuHeight + 'px'
+      @$el.isotope
+        layoutMode: "fitColumns"
+        transformsEnabled: false
+        containerStyle:
+          position: 'absolute'
+          overflow: 'auto'
+          bottom: '0'
+        resizesContainer: false
     else
       if @childrenOverflow() == true
         @$el.addClass 'content-columns'
