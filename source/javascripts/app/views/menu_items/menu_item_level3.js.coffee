@@ -7,6 +7,10 @@ class Eludia.Views.MenuItemLevel3 extends Eludia.Views.MenuItem
       @_renderSubmenu()
     super
 
+  addTooltip: ->
+    @collectionView = @options.collectionView
+    @listenTo @collectionView, 'transitions:end', @_prepareTooltip()
+
   _renderSubmenu: ->
     @menu_view4 = new Eludia.Views.MenuViewLevel4 collection: new Eludia.Collections.MenuCollection @model.get('items')
     @$el.append @menu_view4.render().$el
