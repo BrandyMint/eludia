@@ -9,11 +9,7 @@ class Eludia.Views.MenuItemLevel3 extends Eludia.Views.MenuItem
 
   addTooltip: ->
     @collectionView = @options.collectionView
-    @listenTo @collectionView, 'transitions:end', @_prepareTooltip
-
-  _prepareTooltip: ->
-    if @model.get('title').length >= @titleLength
-      @$el.find("[data-toggle='tooltip']:first").tooltip({container: "#{@tooltipContainer()}"})
+    @listenTo @collectionView, 'transitions:end', @_prepareTooltip()
 
   _renderSubmenu: ->
     @menu_view4 = new Eludia.Views.MenuViewLevel4 collection: new Eludia.Collections.MenuCollection @model.get('items')
