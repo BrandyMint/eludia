@@ -10,7 +10,7 @@
     "momentjs": "latest",
     "jquery.transit": "latest",
     "isotope": "latest",
-    "hammerjs": "latest",
+    "hammerjs": "1.0.5",
     "jquery-hammerjs": "latest",
     "modernizr": "latest",
     "detectizr": "latest",
