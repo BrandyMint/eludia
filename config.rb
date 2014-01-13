@@ -60,9 +60,7 @@ page "*", :layout => "application"
 
 ##############################
 # Dynamically Generated Pages
-activate :directory_indexes  #Removes .html from file
-
-
+#activate :directory_indexes  #Removes .html from file
 
 ##############################
 ## Settings
