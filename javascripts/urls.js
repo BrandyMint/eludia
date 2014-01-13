@@ -1,1 +1,1 @@
-!function(){this.App.goto=function(n){return window.location.href=n},this.App.goto_key=function(){return this.App.goto(Eludia.Helpers.ApplicationHelpers.url(url_name))}}.call(this);
+!function(){this.App.goto=function(t){return window.location.href=t},this.App.goto_key=function(){return this.App.goto(Eludia.Helpers.ApplicationHelpers.url(url_name))}}.call(this);

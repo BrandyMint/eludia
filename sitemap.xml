@@ -30,19 +30,19 @@
       window.options = {
           container: "#eludia-application-menu",
           urls: {
-            logout: '/auth',
-            settings: '/settings',
+            logout: 'logon.html',
+            settings: 'settings.html',
             quirks_test: 'http://hixie.ch/tests/adhoc/compat/mozilla/001.cgi?DOCTYPE=&MODE=full&EXPECT=quirks%20mode',
-            help: '/help',
-            logo: '/sample',
-            name: '/user',
-            combination_cancel: '/combination_cancel',
-            combination_setup: '/combination_setup'
+            help: 'help.html',
+            logo: 'sample.html',
+            name: 'user.html',
+            users_twins_cancel: 'users_twins_cancel.html',
+            users_twins_setup: 'users_twins_setup.html'
           },
           user: {
              name: "Иванов В.И.",
              state: "enabled", // denied, combinated
-             // combination_name: "Васильев А.Г."
+             // users_twins_name: "Васильев А.Г."
            }
         }
     </script>
@@ -68,6 +68,12 @@
             <priority>0.5</priority>
           </url>
           <url>
+            <loc>http://www.brandymint.com/users_twins.html</loc>
+            <lastmod>2014-01-13T00:00:00+04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+          </url>
+          <url>
             <loc>http://www.brandymint.com/index.html</loc>
             <lastmod>2014-01-13T00:00:00+04:00</lastmod>
             <changefreq>monthly</changefreq>
@@ -80,19 +86,13 @@
             <priority>0.5</priority>
           </url>
           <url>
-            <loc>http://www.brandymint.com/combinated.html</loc>
+            <loc>http://www.brandymint.com/logon.html</loc>
             <lastmod>2014-01-13T00:00:00+04:00</lastmod>
             <changefreq>monthly</changefreq>
             <priority>0.5</priority>
           </url>
           <url>
             <loc>http://www.brandymint.com/sample.html</loc>
-            <lastmod>2014-01-13T00:00:00+04:00</lastmod>
-            <changefreq>monthly</changefreq>
-            <priority>0.5</priority>
-          </url>
-          <url>
-            <loc>http://www.brandymint.com/auth.html</loc>
             <lastmod>2014-01-13T00:00:00+04:00</lastmod>
             <changefreq>monthly</changefreq>
             <priority>0.5</priority>

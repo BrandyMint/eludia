@@ -30,19 +30,19 @@
       window.options = {
           container: "#eludia-application-menu",
           urls: {
-            logout: '/auth',
-            settings: '/settings',
+            logout: 'logon.html',
+            settings: 'settings.html',
             quirks_test: 'http://hixie.ch/tests/adhoc/compat/mozilla/001.cgi?DOCTYPE=&MODE=full&EXPECT=quirks%20mode',
-            help: '/help',
-            logo: '/sample',
-            name: '/user',
-            combination_cancel: '/combination_cancel',
-            combination_setup: '/combination_setup'
+            help: 'help.html',
+            logo: 'sample.html',
+            name: 'user.html',
+            users_twins_cancel: 'users_twins_cancel.html',
+            users_twins_setup: 'users_twins_setup.html'
           },
           user: {
              name: "Иванов В.И.",
              state: "enabled", // denied, combinated
-             // combination_name: "Васильев А.Г."
+             // users_twins_name: "Васильев А.Г."
            }
         }
     </script>
@@ -61,9 +61,10 @@
         <div id='eludia-application-menu'></div>
         <div class='container'>
           <script>
-            window.options.user.state='denied'
+            window.options.user.state='combinated'
+            window.options.user.combination_name='Васильев Г.А.'
           </script>
-          <h1>User denied</h1>
+          <h1>User combinated</h1>
         </div>
         <p>Paragraph tra-la-la</p>
         <p>

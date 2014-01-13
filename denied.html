@@ -8,7 +8,7 @@
 <html class='no-js' lang='en'>
   <!-- <![endif] -->
   <head>
-    <title>Eludia</title>
+    <title>eludia</title>
     <meta charset='utf-8' content='text/html' http-equiv='content-type'>
     <meta content='ie=edge,chrome=1' http-equiv='x-ua-compatible'>
     <meta content='web and mobile application development company' name='description'>
@@ -24,25 +24,25 @@
     <link href='/images/apple-touch-icon-152x152-precomposed.png' rel='apple-touch-icon-precomposed' sizes='152x152'>
     <link href='stylesheets/application.css' media='screen' rel='stylesheet' type='text/css'>
   </head>
-  <body class='page'>
+  <body class='index'>
     <script src='javascripts/application.js'></script>
     <script>
       window.options = {
           container: "#eludia-application-menu",
           urls: {
-            logout: '/auth',
-            settings: '/settings',
+            logout: 'logon.html',
+            settings: 'settings.html',
             quirks_test: 'http://hixie.ch/tests/adhoc/compat/mozilla/001.cgi?DOCTYPE=&MODE=full&EXPECT=quirks%20mode',
-            help: '/help',
-            logo: '/sample',
-            name: '/user',
-            combination_cancel: '/combination_cancel',
-            combination_setup: '/combination_setup'
+            help: 'help.html',
+            logo: 'sample.html',
+            name: 'user.html',
+            users_twins_cancel: 'users_twins_cancel.html',
+            users_twins_setup: 'users_twins_setup.html'
           },
           user: {
              name: "Иванов В.И.",
              state: "enabled", // denied, combinated
-             // combination_name: "Васильев А.Г."
+             // users_twins_name: "Васильев А.Г."
            }
         }
     </script>
@@ -59,16 +59,11 @@
       <div class='application-container'>
         <a name='top'></a>
         <div id='eludia-application-menu'></div>
-        <div class='content'>
-          <div class='container'>
-            <div class='row'>
-              <div class='span12'>
-                <h2>The content you're looking for cannot be found.</h2>
-                <br>
-                <h3><a href="/">Return to homepage.</a></h3>
-              </div>
-            </div>
-          </div>
+        <div class='container'>
+          <script>
+            window.options.user.state='denied'
+          </script>
+          <h1>User denied</h1>
         </div>
         <p>Paragraph tra-la-la</p>
         <p>
