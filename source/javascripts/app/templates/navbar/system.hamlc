@@ -21,7 +21,7 @@
       //{role: 'user'}
       //%a{ href: '#', role: 'user_name' } name
       //%div{role: 'combination_state'} state
-      //%div{role: 'combination_user_name'} combination_name
+      //%div{role: 'combination_user_name'} users_twins_name
       &nbsp;
       .navbar-system-superpos.navbar-menu-item-block.navbar-system-superpos
         %a{ href: "#{@url 'users_twins_setup'}", title: 'перейти в режим совмещения', role: 'combination_state', class: 'navbar-system-superpos-btn'}

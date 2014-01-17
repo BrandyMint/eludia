@@ -4,7 +4,7 @@
   %a{ href: '#', title: 'перейти в режим совмещения', role: 'navbar-superpos-btn', class: 'navbar-system-superpos-btn'}
     != @ficon 'shuffle-1'
   %span{ role: 'navbar-superpos-block', class: 'navbar-system-superpos-block' }
-    %span{role: 'combination_user_name'} combination_name
+    %span{role: 'combination_user_name'} users_twins_name
     %a.navbar-system-superpos-close{ href: "#{@url 'users_twins_cancel'}", role: 'navbar-superpos-btn', data: {target: 'iframe'} }
       != @ficon 'cancel-1'
 
