@@ -24,11 +24,11 @@
       //%div{role: 'combination_user_name'} combination_name
       &nbsp;
       .navbar-system-superpos.navbar-menu-item-block.navbar-system-superpos
-        %a{ href: "#{@url 'combination_setup'}", title: 'перейти в режим совмещения', role: 'combination_state', class: 'navbar-system-superpos-btn'}
+        %a{ href: "#{@url 'users_twins_setup'}", title: 'перейти в режим совмещения', role: 'combination_state', class: 'navbar-system-superpos-btn'}
           != @ficon 'shuffle-1'
         %span{ role: 'combination_user_name', class: 'navbar-system-superpos-block hide' }
           Михайлов А. Л.
-          %a.navbar-system-superpos-close{ href: "#{@url 'combination_cancel'}", role: 'navbar-superpos-btn' }!= @ficon 'cancel-1'
+          %a.navbar-system-superpos-close{ href: "#{@url 'users_twins_cancel'}", role: 'navbar-superpos-btn' }!= @ficon 'cancel-1'
 
     .col-sm-4.navbar-menu-item.navbar-system-block.navbar-user-links
       %a.icon-size-16.pull-left{ href: "#{@url 'help'}", data: {target: 'iframe'} }
