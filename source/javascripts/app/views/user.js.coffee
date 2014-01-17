@@ -3,7 +3,7 @@ class Eludia.Views.UserView extends Marionette.ItemView
   bindings: 
     '@user_name': 'name'
     '@combination_state': 'state'
-    '@combination_user_name': 'combination_name'
+    '@combination_user_name': 'users_twins_name'
 
   onRender: ->
     @stickit()
