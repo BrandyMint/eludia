@@ -7,6 +7,11 @@ class Eludia.Views.MenuViewLevel4 extends Eludia.Views.MenuViewBase
   className: 'navbar-menu-level4'
   itemView: Eludia.Views.MenuItem
 
+  initialize: ->
+    _.extend @, Eludia.Helpers.ApplicationHelpers
+    # using helper @windowWidth
+    super
+
   #collectionEvents:
     #'itemview:click' : '_itemview_click'
 

@@ -22,7 +22,7 @@ Eludia.Helpers.ApplicationHelpers =
     App.urls[url_name] || "Неизвестный url_name #{url_name}"
 
   iframe_show: (url) ->
-    App.nav_layout.iframe.show App.iframe_view = new Eludia.Views.IframeView src: url
+    App.nav_layout.iframe.show App.iframe_view = new Eludia.Views.IframeView src: @salt_link(url)
 
   windowWidth: ->
     $(window).width()
@@ -40,4 +40,8 @@ Eludia.Helpers.ApplicationHelpers =
     top = pos.top
     $el.css('height', @windowHeight() - top + 'px')
     $el.css('top', top + 'px')
+
+  salt_link: (href) ->
+    if href
+      href + (if href.indexOf('?') != -1 then '&' else '?') + "time=#{Math.round(new Date().getTime() / 100)}"
 

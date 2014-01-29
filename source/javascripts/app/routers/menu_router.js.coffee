@@ -1,1 +1,0 @@
-class Eludia.Routers.MenuRouter extends Backbone.Router
