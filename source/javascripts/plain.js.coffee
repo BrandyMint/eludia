@@ -6,8 +6,8 @@
 #= require momentjs/lang/ru
 #= require isotope/jquery.isotope
 #= require jquery.transit/jquery.transit
-#= require hammerjs/hammer.min
-#= require jquery-hammerjs/jquery.hammer
+#= require hammerjs/dist/hammer.min
+#= require hammerjs/dist/jquery.hammer
 #= require modernizr/modernizr
 #= require detectizr/detectizr
 #= require respond/dest/respond.min.js
