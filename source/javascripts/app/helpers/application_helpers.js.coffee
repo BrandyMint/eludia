@@ -43,5 +43,5 @@ Eludia.Helpers.ApplicationHelpers =
 
   salt_link: (href) ->
     if href
-      href + (if href.indexOf('?') != -1 then '&' else '?') + "time=#{Math.round(new Date().getTime() / 100)}"
+      href + (if href.indexOf('?') != -1 then '&' else '?') + "salt=#{Math.round(new Date().getTime() / 100)}"
 
